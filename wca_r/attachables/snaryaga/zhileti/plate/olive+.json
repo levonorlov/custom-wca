@@ -1,0 +1,24 @@
+{
+	"format_version": "1.8.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "addon:plate_olive+",
+			"materials": {
+				"default": "armor",
+				"enchanted": "armor_enchanted"
+			},
+			"textures": {
+				"m88_butan": "textures/entity/plate_olive+"
+			},
+			"geometry": {
+				"m88": "geometry.plate"
+			},
+			"scripts": {
+				"parent_setup": "variable.chest_layer_visible = 0.0;"
+			},
+			"render_controllers": [
+				"controller.render.m88_butan"
+			]
+		}
+	}
+}

@@ -1,0 +1,234 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.svds_fire": {
+			"initial_state": "setup",
+			"states": {
+				"setup": {
+					"transitions": [
+						{"fire": "query.property('gun:fire') == 1"}
+					]
+				},
+				"fire": {
+					"animations": [
+						{"svds_shoot": "v.svds"}
+					],
+					"transitions": [
+						{
+						  "fire": "query.property('gun:fire') == 1"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.svds_sneak": {
+			"initial_state": "setup",
+			"states": {
+				"setup": {
+					"transitions": [
+						{"hold": "variable.svds"}
+					]
+				},
+				"hold": {
+					"animations": [
+						{"svds_sneak": "v.svds"}
+					],
+					"transitions": [
+						{"reload": "q.property('addon:gun') == 2"},
+						{"reload2": "q.property('addon:gun') == 3"},
+                        {"moving": "query.is_riding && query.ground_speed > 0.0"}
+					],
+					"blend_transition": 0.1
+				},
+                "moving": {
+                    "animations": [
+                        {"crawl2": "v.svds"}
+                    ],
+                    "blend_transition": 0.1,
+                    "blend_via_shortest_path": true,
+                    "transitions": [
+                        {
+                            "hold": "query.is_riding && query.ground_speed == 0.0"
+                        },
+                        {
+                            "default": "!query.is_riding"
+                        }
+                    ]
+                },
+				"reload": {
+					"animations": [
+						{"svds_reload_sneak": "v.svds"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "q.property('addon:gun') != 2"}
+					]
+				},
+				"reload2": {
+					"animations": [
+						{"svds_reload2_sneak": "v.svds"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "q.property('addon:gun') != 3"}
+					]
+				}
+			}
+		},
+		"controller.animation.svds_third": {
+			"initial_state": "setup",
+			"states": {
+				"setup": {
+					"transitions": [
+						{"hold": "variable.svds"}
+					]
+				},
+				"hold": {
+					"animations": [
+						{"svds_third": "v.svds"}
+					],
+					"transitions": [
+						{"hold2": "q.all_animations_finished && q.is_using_item"},
+						{"gun_third": "q.all_animations_finished && !q.is_using_item"},
+						{"reload": "q.property('addon:gun') == 2"},
+						{"aim": "q.is_sneaking"},
+						{"sprint": "q.is_sprinting && !q.is_using_item"},
+						{"reload2": "q.property('addon:gun') == 3"}
+					],
+					"blend_transition": 0.1
+				},
+				"hold2": {
+					"animations": [
+						{"svds_third": "v.svds"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished && q.is_using_item"},
+						{"gun_third": "q.all_animations_finished && !q.is_using_item"},
+						{"reload": "q.property('addon:gun') == 2"},
+						{"aim": "q.is_sneaking"},
+						{"sprint": "q.is_sprinting && !q.is_using_item"},
+						{"reload2": "q.property('addon:gun') == 3"}
+					],
+					"blend_transition": 0.1
+				},
+				"gun_third": {
+					"animations": [
+						{"gun_third": "v.svds"}
+					],
+					"transitions": [
+						{"hold": "q.is_using_item"},
+						{"reload": "q.property('addon:gun') == 2"},
+						{"aim": "q.is_sneaking"},
+						{"sprint": "q.is_sprinting && !q.is_using_item"},
+						{"reload2": "q.property('addon:gun') == 3"}
+					],
+					"blend_transition": 0.15
+				},
+				"reload": {
+					"animations": [
+						{"svds_reload_third": "v.svds"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "q.property('addon:gun') != 2"}
+					]
+				},
+				"reload2": {
+					"animations": [
+						{"svds_reload2_third": "v.svds"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "q.property('addon:gun') != 3"}
+					]
+				},
+				"aim": {
+					"animations": [
+						{"svds_aim_third": "v.svds"}
+					],
+					"transitions": [
+						{"hold": "!q.is_sneaking"},
+						{"reload": "q.property('addon:gun') == 2"},
+						{"reload2": "q.property('addon:gun') == 3"}
+					],
+					"blend_transition": 0.1
+				},
+				"sprint": {
+					"animations": [
+						{"svds_sprint_third": "v.svds"}
+					],
+					"transitions": [
+						{"hold": "!q.is_sprinting"},
+						{"hold": "q.is_using_item"},
+						{"reload": "q.property('addon:gun') == 2"},
+						{"reload2": "q.property('addon:gun') == 3"}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		},
+		"controller.animation.svds": {
+			"initial_state": "setup",
+			"states": {
+				"setup": {
+					"transitions": [
+						{"hold": "variable.svds"}
+					]
+				},
+				"hold": {
+					"animations": [
+						{"svds": "v.svds"}
+					],
+					"transitions": [
+						{"reload": "q.property('addon:gun') == 2"},
+						{"aim": "q.is_sneaking"},
+						{"sprint": "q.is_sprinting && !q.is_using_item"},
+						{"reload2": "q.property('addon:gun') == 3"}
+					],
+					"blend_transition": 0.1
+				},
+				"reload": {
+					"animations": [
+						{"svds_reload": "v.svds"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "q.property('addon:gun') != 2"}
+					]
+				},
+				"reload2": {
+					"animations": [
+						{"svds_reload2": "v.svds"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "q.property('addon:gun') != 3"}
+					]
+				},
+				"aim": {
+					"animations": [
+						{"svds_aim": "v.svds"}
+					],
+					"transitions": [
+						{"hold": "!q.is_sneaking"},
+						{"reload": "q.property('addon:gun') == 2"},
+						{"reload2": "q.property('addon:gun') == 3"}
+					],
+					"blend_transition": 0.1
+				},
+				"sprint": {
+					"animations": [
+						{"svds_sprint": "v.svds"}
+					],
+					"transitions": [
+						{"hold": "!q.is_sprinting"},
+						{"hold": "q.is_using_item"},
+						{"reload": "q.property('addon:gun') == 2"},
+						{"reload2": "q.property('addon:gun') == 3"}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		}
+	}
+}

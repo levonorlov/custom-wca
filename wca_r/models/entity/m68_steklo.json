@@ -1,0 +1,134 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.m68_steklo",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "rightArmgun",
+					"pivot": [-5, 22, 0]
+				},
+				{
+					"name": "rightArmgun2",
+					"parent": "rightArmgun",
+					"pivot": [-5, 22, 0]
+				},
+				{
+					"name": "gun",
+					"parent": "rightArmgun2",
+					"pivot": [-4.5, 13.25, -2.4],
+					"rotation": [90, 0, 0]
+				},
+				{
+					"name": "bolt",
+					"parent": "gun",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "uper",
+					"parent": "gun",
+					"pivot": [-5, 13.9, -6.9]
+				},
+				{
+					"name": "rukoyatka",
+					"parent": "uper",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "barrel",
+					"parent": "uper",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "handguard",
+					"parent": "uper",
+					"pivot": [-5, 14.69531, -4.42344]
+				},
+				{
+					"name": "celik",
+					"parent": "uper",
+					"pivot": [-5, 13.9, -6.65]
+				},
+				{
+					"name": "peq",
+					"parent": "uper",
+					"pivot": [-5.875, 14.7, -6.4]
+				},
+				{
+					"name": "magazine",
+					"parent": "gun",
+					"pivot": [-4.5, 11.75, -5.9]
+				},
+				{
+					"name": "bullet",
+					"parent": "magazine",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "bullet2",
+					"parent": "magazine",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "lower",
+					"parent": "gun",
+					"pivot": [-5, 12.25, -4.9]
+				},
+				{
+					"name": "stock",
+					"parent": "lower",
+					"pivot": [-4.99999, 13.44909, 4.01903]
+				},
+				{
+					"name": "scope",
+					"parent": "gun",
+					"pivot": [-5.0325, 16.30429, -4.14186],
+					"cubes": [
+						{
+							"origin": [-5.06, 16.255, -3.425],
+							"size": [0.55, 0.551, 0.475],
+							"pivot": [-5, 16.75, -4.4],
+							"rotation": [0, 0, 45],
+							"uv": {
+								"north": {"uv": [15.5, 1.5], "uv_size": [0.5, 0.5]},
+								"east": {"uv": [3, 2], "uv_size": [3.25, 0.5]},
+								"south": {"uv": [15.5, 1], "uv_size": [0.5, 0.5]},
+								"west": {"uv": [3, 3], "uv_size": [3.25, 0.5]},
+								"up": {"uv": [2, 4], "uv_size": [0.5, 3.25]},
+								"down": {"uv": [3, 7.25], "uv_size": [0.5, -3.25]}
+							}
+						}
+					]
+				},
+				{
+					"name": "red_dot",
+					"parent": "scope",
+					"pivot": [-5, 16.75, -4.4],
+					"cubes": [
+						{
+							"origin": [-4.8, 16.5, -4.175],
+							"size": [0.05, 0.05, 0],
+							"pivot": [-5, 16.75, -4.4],
+							"rotation": [0, 0, 45],
+							"uv": {
+								"north": {"uv": [8, 1], "uv_size": [0.5, 0.5]},
+								"east": {"uv": [3, 2], "uv_size": [3.25, 0.5]},
+								"south": {"uv": [2, 8], "uv_size": [0.5, 0.5]},
+								"west": {"uv": [3, 3], "uv_size": [3.25, 0.5]},
+								"up": {"uv": [2, 4], "uv_size": [0.5, 3.25]},
+								"down": {"uv": [3, 7.25], "uv_size": [0.5, -3.25]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

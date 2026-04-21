@@ -1,0 +1,118 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.m4a1_pbs",
+				"texture_width": 8,
+				"texture_height": 8,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "rightArmgun",
+					"pivot": [-5, 22, 0]
+				},
+				{
+					"name": "rightArmgun2",
+					"parent": "rightArmgun",
+					"pivot": [-5, 22, 0]
+				},
+				{
+					"name": "gun",
+					"parent": "rightArmgun2",
+					"pivot": [-4.5, 13.25, -2.4],
+					"rotation": [90, 0, 0]
+				},
+				{
+					"name": "bolt",
+					"parent": "gun",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "uper",
+					"parent": "gun",
+					"pivot": [-5, 13.9, -6.9]
+				},
+				{
+					"name": "rukoyatka",
+					"parent": "uper",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "barrel",
+					"parent": "uper",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "handguard",
+					"parent": "uper",
+					"pivot": [-5, 14.69531, -4.42344]
+				},
+				{
+					"name": "celik",
+					"parent": "uper",
+					"pivot": [-5, 13.9, -6.65]
+				},
+				{
+					"name": "celik_da",
+					"parent": "celik",
+					"pivot": [-5, 15.725, -2.44445]
+				},
+				{
+					"name": "peq",
+					"parent": "uper",
+					"pivot": [-5.875, 14.7, -6.4]
+				},
+				{
+					"name": "magazine",
+					"parent": "gun",
+					"pivot": [-4.5, 11.75, -5.9]
+				},
+				{
+					"name": "bullet",
+					"parent": "magazine",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "bullet2",
+					"parent": "magazine",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "lower",
+					"parent": "gun",
+					"pivot": [-5, 12.25, -4.9]
+				},
+				{
+					"name": "stock",
+					"parent": "lower",
+					"pivot": [-4.99999, 13.44909, 4.01903]
+				},
+				{
+					"name": "glushak",
+					"parent": "gun",
+					"pivot": [-4.99999, 14.64006, -18.15781],
+					"cubes": [
+						{
+							"origin": [-5.38437, 14.23281, -22.74375],
+							"size": [0.84688, 0.84688, 5.27188],
+							"pivot": [-5, 14.69531, -4.42344],
+							"rotation": [0, 0, 45],
+							"uv": {
+								"north": {"uv": [2, 2], "uv_size": [0.75, 0.75]},
+								"east": {"uv": [0, 0], "uv_size": [5.25, 0.75]},
+								"south": {"uv": [2, 3], "uv_size": [0.75, 0.75]},
+								"west": {"uv": [0, 1], "uv_size": [5.25, 0.75]},
+								"up": {"uv": [0, 2], "uv_size": [0.75, 5.25]},
+								"down": {"uv": [1, 7.25], "uv_size": [0.75, -5.25]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

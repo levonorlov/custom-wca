@@ -1,0 +1,30 @@
+{
+  "format_version": 2,
+  "header": {
+    "description":"World Conflict addon by YouTube:@4uXoH, credits: YouTube:@cken_team",
+    "name": "WCA 1.1.4",
+    "uuid": "443ccb5b-c677-43d5-a55a-ce386ccdc5e7",
+    "version": [
+      1,
+      1,
+      4
+    ],
+    "min_engine_version": [
+      1,
+      20,
+      0
+    ]
+  },
+  "modules": [
+    {
+      "description": "ezy,e&-=€-€=-=€ by cn,j,f",
+      "type": "resources",
+      "uuid": "b1cf2591-b158-4279-9f7d-7431b47bbed0",
+      "version": [
+        1,
+        0,
+        3
+      ]
+    }
+  ]
+}

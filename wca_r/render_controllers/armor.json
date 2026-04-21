@@ -1,0 +1,107 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.povyazka": {
+      "textures": [
+	"q.is_item_name_any('slot.inventory',1,'addon:povyazka_blue') ? Texture.povyazka_blue : ( q.is_item_name_any('slot.inventory',1,'addon:povyazka_red') ? Texture.povyazka_red : ( q.is_item_name_any('slot.inventory',1,'addon:povyazka_green') ? Texture.povyazka_green : ( q.is_item_name_any('slot.inventory',1,'addon:povyazka_yellow') ? Texture.povyazka_yellow : ( (texture.povyazka_white)))))"
+	  ],
+        "geometry": "Geometry.povyazka",
+        "materials": [
+          { "*": "Material.default" }
+        ]
+      },
+      "controller.render.balaklava": {
+      "is_hurt_color": {},
+      "on_fire_color": {},
+      "geometry": "Geometry.balaklava",
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [
+	"q.is_item_name_any('slot.inventory',0,'addon:balaklava2') ? Texture.balaklava2 : ( q.is_item_name_any('slot.inventory',0,'addon:balaklava_sand') ? Texture.balaklava_sand : ( (texture.balaklava)))"
+	  ]
+     },
+   "controller.render.panama_usa": {
+   "is_hurt_color": {},
+   "on_fire_color": {},
+   "geometry": "Geometry.panama_usa",
+   "materials": [ { "*": "Material.default" } ],
+   "textures": [ "Texture.panama_usa" ]
+  },
+   "controller.render.pasgtv": {
+   "is_hurt_color": {},
+   "on_fire_color": {},
+   "geometry": "Geometry.pasgtv",
+   "materials": [ { "*": "Material.default" } ],
+   "textures": [ "Texture.pasgtv" ]
+  },
+  "controller.render.pasgth": {
+  "is_hurt_color": {},
+  "on_fire_color": {},
+  "geometry": "Geometry.pasgth",
+  "materials": [ { "*": "Material.default" } ],
+  "textures": [ "Texture.pasgth" ]
+ },
+ "controller.render.alice": {
+ "is_hurt_color": {},
+ "on_fire_color": {},
+ "geometry": "Geometry.alice",
+ "materials": [ { "*": "Material.default" } ],
+ "textures": [ "Texture.alice" ]
+},
+      "controller.render.m88_butan": {
+      "is_hurt_color": {},
+      "on_fire_color": {},
+      "geometry": "Geometry.m88",
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [ "Texture.m88_butan" ]
+     },
+     "controller.render.m88_berezka": {
+     "is_hurt_color": {},
+     "on_fire_color": {},
+     "geometry": "Geometry.m88",
+     "materials": [ { "*": "Material.default" } ],
+     "textures": [ "Texture.m88_berezka" ]
+    },
+     "controller.render.v6b2": {
+     "is_hurt_color": {},
+     "on_fire_color": {},
+     "geometry": "Geometry.v6b2",
+     "materials": [ { "*": "Material.default" } ],
+     "textures": [ "Texture.v6b2" ]
+    },
+     "controller.render.v6b3": {
+     "is_hurt_color": {},
+     "on_fire_color": {},
+     "geometry": "Geometry.v6b3",
+     "materials": [ { "*": "Material.default" } ],
+     "textures": [ "Texture.v6b3" ]
+    },
+    "controller.render.ssh68": {
+    "is_hurt_color": {},
+    "on_fire_color": {},
+    "geometry": "Geometry.ssh68",
+    "materials": [ { "*": "Material.default" } ],
+    "textures": [ "Texture.ssh68" ]
+   },
+   "controller.render.panama_berezka": {
+   "is_hurt_color": {},
+   "on_fire_color": {},
+   "geometry": "Geometry.panama",
+   "materials": [ { "*": "Material.default" } ],
+   "textures": [ "Texture.panama_berezka" ]
+  },
+  "controller.render.sumka_vog": {
+  "is_hurt_color": {},
+  "on_fire_color": {},
+  "geometry": "Geometry.sumka_vog",
+  "materials": [ { "*": "Material.default" } ],
+  "textures": [ "Texture.sumka_vog" ]
+ },
+ "controller.render.rpg_sumka": {
+ "is_hurt_color": {},
+ "on_fire_color": {},
+ "geometry": "Geometry.rpg_sumka",
+ "materials": [ { "*": "Material.default" } ],
+ "textures": [ "Texture.rpg_sumka" ]
+}
+  }
+}

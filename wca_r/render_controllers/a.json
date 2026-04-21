@@ -1,0 +1,82 @@
+{
+  "format_version":"1.8.0",
+  "render_controllers": {
+        "controller.render.large_item": {
+            "geometry": "Geometry.default",
+            "materials": [{ "*": "variable.is_enchanted ? Material.enchanted : Material.default" }],
+            "textures": ["Texture.default", "Texture.enchanted"]
+        },
+    "controller.render.bmp3_pushka": {
+       "geometry": "Geometry.bmp3",
+       "materials": [ { "*": "Material.slime" } ],
+       "textures": [ "Texture.bmp3" ],
+       "is_hurt_color": {},
+       "on_fire_color": {}
+      },
+      "controller.render.letchik": {
+         "geometry": "Geometry.letchik",
+         "materials": [ { "*": "Material.default" } ],
+         "textures": [ "Texture.letchik" ],
+         "is_hurt_color": {},
+         "on_fire_color": {}
+        },
+    "controller.render.bmp2d_gusla_move": {
+       "geometry": "Geometry.gusla",
+       "materials": [ { "*": "Material.flash" } ],
+       "textures": [ "Texture.gusla" ],
+       "is_hurt_color": {},
+       "on_fire_color": {},
+       "uv_anim": {
+         "offset": [
+           0.0,
+           "math.mod(math.floor(query.life_time * 10),2) / 2"
+         ],
+         "scale": [
+           1.0,
+           "1 / 2"
+         ]
+       }
+      },
+      "controller.render.btr80": {
+          "textures": [
+            "query.get_name == 'sand' ? Texture.sand : (texture.default)"],
+          "geometry": "Geometry.default",
+          "materials": [
+            { "*": "Material.default" }
+          ],
+          "part_visibility": [
+            { "*": true },
+            { "head": "!q.has_rider" },
+            { "anteni": "!q.has_rider" },
+            { "krishka": "!q.has_rider" },
+            { "pushka": "!q.has_rider" },
+            { "2a42": "!q.has_rider" },
+            { "2a72": "!q.has_rider" },
+            { "gilza_bmp3": "!q.has_rider" },
+            { "gilza_2a72": "!q.has_rider" }
+          ],
+          "is_hurt_color": {},
+          "on_fire_color": {}
+        },
+	"controller.render.bmp2d": {
+      "textures": ["Texture.default"],
+      "geometry": "Geometry.default",
+      "materials": [
+        { "*": "Material.default" }
+      ],
+      "is_hurt_color": {},
+      "on_fire_color": {}
+    },
+    "controller.render.bmp2d_gusla": {
+        "textures": [
+    "texture.gusla_2"
+      ],
+        "geometry": "Geometry.gusla",
+        "materials": [
+          { "*": "Material.default" }
+        ],
+        "is_hurt_color": {},
+        "on_fire_color": {}
+      }
+  }
+}

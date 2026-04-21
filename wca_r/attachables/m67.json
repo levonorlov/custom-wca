@@ -1,0 +1,47 @@
+
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "addon:m67",
+      "materials": {
+        "default": "entity_alphatest",
+        "slime": "slime_outer"
+      },
+      "textures": {
+        "default": "textures/entity/m67"
+      },
+      "geometry": {
+        "default":  "geometry.m67"
+      },
+      "scripts": {
+        "pre_animation": [
+           "v.main_hand = c.item_slot == 'main_hand';",
+           "v.m67 = c.item_slot == 'main_hand';",
+           "v.fire = q.main_hand_item_use_duration > 0.0f;"
+        ],
+        "animate": [
+          {"m67_controller": "c.is_first_person"},
+          {"m67_controller_third": "!c.is_first_person"}
+
+        ]
+      },
+      "animations": {
+        "m67_controller": "controller.animation.m67",
+        "m67": "animation.m67",
+        "crawl": "controller.animation.crawl",
+        "crawl1": "animation.crawl1",
+        "crawl2": "animation.crawl2",
+        "m67_use": "animation.m67_use",
+        "m67_unuse": "animation.m67_unuse",
+				"m67_controller_third": "controller.animation.m67_third",
+        "m67_third": "animation.m67_third",
+        "m67_use_third": "animation.m67_use_third",
+        "m67_unuse_third": "animation.m67_unuse_third"
+      },
+      "render_controllers": [ 
+        "controller.render.crossbow"
+    ]
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.dviglo",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "bb_main2",
+					"pivot": [0, 0, 0],
+					"locators": {
+						"dviglo": [-13, 13, -1],
+						"dviglo2": [13, 13, -1],
+						"dviglo5": [13, 13, -11],
+						"dviglo4": [-13, 13, -11],
+						"dviglo3": [0, 12, -14],
+						"dviglo_iskri": [0, 12, -1]
+					}
+				},
+				{
+					"name": "bb_main",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "head",
+					"pivot": [0, 0, 0]
+				}
+			]
+		}
+	]
+}

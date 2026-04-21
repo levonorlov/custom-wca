@@ -1,0 +1,43 @@
+
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "addon:m16a2_m203",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/guns/nato/m16a2",
+        "gl": "textures/guns/m203_early"
+      },
+      "geometry": {
+        "default":  "geometry.m16a2",
+        "gl":  "geometry.m203_early"
+      },
+      "scripts": {
+        "pre_animation": [
+           "v.main_hand = c.item_slot == 'main_hand';",
+           "v.m16a2 = c.item_slot == 'main_hand';",
+           "v.fire = q.main_hand_item_use_duration > 0.0f;"
+        ],
+        "animate": [
+          {"m16a2_controller": "c.is_first_person"},
+          {"m16a2_fire_controller": "variable.m16a2 && variable.is_first_person"}
+
+        ]
+      },
+      "animations": {
+        "m16a2_controller": "controller.animation.m16a2",
+        "m16a2_m203_sprint": "animation.m16a2_m203_sprint",
+        "m16a2_m203_gl": "animation.m16a2_m203_gl",
+        "m203_m16a2_reload": "animation.m203_m16a2_reload",
+        "m203_m16a2_aim": "animation.m203_m16a2_aim",
+        "m16a2_m203": "animation.m16a2_m203",
+        "m16a2_m203_ungl": "animation.m16a2_m203_ungl",
+        "m16a2_reload": "animation.m16a2_reload_item"
+      },
+      "render_controllers": [ "controller.render.m16a1","controller.render.gl" ]
+    }
+  }
+}

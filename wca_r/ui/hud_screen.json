@@ -1,0 +1,87 @@
+{
+	"root_panel": {
+		"modifications": [
+			{
+				"array_name": "controls",
+				"operation": "insert_front",
+				"value": [{ "hud_renderer@hud.hud_renderer": {} },
+				{ "svd_scope_renderer@hud.hud_svd_scope_render": {} },
+				{"scope_factory@hud.scope_factory": {}}
+			]
+			}
+		]
+	},
+
+	"hud_renderer": {
+		"renderer": "live_player_renderer",
+		"size": [20, 20],
+		"anchor_from": "center",
+		"anchor_to": "center",
+		"layer": 0,
+		"type": "custom",
+		"offset": [5865, 0],
+		"bindings": [
+			{
+				"binding_name": "#show_survival_ui",
+				"binding_name_override": "#visible"
+			}
+		]
+	},
+	"scope_renderer": {
+		"type": "image",
+		"offset": [0,0],
+		"texture": "$texture",
+		"anchor_from": "top_right ",
+		"anchor_to": "top_right ",
+		"size": ["275%", "275%"],
+		"$texture|default": "textures/ui/empty",
+		"layer": 2,
+		"variables": [
+			{
+				"requires": "($title_text = 'hud.b8')",
+				"$texture": "textures/ui/b8_scope"
+			},
+			{
+				"requires": "($title_text = 'hud.m22')",
+				"$texture": "textures/ui/m22_scope"
+			},
+			{
+				"requires": "($title_text = 'hud.svd_scope')",
+				"$texture": "textures/ui/svd_scope"
+			},
+			{
+				"requires": "($title_text = 'hud.svds_scope')",
+				"$texture": "textures/ui/svds_scope"
+			},
+			{
+				"requires": "($title_text = 'hud.mosin_scope')",
+				"$texture": "textures/ui/mosin_scope"
+			},
+			{
+				"requires": "($title_text = 'hud.m21_scope')",
+				"$texture": "textures/ui/m21_scope"
+			},
+			{
+				"requires": "($title_text = 'hud.m110_scope')",
+				"$texture": "textures/ui/m110_scope"
+			},
+			{
+				"requires": "($title_text = 'hud.empty')",
+				"$texture": "textures/ui/empty"
+			}
+		]
+	}, 
+	"scope_factory":{
+	"type": "panel",
+		"factory": {
+			"name": "hud_title_text_factory",
+			"control_ids": {
+				"hud_title_text": "scope_renderer@hud.scope_renderer"
+			}
+		}
+	}, 
+//Если в титл есть hud., то текста будет не видно
+	"hud_title_text":{
+    "ignored":"($title_text > 'hud')"
+    }
+}

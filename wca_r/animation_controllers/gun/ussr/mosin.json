@@ -1,0 +1,268 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.mosin_fire": {
+			"initial_state": "setup",
+			"states": {
+				"setup": {
+					"transitions": [
+						{"fire": "query.property('gun:fire') == 1"}
+					]
+				},
+				"fire": {
+					"animations": [
+						{"mosin_shoot": "v.mosin"}
+					],
+					"transitions": [
+						{
+						  "fire": "query.property('gun:fire') == 1"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.mosin_sneak": {
+			"initial_state": "setup",
+			"states": {
+				"setup": {
+					"transitions": [
+						{"hold": "variable.mosin"}
+					]
+				},
+				"hold": {
+					"animations": [
+						{"mosin_sneak": "v.mosin"}
+					],
+					"transitions": [
+						{"zatvor": "q.property('addon:gun') == 5"},
+						{"reload": "q.property('addon:gun') == 2"},
+						{"reload2": "q.property('addon:gun') == 3"},
+                        {"moving": "query.is_riding && query.ground_speed > 0.0"}
+					],
+					"blend_transition": 0.1
+				},
+				"zatvor": {
+					"animations": [
+						{"mosin_zatvor_sneak": "v.mosin"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"}
+					]
+				},
+                "moving": {
+                    "animations": [
+                        {"crawl2": "v.mosin"}
+                    ],
+                    "blend_transition": 0.1,
+                    "blend_via_shortest_path": true,
+                    "transitions": [
+                        {
+                            "hold": "query.is_riding && query.ground_speed == 0.0"
+                        },
+                        {
+                            "default": "!query.is_riding"
+                        }
+                    ]
+                },
+				"reload": {
+					"animations": [
+						{"mosin_reload_sneak": "v.mosin"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "q.property('addon:gun') != 2"}
+					]
+				},
+				"reload2": {
+					"animations": [
+						{"mosin_reload2_sneak": "v.mosin"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "q.property('addon:gun') != 3"}
+					]
+				}
+			}
+		},
+		"controller.animation.mosin_third": {
+			"initial_state": "setup",
+			"states": {
+				"setup": {
+					"transitions": [
+						{"hold": "variable.mosin"}
+					]
+				},
+				"hold": {
+					"animations": [
+						{"mosin_third": "v.mosin"}
+					],
+					"transitions": [
+						{"hold2": "q.all_animations_finished && q.is_using_item"},
+						{"gun_third": "q.all_animations_finished && !q.is_using_item"},
+						{"reload": "q.property('addon:gun') == 2"},
+						{"aim": "q.is_sneaking"},
+						{"sprint": "q.is_sprinting && !q.is_using_item"},
+						{"zatvor": "q.property('addon:gun') == 5"},
+						{"reload2": "q.property('addon:gun') == 3"}
+					],
+					"blend_transition": 0.1
+				},
+				
+				"zatvor": {
+					"animations": [
+						{"mosin_zatvor_third": "v.mosin"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"}
+					]
+				},
+				"hold2": {
+					"animations": [
+						{"mosin_third": "v.mosin"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished && q.is_using_item"},
+						{"gun_third": "q.all_animations_finished && !q.is_using_item"},
+						{"reload": "q.property('addon:gun') == 2"},
+						{"aim": "q.is_sneaking"},
+						{"sprint": "q.is_sprinting && !q.is_using_item"},
+						{"zatvor": "q.property('addon:gun') == 5"},
+						{"reload2": "q.property('addon:gun') == 3"}
+					],
+					"blend_transition": 0.1
+				},
+				"gun_third": {
+					"animations": [
+						{"gun_third": "v.mosin"}
+					],
+					"transitions": [
+						{"hold": "q.is_using_item"},
+						{"reload": "q.property('addon:gun') == 2"},
+						{"aim": "q.is_sneaking"},
+						{"sprint": "q.is_sprinting && !q.is_using_item"},
+						{"zatvor": "q.property('addon:gun') == 5"},
+						{"reload2": "q.property('addon:gun') == 3"}
+					],
+					"blend_transition": 0.15
+				},
+				"reload": {
+					"animations": [
+						{"mosin_reload_third": "v.mosin"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "q.property('addon:gun') != 2"}
+					]
+				},
+				"reload2": {
+					"animations": [
+						{"mosin_reload2_third": "v.mosin"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "q.property('addon:gun') != 3"}
+					]
+				},
+				"aim": {
+					"animations": [
+						{"mosin_aim_third": "v.mosin"}
+					],
+					"transitions": [
+						{"hold": "!q.is_sneaking"},
+						{"zatvor": "q.property('addon:gun') == 5"},
+						{"reload": "q.property('addon:gun') == 2"},
+						{"reload2": "q.property('addon:gun') == 3"}
+					],
+					"blend_transition": 0.1
+				},
+				"sprint": {
+					"animations": [
+						{"mosin_sprint_third": "v.mosin"}
+					],
+					"transitions": [
+						{"hold": "!q.is_sprinting"},
+						{"hold": "q.is_using_item"},
+						{"zatvor": "q.property('addon:gun') == 5"},
+						{"reload": "q.property('addon:gun') == 2"},
+						{"reload2": "q.property('addon:gun') == 3"}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		},
+		"controller.animation.mosin": {
+			"initial_state": "setup",
+			"states": {
+				"setup": {
+					"transitions": [
+						{"hold": "variable.mosin"}
+					]
+				},
+				"hold": {
+					"animations": [
+						{"mosin": "v.mosin"}
+					],
+					"transitions": [
+						{"reload": "q.property('addon:gun') == 2"},
+						{"zatvor": "q.property('addon:gun') == 5"},
+						{"aim": "q.is_sneaking"},
+						{"sprint": "q.is_sprinting && !q.is_using_item"},
+						{"reload2": "q.property('addon:gun') == 3"}
+					],
+					"blend_transition": 0.1
+				},
+				"zatvor": {
+					"animations": [
+						{"mosin_zatvor": "v.mosin"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"}
+					]
+				},
+				"reload": {
+					"animations": [
+						{"mosin_reload": "v.mosin"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "q.property('addon:gun') != 2"}
+					]
+				},
+				"reload2": {
+					"animations": [
+						{"mosin_reload2": "v.mosin"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "q.property('addon:gun') != 3"}
+					]
+				},
+				"aim": {
+					"animations": [
+						{"mosin_aim": "v.mosin"}
+					],
+					"transitions": [
+						{"hold": "!q.is_sneaking"},
+						{"zatvor": "q.property('addon:gun') == 5"},
+						{"reload": "q.property('addon:gun') == 2"},
+						{"reload2": "q.property('addon:gun') == 3"}
+					],
+					"blend_transition": 0.1
+				},
+				"sprint": {
+					"animations": [
+						{"mosin_sprint": "v.mosin"}
+					],
+					"transitions": [
+						{"hold": "!q.is_sprinting"},
+						{"hold": "q.is_using_item"},
+						{"zatvor": "q.property('addon:gun') == 5"},
+						{"reload": "q.property('addon:gun') == 2"},
+						{"reload2": "q.property('addon:gun') == 3"}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		}
+	}
+}

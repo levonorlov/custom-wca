@@ -1,0 +1,312 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.m249_fire": {
+			"initial_state": "setup",
+			"states": {
+				"setup": {
+					"transitions": [
+						{"fire": "query.property('gun:fire') == 1"}
+					]
+				},
+				"fire": {
+					"animations": [
+						{"shoot": "v.m249"}
+					],
+					"transitions": [
+						{
+						  "fire": "query.property('gun:fire') == 1"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.m249_sneak": {
+			"initial_state": "setup",
+			"states": {
+				"setup": {
+					"transitions": [
+						{"hold": "variable.m249"}
+					]
+				},
+				"hold": {
+					"animations": [
+						{"m249_sneak": "v.m249"}
+					],
+					"transitions": [
+						{"reload": "q.property('addon:gun') == 2"},
+						{"reload2": "q.property('addon:gun') == 3"},
+                        {"moving": "query.is_riding && query.ground_speed > 0.0"}
+					],
+					"blend_transition": 0.1
+				},
+                "moving": {
+                    "animations": [
+                        {"crawl2": "v.m249"}
+                    ],
+                    "blend_transition": 0.1,
+                    "blend_via_shortest_path": true,
+                    "transitions": [
+                        {
+                            "hold": "query.is_riding && query.ground_speed == 0.0"
+                        },
+                        {
+                            "default": "!query.is_riding"
+                        }
+                    ]
+                },
+				"reload": {
+					"animations": [
+						{"m249_reload_sneak": "v.m249"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "q.property('addon:gun') != 2"}
+					]
+				},
+				"reload2": {
+					"animations": [
+						{"m249_reload2_sneak": "v.m249"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "q.property('addon:gun') != 3"}
+					]
+				}
+			}
+		},
+		"controller.animation.m249_third": {
+			"initial_state": "setup",
+			"states": {
+				"setup": {
+					"transitions": [
+						{"hold": "variable.m249"}
+					]
+				},
+				"hold": {
+					"animations": [
+						{"m249_third": "v.m249"}
+					],
+					"transitions": [
+						{"hold2": "q.all_animations_finished && q.is_using_item"},
+						{"gun_third": "q.all_animations_finished && !q.is_using_item"},
+						{"reload": "q.property('addon:gun') == 2"},
+						{"aim": "q.is_sneaking"},
+						{"sprint": "q.is_sprinting && !q.is_using_item"},
+						{"reload2": "q.property('addon:gun') == 3"}
+					],
+					"blend_transition": 0.1
+				},
+				"hold2": {
+					"animations": [
+						{"m249_third": "v.m249"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished && q.is_using_item"},
+						{"gun_third": "q.all_animations_finished && !q.is_using_item"},
+						{"reload": "q.property('addon:gun') == 2"},
+						{"aim": "q.is_sneaking"},
+						{"sprint": "q.is_sprinting && !q.is_using_item"},
+						{"reload2": "q.property('addon:gun') == 3"}
+					],
+					"blend_transition": 0.1
+				},
+				"gun_third": {
+					"animations": [
+						{"gun_third": "v.m249"}
+					],
+					"transitions": [
+						{"hold": "q.is_using_item"},
+						{"reload": "q.property('addon:gun') == 2"},
+						{"aim": "q.is_sneaking"},
+						{"sprint": "q.is_sprinting && !q.is_using_item"},
+						{"reload2": "q.property('addon:gun') == 3"}
+					],
+					"blend_transition": 0.15
+				},
+				"reload_m203": {
+					"animations": [
+						{"m203_m249_reload_third": "v.m249"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "q.property('m249:m203') == 3"}
+					]
+				},
+				"reload": {
+					"animations": [
+						{"m249_reload_third": "v.m249"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "q.property('addon:gun') != 2"}
+					]
+				},
+				"reload2": {
+					"animations": [
+						{"m249_reload2_third": "v.m249"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "q.property('addon:gun') != 3"}
+					]
+				},
+				"aim": {
+					"animations": [
+						{"m249_aim_third": "v.m249"}
+					],
+					"transitions": [
+						{"reload_m203": "q.property('m249:m203') == 2"},
+						{"hold": "!q.is_sneaking"},
+						{"reload": "q.property('addon:gun') == 2"},
+						{"reload2": "q.property('addon:gun') == 3"}
+					],
+					"blend_transition": 0.1
+				},
+				"sprint": {
+					"animations": [
+						{"m249_sprint_third": "v.m249"}
+					],
+					"transitions": [
+						{"reload_m203": "q.property('m249:m203') == 2"},
+						{"hold": "!q.is_sprinting"},
+						{"hold": "q.is_using_item"},
+						{"reload": "q.property('addon:gun') == 2"},
+						{"reload2": "q.property('addon:gun') == 3"}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		},
+		"controller.animation.m249": {
+			"initial_state": "setup",
+			"states": {
+				"setup": {
+					"transitions": [
+						{"hold": "variable.m249"}
+					]
+				},
+				"hold": {
+					"animations": [
+						{"m249": "v.m249"}
+					],
+					"transitions": [
+						{"reload": "q.property('addon:gun') == 2"},
+						{"aim": "q.is_sneaking"},
+						{"sprint": "q.is_sprinting && !q.is_using_item"},
+						{"reload2": "q.property('addon:gun') == 3"},
+						{"gl": "q.property('m249:m203') == 1 || q.property('m249:m203') == 3"}
+					],
+					"blend_transition": 0.1
+				},
+				"gl": {
+					"animations": [
+						{"m249_m203_gl": "v.m249"}
+					],
+					"transitions": [
+						{"m203": "q.all_animations_finished"}
+					],
+					"blend_transition": 0.1
+				},
+				"ungl": {
+					"animations": [
+						{"m249_m203_ungl": "v.m249"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"}
+					],
+					"blend_transition": 0.1
+				},
+				"m203": {
+					"animations": [
+						{"m249_m203": "v.m249"}
+					],
+					"transitions": [
+						{"reload_m203": "q.property('m249:m203') == 2"},
+						{"aim_m203": "q.is_sneaking"},
+						{"sprint_m203": "q.is_sprinting"},
+						{"ungl": "q.property('m249:m203') == 0 || q.property('m249:m203') == 4"}
+					],
+					"blend_transition": 0.1
+				},
+				"reload_m203": {
+					"animations": [
+						{"m203_m249_reload": "v.m249"}
+					],
+					"transitions": [
+						{"m203": "q.all_animations_finished"},
+						{"m203": "q.property('m249:m203') == 3"}
+					]
+				},
+				"aim_m203": {
+					"animations": [
+						{"m203_m249_aim": "v.m249"}
+					],
+					"transitions": [
+						{"m203": "!q.is_sneaking"},
+						{"reload_m203": "q.property('m249:m203') == 2"},
+						{"ungl": "q.property('m249:m203') == 0 || q.property('m249:m203') == 4"}
+					],
+					"blend_transition": 0.1
+				},
+				"reload": {
+					"animations": [
+						{"m249_reload": "v.m249"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "q.property('addon:gun') != 2"}
+					]
+				},
+				"reload2": {
+					"animations": [
+						{"m249_reload2": "v.m249 && !query.equipped_item_any_tag('slot.weapon.mainhand','m203')"},
+						{"m249_m203_reload2": "v.m249 && query.equipped_item_any_tag('slot.weapon.mainhand','m203')"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "q.property('addon:gun') != 3"}
+					]
+				},
+				"aim": {
+					"animations": [
+						{"m249_aim": "v.m249 && !v.eotech && !query.equipped_item_any_tag('slot.weapon.mainhand','m68')"},
+						{"m249_aim_m68": "v.m249 && query.equipped_item_any_tag('slot.weapon.mainhand','m68')"},
+						{"m249_aim_eotech": "v.m249 && v.eotech"}
+					],
+					"transitions": [
+						{"hold": "!q.is_sneaking"},
+						{"reload": "q.property('addon:gun') == 2"},
+						{"reload2": "q.property('addon:gun') == 3"},
+						{"gl": "q.property('m249:m203') == 1 || q.property('m249:m203') == 3"}
+					],
+					"blend_transition": 0.1
+				},
+				"sprint": {
+					"animations": [
+						{"m249_sprint": "v.m249"}
+					],
+					"transitions": [
+						{"hold": "!q.is_sprinting"},
+						{"hold": "q.is_using_item"},
+						{"reload": "q.property('addon:gun') == 2"},
+						{"reload2": "q.property('addon:gun') == 3"},
+						{"gl": "q.property('m249:m203') == 1 || q.property('m249:m203') == 3"}
+					],
+					"blend_transition": 0.2
+				},
+				"sprint_m203": {
+					"animations": [
+						{"m249_m203_sprint": "v.m249"}
+					],
+					"transitions": [
+						{"m203": "!q.is_sprinting"},
+						{"reload_m203": "q.property('m249:m203') == 2"},
+						{"ungl": "q.property('m249:m203') == 0 || q.property('m249:m203') == 4"}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		}
+	}
+}

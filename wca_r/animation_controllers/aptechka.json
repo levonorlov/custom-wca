@@ -1,0 +1,57 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.aptechka": {
+      "initial_state": "setup",
+      "states": {
+        "setup": {
+          "transitions": [
+            {
+              "ai2_use": "query.is_item_name_any('slot.weapon.mainhand',0,'addon:aptechka') && q.is_using_item"
+            }]
+        },
+        "ai2_use": {
+          "animations": [
+            {
+              "aptechka": "query.is_item_name_any('slot.weapon.mainhand',0,'addon:aptechka')"
+            }
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            },
+            {
+              "setup": "!query.is_item_name_any('slot.weapon.mainhand',0,'addon:aptechka')"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.aptechka_third": {
+      "initial_state": "setup",
+      "states": {
+        "setup": {
+          "transitions": [
+            {
+              "ai2_use": "query.is_item_name_any('slot.weapon.mainhand',0,'addon:aptechka') && q.is_using_item"
+            }]
+        },
+        "ai2_use": {
+          "animations": [
+            {
+              "aptechka_third": "query.is_item_name_any('slot.weapon.mainhand',0,'addon:aptechka')"
+            }
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            },
+            {
+              "setup": "!query.is_item_name_any('slot.weapon.mainhand',0,'addon:aptechka')"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

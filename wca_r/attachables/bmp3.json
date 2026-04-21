@@ -1,0 +1,36 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "addon:bmp3_h.player",
+			"item": {
+				"addon:bmp3_h": "q.is_owner_identifier_any('minecraft:player')"
+			},
+			"materials": {
+				"default": "armor",
+				"enchanted": "armor_enchanted"
+			},
+			"textures": {
+				"default": "textures/entity/ussr/bmp3"
+			},
+			"geometry": {
+				"default": "geometry.bmp3_bashnya"
+			},
+			"animations": {
+				"fire_2a72": "controller.animation.fire_bmp3_2a72",
+				"fire_2a70": "controller.animation.fire_bmp3_2a70",
+			 "2a72_fire": "animation.2a72_fire",
+			 "2a70_fire": "animation.2a70_fire",
+			  "look_at_target": "animation.common.look_at_target_tunk2"
+			},
+			"scripts": {
+				"animate": [
+					"fire_2a72",
+					"fire_2a70",
+					"look_at_target"
+				]
+			},
+			"render_controllers": ["controller.render.armor"]
+		}
+	}
+}

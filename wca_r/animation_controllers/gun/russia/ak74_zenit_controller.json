@@ -1,0 +1,288 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.ak74m_zenit_sneak": {
+			"initial_state": "setup",
+			"states": {
+				"setup": {
+					"transitions": [
+						{"hold": "variable.ak74m_zenit"}
+					]
+				},
+				"hold": {
+					"animations": [
+						{"ak74m_zenit_sneak": "v.ak74m_zenit"}
+					],
+					"transitions": [
+						{"reload": "q.property('addon:gun') == 2"},
+						{"reload2": "q.property('addon:gun') == 3"},
+                        {"moving": "query.is_riding && query.ground_speed > 0.0"}
+					],
+					"blend_transition": 0.1
+				},
+                "moving": {
+                    "animations": [
+                        {"crawl2": "v.ak74m_zenit"}
+                    ],
+                    "blend_transition": 0.1,
+                    "blend_via_shortest_path": true,
+                    "transitions": [
+                        {
+                            "hold": "query.is_riding && query.ground_speed == 0.0"
+                        },
+                        {
+                            "default": "!query.is_riding"
+                        }
+                    ]
+                },
+				"reload": {
+					"animations": [
+						{"ak74m_zenit_reload_sneak": "v.ak74m_zenit"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "q.property('addon:gun') != 2"}
+					]
+				},
+				"reload2": {
+					"animations": [
+						{"ak74m_zenit_reload2_sneak": "v.ak74m_zenit"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "q.property('addon:gun') != 3"}
+					]
+				}
+			}
+		},
+		"controller.animation.ak74m_zenit_third": {
+			"initial_state": "setup",
+			"states": {
+				"setup": {
+					"transitions": [
+						{"hold": "variable.ak74m_zenit"}
+					]
+				},
+				"hold": {
+					"animations": [
+						{"ak74m_zenit_third": "v.ak74m_zenit"}
+					],
+					"transitions": [
+						{"hold2": "q.all_animations_finished && q.is_using_item"},
+						{"gun_third": "q.all_animations_finished && !q.is_using_item"},
+						{"reload_gp25": "q.property('ak74m_zenit:gp25') == 2"},
+						{"reload": "q.property('addon:gun') == 2"},
+						{"aim": "q.is_sneaking"},
+						{"sprint": "q.is_sprinting && !q.is_using_item"},
+						{"reload2": "q.property('addon:gun') == 3"}
+					],
+					"blend_transition": 0.1
+				},
+				"hold2": {
+					"animations": [
+						{"ak74m_zenit_third": "v.ak74m_zenit"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished && q.is_using_item"},
+						{"gun_third": "q.all_animations_finished && !q.is_using_item"},
+						{"reload_gp25": "q.property('ak74m_zenit:gp25') == 2"},
+						{"reload": "q.property('addon:gun') == 2"},
+						{"aim": "q.is_sneaking"},
+						{"sprint": "q.is_sprinting && !q.is_using_item"},
+						{"reload2": "q.property('addon:gun') == 3"}
+					],
+					"blend_transition": 0.1
+				},
+				"gun_third": {
+					"animations": [
+						{"gun_third": "v.ak74m_zenit"}
+					],
+					"transitions": [
+						{"hold": "q.is_using_item"},
+						{"reload_gp25": "q.property('ak74m_zenit:gp25') == 2"},
+						{"reload": "q.property('addon:gun') == 2"},
+						{"aim": "q.is_sneaking"},
+						{"sprint": "q.is_sprinting && !q.is_using_item"},
+						{"reload2": "q.property('addon:gun') == 3"}
+					],
+					"blend_transition": 0.15
+				},
+				"reload_gp25": {
+					"animations": [
+						{"gp25_ak74m_zenit_reload_third": "v.ak74m_zenit"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "q.property('ak74m_zenit:gp25') == 3"}
+					]
+				},
+				"reload": {
+					"animations": [
+						{"ak74m_zenit_reload_third": "v.ak74m_zenit"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "q.property('addon:gun') != 2"}
+					]
+				},
+				"reload2": {
+					"animations": [
+						{"ak74m_zenit_reload2_third": "v.ak74m_zenit"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "q.property('addon:gun') != 3"}
+					]
+				},
+				"aim": {
+					"animations": [
+						{"ak74m_zenit_aim_third": "v.ak74m_zenit"}
+					],
+					"transitions": [
+						{"reload_gp25": "q.property('ak74m_zenit:gp25') == 2"},
+						{"hold": "!q.is_sneaking"},
+						{"reload": "q.property('addon:gun') == 2"},
+						{"reload2": "q.property('addon:gun') == 3"}
+					],
+					"blend_transition": 0.1
+				},
+				"sprint": {
+					"animations": [
+						{"ak74m_zenit_sprint_third": "v.ak74m_zenit"}
+					],
+					"transitions": [
+						{"reload_gp25": "q.property('ak74m_zenit:gp25') == 2"},
+						{"hold": "!q.is_sprinting"},
+						{"hold": "q.is_using_item"},
+						{"reload": "q.property('addon:gun') == 2"},
+						{"reload2": "q.property('addon:gun') == 3"}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		},
+		"controller.animation.ak74m_zenit": {
+			"initial_state": "setup",
+			"states": {
+				"setup": {
+					"transitions": [
+						{"hold": "variable.ak74m_zenit"}
+					]
+				},
+				"hold": {
+					"animations": [
+						{"ak74m_zenit": "v.ak74m_zenit && !query.equipped_item_any_tag('slot.weapon.mainhand','gp25')"},
+						{"ak74m_zenit_gp25": "v.ak74m_zenit && query.equipped_item_any_tag('slot.weapon.mainhand','gp25')"}
+					],
+					"transitions": [
+						{"reload": "q.property('addon:gun') == 2"},
+						{"aim": "q.is_sneaking"},
+						{"sprint": "q.is_sprinting && !q.is_using_item"},
+						{"reload2": "q.property('addon:gun') == 3"},
+						{"gp25": "q.property('ak74m_zenit:gp25') == 1 || q.property('ak74m_zenit:gp25') == 3"}
+					],
+					"blend_transition": 0.1
+				},
+				"gl": {
+					"animations": [
+						{"ak74m_zenit_gp25_gl": "v.ak74m_zenit"}
+					],
+					"transitions": [
+						{"gp25": "q.all_animations_finished"}
+					],
+					"blend_transition": 0.1
+				},
+				"ungl": {
+					"animations": [
+						{"ak74m_zenit_gp25_ungl": "v.ak74m_zenit"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"}
+					],
+					"blend_transition": 0.1
+				},
+				"gp25": {
+					"animations": [
+						{"ak74m_zenit_gp25": "v.ak74m_zenit"}
+					],
+					"transitions": [
+						{"reload_gp25": "q.property('ak74m_zenit:gp25') == 2"},
+						{"aim_gp25": "q.is_sneaking"},
+						{"sprint": "q.is_sprinting && !q.is_using_item"},
+						{"hold": "q.property('ak74m_zenit:gp25') == 0 || q.property('ak74m_zenit:gp25') == 4"}
+					],
+					"blend_transition": 0.1
+				},
+				"reload_gp25": {
+					"animations": [
+						{"gp25_ak74m_zenit_reload": "v.ak74m_zenit"}
+					],
+					"transitions": [
+						{"gp25": "q.all_animations_finished"},
+						{"gp25": "q.property('ak74m_zenit:gp25') == 3"}
+					]
+				},
+				"aim_gp25": {
+					"animations": [
+						{"gp25_ak74m_zenit_aim": "v.ak74m_zenit"}
+					],
+					"transitions": [
+						{"aim": "q.property('ak74m_zenit:gp25') == 0 || q.property('ak74m_zenit:gp25') == 4"},
+						{"gp25": "!q.is_sneaking"},
+						{"reload_gp25": "q.property('ak74m_zenit:gp25') == 2"}
+					],
+					"blend_transition": 0.1
+				},
+				"reload": {
+					"animations": [
+						{"ak74m_zenit_reload": "v.ak74m_zenit && !query.equipped_item_any_tag('slot.weapon.mainhand','gp25')"},
+						{"ak74m_zenit_gp25_reload": "v.ak74m_zenit && query.equipped_item_any_tag('slot.weapon.mainhand','gp25')"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "q.property('addon:gun') != 2"}
+					]
+				},
+				"reload2": {
+					"animations": [
+						{"ak74m_zenit_reload2": "v.ak74m_zenit && !query.equipped_item_any_tag('slot.weapon.mainhand','gp25')"},
+						{"ak74m_zenit_gp25_reload2": "v.ak74m_zenit && query.equipped_item_any_tag('slot.weapon.mainhand','gp25')"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "q.property('addon:gun') != 3"}
+					]
+				},
+				"aim": {
+					"animations": [
+						{"ak74m_zenit_aim": "v.ak74m_zenit && !v.eotech && !query.equipped_item_any_tag('slot.weapon.mainhand','1p87') && !query.equipped_item_any_tag('slot.weapon.mainhand','gp25')"},
+						{"ak74m_zenit_aim_gp25": "v.ak74m_zenit && query.equipped_item_any_tag('slot.weapon.mainhand','gp25') && !v.eotech && !query.equipped_item_any_tag('slot.weapon.mainhand','1p87')"},
+						{"ak74m_zenit_aim_1p87": "v.ak74m_zenit && query.equipped_item_any_tag('slot.weapon.mainhand','1p87')"},
+						{"ak74m_zenit_aim_eotech": "v.ak74m_zenit && v.eotech"}
+					],
+					"transitions": [
+						{"aim_gp25": "q.property('ak74m_zenit:gp25') == 1 || q.property('ak74m_zenit:gp25') == 3"},
+						{"hold": "!q.is_sneaking"},
+						{"reload": "q.property('addon:gun') == 2"},
+						{"reload2": "q.property('addon:gun') == 3"}
+					],
+					"blend_transition": 0.1
+				},
+				"sprint": {
+					"animations": [
+						{"ak74m_zenit_sprint_gp25": "v.ak74m_zenit && query.equipped_item_any_tag('slot.weapon.mainhand','gp25')"},
+						{"ak74m_zenit_sprint": "v.ak74m_zenit && !query.equipped_item_any_tag('slot.weapon.mainhand','gp25')"}
+					],
+					"transitions": [
+					{"gp25": "!q.is_sprinting && q.property('ak74m_zenit:gp25') == 1 || q.property('ak74m_zenit:gp25') == 3"},
+						{"hold": "!q.is_sprinting"},
+						{"hold": "q.is_using_item"},
+						{"reload": "q.property('addon:gun') == 2"},
+						{"reload2": "q.property('addon:gun') == 3"}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		}
+	}
+}

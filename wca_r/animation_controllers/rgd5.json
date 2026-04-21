@@ -1,0 +1,113 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.rgd5": {
+      "initial_state": "setup",
+      "states": {
+        "setup": {
+          "animations": [
+              "rgd5"
+          ],
+          "transitions": [
+            {
+              "rgd5_use": "q.is_using_item"
+            }]
+        },
+        "rgd5_use": {
+          "animations": [
+              "rgd5_use"
+          ],
+          "blend_transition": 0.1,
+          "transitions": [
+            {
+              "setup": "!q.is_using_item && !q.any_animation_finished"
+            },
+            {
+              "rgd5_unuse": "!q.is_using_item && q.any_animation_finished"
+            }
+          ]
+        },
+        "rgd5_unuse": {
+          "animations": [
+              "rgd5_unuse"
+          ],
+          "transitions": [
+            {
+              "setup": "q.any_animation_finished"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.rgd5_third": {
+      "initial_state": "setup",
+      "states": {
+        "setup": {
+          "animations": [
+              "rgd5_third"
+          ],
+          "transitions": [
+            {
+                "idle": "query.is_riding && query.mark_variant == 1"
+            },
+            {
+                "moving": "query.is_riding && query.mark_variant == 2"
+            },
+            {
+              "rgd5_use": "q.is_using_item || c.is_using_item"
+            }]
+        },
+        "rgd5_use": {
+          "animations": [
+              "rgd5_use_third"
+          ],
+          "transitions": [
+            {
+              "rgd5_unuse": "!q.is_using_item || !c.is_using_item"
+            }
+          ]
+        },
+        "rgd5_unuse": {
+          "animations": [
+              "rgd5_unuse_third"
+          ],
+          "transitions": [
+            {
+              "setup": "q.any_animation_finished"
+            }
+          ]
+        },
+        "idle": {
+            "animations": [
+                "crawl1"
+            ],
+            "transitions": [
+                {
+                    "moving": "query.ground_speed > 0.0 && query.is_riding"
+                },
+                {
+                    "setup": "!query.is_riding"
+                }
+            ],
+            "blend_transition": 0.1,
+            "blend_via_shortest_path": true
+        },
+        "moving": {
+            "animations": [
+                "crawl2"
+            ],
+            "blend_transition": 0.1,
+            "blend_via_shortest_path": true,
+            "transitions": [
+                {
+                    "idle": "query.ground_speed == 0.0 && query.is_riding"
+                },
+                {
+                    "setup": "!query.is_riding"
+                }
+            ]
+        }
+      }
+    }
+  }
+}

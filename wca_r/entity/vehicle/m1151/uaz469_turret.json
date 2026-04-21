@@ -1,0 +1,41 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "addon:m1151_turret",
+      "materials": {
+        "default": "spider"
+      },
+      "textures": {
+        "default": "textures/entity/vehicle/m1151_turret",
+        "camo": "textures/entity/vehicle/m1151_turret_camo",
+        "m2hb": "textures/entity/vehicle/m2hb"
+      },
+      "animations": {
+        "uaz469": "controller.animation.m1151_m2hb_turret",
+        "reload": "animation.m1151_m2hb_reload"
+      },
+      "scripts": {
+        "animate": [
+        "uaz469"
+        ]
+      },
+      "geometry": {
+        "default": "geometry.m1151_turret",
+        "m2hb": "geometry.m1151_turret_m2"
+      },
+      "render_controllers": [
+        "controller.render.m1151",
+        "controller.render.m2hb"
+      ],
+			"sound_effects": {
+				"m2hbvihod": "addon.kordvihod",
+				"m2hbvhod": "addon.kordvhod",
+				"m2hbzatvor": "addon.kordzatvor",
+				"m2hblenta": "addon.kordlenta",
+				"m2hbopen": "addon.kordopen",
+				"m2hbclose": "addon.kordclose"
+      }
+    }
+  }
+}

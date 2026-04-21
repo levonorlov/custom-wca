@@ -1,0 +1,30 @@
+{
+	"format_version": "1.8.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "addon:ussr_pehota",
+			"materials": {
+				"default": "armor",
+				"enchanted": "armor_enchanted"
+			},
+			"textures": {
+				"m88_butan": "textures/entity/ussr/m88_butan",
+				"ssh68": "textures/entity/ussr/ssh68",
+				"v6b3": "textures/entity/ussr/6b3"
+			},
+			"geometry": {
+				"m88": "geometry.m88",
+				"ssh68": "geometry.ssh68",
+				"v6b3": "geometry.v6b3"
+			},
+			"scripts": {
+				"parent_setup": "variable.chest_layer_visible = 0.0;"
+			},
+			"render_controllers": [
+				"controller.render.m88_butan",
+				"controller.render.ssh68",
+				"controller.render.v6b3"
+			]
+		}
+	}
+}

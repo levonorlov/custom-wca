@@ -1,0 +1,64 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.panama_ussr",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "bone",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "panama",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{
+							"origin": [-4.5, 29.5, -4.5],
+							"size": [9, 4, 9],
+							"inflate": 0.1,
+							"uv": {
+								"north": {"uv": [22, 32], "uv_size": [16, 8]},
+								"east": {"uv": [38, 0], "uv_size": [16, 8]},
+								"south": {"uv": [38, 8], "uv_size": [16, 8]},
+								"west": {"uv": [38, 16], "uv_size": [16, 8]},
+								"up": {"uv": [22, 0], "uv_size": [16, 16]},
+								"down": {"uv": [22, 32], "uv_size": [16, -16]}
+							}
+						},
+						{
+							"origin": [-0.5, 30.825, -4.65],
+							"size": [1, 1, 0],
+							"uv": {
+								"north": {"uv": [38, 24], "uv_size": [2, 2]},
+								"east": {"uv": [0, 0], "uv_size": [0, 2]},
+								"south": {"uv": [38, 26], "uv_size": [2, 2]},
+								"west": {"uv": [0, 0], "uv_size": [0, 2]},
+								"up": {"uv": [0, 0], "uv_size": [2, 0]},
+								"down": {"uv": [0, 0], "uv_size": [2, 0]}
+							}
+						},
+						{
+							"origin": [-6, 29.375, -6],
+							"size": [12, 0, 12],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [22, 0]},
+								"east": {"uv": [0, 0], "uv_size": [22, 0]},
+								"south": {"uv": [0, 0], "uv_size": [22, 0]},
+								"west": {"uv": [0, 0], "uv_size": [22, 0]},
+								"up": {"uv": [0, 0], "uv_size": [22, 22]},
+								"down": {"uv": [0, 44], "uv_size": [22, -22]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

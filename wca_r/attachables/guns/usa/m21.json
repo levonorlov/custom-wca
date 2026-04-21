@@ -1,0 +1,42 @@
+
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "addon:m21",
+      "materials": {
+        "default": "slime_outer",
+        "gun": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/guns/nato/m21"
+      },
+      "geometry": {
+        "default":  "geometry.m21"
+      },
+      "scripts": {
+        "pre_animation": [
+           "v.main_hand = c.item_slot == 'main_hand';",
+           "v.m21 = c.item_slot == 'main_hand';",
+           "v.fire = q.main_hand_item_use_duration > 0.0f;"
+        ],
+        "animate": [
+          {"m21_controller": "c.is_first_person && !q.is_riding"},
+          {"m21_fire_controller": "variable.m21"}
+
+        ]
+      },
+      "animations": {
+        "m21_aim": "animation.m21_aim",
+        "m21_controller": "controller.animation.m21",
+        "m21_fire_controller": "controller.animation.m21_fire",
+        "m21_shoot": "animation.m21_shoot",
+        "m21_reload": "animation.m21_reload_item",
+        "m21_reload2": "animation.m21_reload2"
+      },
+      "render_controllers": [ 
+				{ "controller.render.gun": "!c.is_first_person || c.is_first_person && !q.is_sneaking" },
+				{ "controller.render.crossbow": "c.is_first_person && !q.is_riding && q.is_sneaking" } ]
+    }
+  }
+}

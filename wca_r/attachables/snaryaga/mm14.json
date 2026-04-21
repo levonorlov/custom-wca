@@ -1,0 +1,31 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "addon:mm14",
+			"materials": {
+				"default": "armor",
+				"enchanted": "armor_enchanted"
+			},
+			"textures": {
+				"m88_butan": "textures/entity/mm14",
+				"povyazka_white": "textures/entity/povyazka",
+				"povyazka_blue": "textures/entity/povyazka_blue",
+				"povyazka_red": "textures/entity/povyazka_red",
+				"povyazka_green": "textures/entity/povyazka_green",
+				"povyazka_yellow": "textures/entity/povyazka_yellow"
+			},
+			"geometry": {
+				"m88": "geometry.m88",
+				"povyazka": "geometry.povyazka"
+			},
+			"scripts": {
+				"parent_setup": "variable.chest_layer_visible = 0.0;"
+			},
+			"render_controllers": [
+				"controller.render.m88_butan",
+				{ "controller.render.povyazka": "q.is_item_name_any('slot.inventory',1,'addon:povyazka_white') || q.is_item_name_any('slot.inventory',1,'addon:povyazka_blue')||q.is_item_name_any('slot.inventory',1,'addon:povyazka_red')||q.is_item_name_any('slot.inventory',1,'addon:povyazka_green')||q.is_item_name_any('slot.inventory',1,'addon:povyazka_yellow')" }
+			]
+		}
+	}
+}

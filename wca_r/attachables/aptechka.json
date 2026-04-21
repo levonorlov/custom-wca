@@ -1,0 +1,35 @@
+
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "addon:aptechka",
+      "materials": {
+        "default": "entity_alphatest",
+        "enchanted": "entity_alphatest_glint"
+      },
+      "textures": {
+        "default": "textures/entity/aptechka"
+      },
+      "geometry": {
+        "default":  "geometry.aptechka"
+      },
+      "scripts": {
+        "animate": [
+          {"aptechka_controller": "c.is_first_person"},
+          {"aptechka_controller_third": "!c.is_first_person"}
+        ]
+      },
+      "animations": {
+        "aptechka_controller": "controller.animation.aptechka",
+        "aptechka_controller_third": "controller.animation.aptechka_third",
+        "aptechka": "animation.aptechka_item",
+        "aptechka_third": "animation.aptechka_item"
+        
+      },
+      "render_controllers": [ 
+        "controller.render.default"
+    ]
+    }
+  }
+}

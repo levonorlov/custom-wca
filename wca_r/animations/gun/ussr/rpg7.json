@@ -1,0 +1,894 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.rpg7_shoot": {
+			"animation_length": 1.70833,
+			"bones": {
+				"mushkarpg": {
+					"position": [0, 0, 5]
+				}
+			},
+			"particle_effects": {
+				"0.0": {
+					"effect": "rpg7flash",
+					"locator": "soplo2"
+				},
+				"0.0417": {
+					"effect": "rpg7gazi4",
+					"locator": "soplo3"
+				},
+				"0.0833": [
+					{
+						"effect": "rpg7gazi5",
+						"locator": "truba2"
+					},
+					{
+						"effect": "rpg7gazi2",
+						"locator": "soplo2"
+					},
+					{
+						"effect": "rpg7gazi3",
+						"locator": "truba"
+					},
+					{
+						"effect": "rpg7gazi",
+						"locator": "soplo"
+					}
+				],
+				"0.125": [
+					{
+						"effect": "rpg7gazi5",
+						"locator": "truba2"
+					},
+					{
+						"effect": "rpg7gazi2",
+						"locator": "soplo2"
+					},
+					{
+						"effect": "rpg7gazi3",
+						"locator": "truba"
+					},
+					{
+						"effect": "rpg7gazi",
+						"locator": "soplo"
+					}
+				],
+				"0.1667": [
+					{
+						"effect": "rpg7gazi5",
+						"locator": "truba2"
+					},
+					{
+						"effect": "rpg7gazi2",
+						"locator": "soplo2"
+					},
+					{
+						"effect": "rpg7gazi3",
+						"locator": "truba"
+					},
+					{
+						"effect": "rpg7gazi",
+						"locator": "soplo"
+					}
+				],
+				"0.2083": [
+					{
+						"effect": "rpg7gazi3",
+						"locator": "truba"
+					},
+					{
+						"effect": "rpg7gazi2",
+						"locator": "soplo2"
+					}
+				],
+				"0.2917": [
+					{
+						"effect": "rpg7gazi3",
+						"locator": "truba"
+					},
+					{
+						"effect": "rpg7gazi2",
+						"locator": "soplo2"
+					}
+				],
+				"0.375": [
+					{
+						"effect": "rpg7gazi3",
+						"locator": "truba"
+					},
+					{
+						"effect": "rpg7gazi2",
+						"locator": "soplo2"
+					}
+				],
+				"0.4583": [
+					{
+						"effect": "rpg7gazi3",
+						"locator": "truba"
+					},
+					{
+						"effect": "rpg7gazi2",
+						"locator": "soplo2"
+					}
+				],
+				"0.5417": [
+					{
+						"effect": "rpg7gazi3",
+						"locator": "truba"
+					},
+					{
+						"effect": "rpg7gazi2",
+						"locator": "soplo2"
+					}
+				],
+				"0.625": [
+					{
+						"effect": "rpg7gazi3",
+						"locator": "truba"
+					},
+					{
+						"effect": "rpg7gazi2",
+						"locator": "soplo2"
+					}
+				],
+				"0.7083": [
+					{
+						"effect": "rpg7gazi3",
+						"locator": "truba"
+					},
+					{
+						"effect": "rpg7gazi2",
+						"locator": "soplo2"
+					}
+				],
+				"0.7917": [
+					{
+						"effect": "rpg7gazi3",
+						"locator": "truba"
+					},
+					{
+						"effect": "rpg7gazi2",
+						"locator": "soplo2"
+					}
+				],
+				"1.7083": [
+					{
+						"effect": "babah_vog",
+						"locator": "soplo2"
+					},
+					{
+						"effect": "hir_dim",
+						"locator": "soplo"
+					},
+					{
+						"effect": "babah_vog",
+						"locator": "truba"
+					},
+					{
+						"effect": "hir_dim",
+						"locator": "truba"
+					}
+				]
+			}
+		},
+		"animation.rpg7_reload_item": {
+			"animation_length": 3.7083,
+			"bones": {
+				"root": {
+					"rotation": [0, 180, 0],
+					"position": [-2.5, 4, -1],
+					"scale": 0.8
+				},
+				"waist": {
+					"rotation": [0, -2.5, 0],
+					"position": [-1, 0.5, 1]
+				},
+				"body": {
+					"rotation": {
+						"0.0": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"1.3333": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"1.5417": {
+							"post": [-2.5, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"1.625": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"1.9167": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"2.125": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"2.2917": {
+							"post": [-2.5, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"2.4167": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"2.5": [0, 0, 0]
+					},
+					"position": [-2, 0.85, -3]
+				},
+				"vistrel": {
+					"rotation": {
+						"1.25": [3.28888, -5.0999, 2.28888],
+						"1.375": [3.28888, -5.0999, 2.28888],
+						"1.625": [0, 0, 0],
+						"2.0417": [0, 0, 0],
+						"2.125": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0.2, -0.1, -1400000000000000000],
+						"1.25": [0.2, -0.1, -14.725],
+						"1.375": [0.2, -0.1, -14.725],
+						"1.625": [0, 0, -5.72],
+						"2.0417": [0, 0, -5.72],
+						"2.125": [0, 0, -5.72],
+						"2.3333": [0, 0, 0]
+					},
+					"scale": {
+						"0.0": [0, 0, 0],
+						"1.2083": [0, 0, 0],
+						"1.25": {"pre": [0, 0, 0], "post": [1, 1, 1]}
+					}
+				},
+				"gun": {
+					"position": [0, 0, 0]
+				},
+				"leftArm2": {
+					"rotation": [45, 0, 0],
+					"position": {
+						"0.0": [-40, 0, 0],
+						"0.2917": [0, 0, 0],
+						"0.9167": [0, -3.53553, 3.53553],
+						"1.2083": [0, -3.53553, 3.53553]
+					}
+				},
+				"vistrel2": {
+					"position": {
+						"0.0": [0, 1, -100000000],
+						"0.2917": [0, 1, -10],
+						"1.2083": [0, 6, -10]
+					},
+					"scale": {
+						"0.0": [0, 0, 0],
+						"0.2917": [0, 0, 0],
+						"0.3333": {"pre": [0, 0, 0], "post": [1, 1, 1]},
+						"1.25": {"pre": [1, 1, 1], "post": [0, 0, 0]}
+					}
+				}
+			},
+			"sound_effects": {
+				"1.125": {
+					"effect": "rpg7_1"
+				},
+				"1.8333": {
+					"effect": "rpg7_1"
+				},
+				"2.875": {
+					"effect": "rpg7_1"
+				}
+			},
+			"particle_effects": {
+				"0.0": {
+					"effect": "hir_dim",
+					"locator": "soplo"
+				}
+			}
+		},
+		"animation.rpg7_aim_item": {
+			"loop": true,
+			"bones": {
+				"vistrel2": {
+					"scale": "q.equipped_item_any_tag('slot.weapon.mainhand','reload')?-0"
+				}
+			}
+		},
+		"animation.rpg7": {
+			"loop": true,
+			"bones": {
+				"vistrel2": {
+					"scale": 0
+				},
+				"root": {
+					"rotation": [0, 180, 0],
+					"position": [-2.5, 4, -1],
+					"scale": 0.8
+				},
+				"waist": {
+					"rotation": [0, -2.5, 0],
+					"position": [-1, 0.5, 1]
+				},
+				"body": {
+					"position": [-2, 0.85, -3]
+				},
+				"leftArm": {
+					"rotation": [-132.42906, 31.77203, -25.70094],
+					"position": [-3, -4, 4]
+				},
+				"rightArm": {
+					"rotation": [-90, -10, 0]
+				},
+				"gun": {
+					"rotation": [0, 0, 10],
+					"position": [-0.5, -0.25, 0]
+				},
+				"vistrel": {
+					"scale": 0
+				}
+			}
+		},
+		"animation.rpg7_sprint": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [0, 180, 0],
+					"position": [-2.5, 4, -1],
+					"scale": 0.8
+				},
+				"waist": {
+					"rotation": [0, -2.5, 0],
+					"position": [-1, 0.5, 1]
+				},
+				"body": {
+					"position": [-2, 0.85, -3]
+				},
+				"leftArm": {
+					"rotation": [-109.92906, 31.77203, -25.70094],
+					"position": [-3, -4, 5]
+				},
+				"rightArm": {
+					"rotation": [-46.34004, -15.48194, -5.25005]
+				},
+				"vistrel2": {
+					"scale": 0
+				}
+			}
+		},
+		"animation.rpg7_aim": {
+			"loop": true,
+			"bones": {
+				"vistrel2": {
+					"scale": 0
+				},
+				"root": {
+					"rotation": [0, 180, 0],
+					"position": [-2.5, 4, -1],
+					"scale": 0.8
+				},
+				"waist": {
+					"rotation": [-0.5, 0, 0],
+					"position": [1.325, -0.1, 0]
+				},
+				"body": {
+					"position": [-2, 0.85, -3]
+				},
+				"leftArm": {
+					"rotation": [-132.42906, 31.77203, -25.70094],
+					"position": [-3, -4, 4]
+				},
+				"rightArm": {
+					"rotation": [-90, -10, 0]
+				},
+				"gun": {
+					"rotation": [0, 0, 10]
+				},
+				"mushkarpg": {
+					"position": [0, 0, 4]
+				},
+				"undefined": {
+					"position": [0, 0, 3]
+				}
+			}
+		},
+		"animation.rpg7_reload": {
+			"animation_length": 3.58333,
+			"bones": {
+				"root": {
+					"rotation": [0, 180, 0],
+					"position": [-2.5, 4, -1],
+					"scale": 0.8
+				},
+				"waist": {
+					"rotation": [0, -2.5, 0],
+					"position": [-1, 0.5, 1]
+				},
+				"body": {
+					"rotation": {
+						"0.0": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"1.3333": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"1.5417": {
+							"post": [-2.5, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"1.625": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"1.9167": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"2.125": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"2.2917": {
+							"post": [-2.5, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"2.4167": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"2.5": [0, 0, 0]
+					},
+					"position": [-2, 0.85, -3]
+				},
+				"leftArm": {
+					"rotation": {
+						"0.0": {
+							"post": [-132.42906, 31.77203, -25.70094],
+							"lerp_mode": "catmullrom"
+						},
+						"0.0417": {
+							"post": [-132.42906, 31.77203, -25.70094],
+							"lerp_mode": "catmullrom"
+						},
+						"0.3333": {
+							"post": [-24.92906, 31.77203, -25.70094],
+							"lerp_mode": "catmullrom"
+						},
+						"1.2083": {
+							"post": [-53.63847, 27.97673, 101.10945],
+							"lerp_mode": "catmullrom"
+						},
+						"1.375": {
+							"post": [-53.63847, 27.97673, 101.10945],
+							"lerp_mode": "catmullrom"
+						},
+						"2.4583": {
+							"post": [-53.63847, 27.97673, 101.10945],
+							"lerp_mode": "catmullrom"
+						},
+						"2.8333": {
+							"post": [-32.36538, 44.87498, 119.78239],
+							"lerp_mode": "catmullrom"
+						},
+						"2.9583": {
+							"post": [-32.36538, 44.87498, 119.78239],
+							"lerp_mode": "catmullrom"
+						},
+						"3.25": {
+							"post": [-32.36538, 44.87498, 119.78239],
+							"lerp_mode": "catmullrom"
+						},
+						"3.5417": {
+							"post": [-132.42906, 31.77203, -25.70094],
+							"lerp_mode": "catmullrom"
+						},
+						"3.5833": [-132.42906, 31.77203, -25.70094]
+					},
+					"position": {
+						"0.0": {
+							"post": [-3, -4, 4],
+							"lerp_mode": "catmullrom"
+						},
+						"0.0417": {
+							"post": [-3, -4, 4],
+							"lerp_mode": "catmullrom"
+						},
+						"0.3333": {
+							"post": [-1, -6, 4],
+							"lerp_mode": "catmullrom"
+						},
+						"1.2083": {
+							"post": [3.75, 1.45, -13.5],
+							"lerp_mode": "catmullrom"
+						},
+						"1.375": {
+							"post": [3.75, 1.45, -13.5],
+							"lerp_mode": "catmullrom"
+						},
+						"1.625": [2, -1.55, -7.5],
+						"1.875": [2, -1.55, -7.5],
+						"2.0417": [4, 2.45, -12.5],
+						"2.125": [4, 2.45, -12.5],
+						"2.3333": [3, -0.55, -7.5],
+						"2.4583": {
+							"pre": [3, -0.55, -7.5],
+							"post": [3, -0.55, -7.5],
+							"lerp_mode": "catmullrom"
+						},
+						"2.8333": {
+							"post": [0, -3.55, -2.5],
+							"lerp_mode": "catmullrom"
+						},
+						"2.9583": {
+							"post": [0, -3.55, -2.5],
+							"lerp_mode": "catmullrom"
+						},
+						"3.0833": {
+							"post": [0, -4.55, -2.5],
+							"lerp_mode": "catmullrom"
+						},
+						"3.25": {
+							"post": [0, -4.55, -2.5],
+							"lerp_mode": "catmullrom"
+						},
+						"3.5417": {
+							"post": [-3, -4, 4],
+							"lerp_mode": "catmullrom"
+						},
+						"3.5833": [-3, -4, 4]
+					}
+				},
+				"rightArm": {
+					"rotation": {
+						"0.0": [-90, -10, 0],
+						"0.3333": [-61.89548, -27.93322, -9.4162],
+						"2.4167": [-61.89548, -27.93322, -9.4162],
+						"2.7083": [-90, -10, 0],
+						"2.9167": [-87.28006, -19.82169, -7.97532],
+						"3.0833": [-87.28006, -19.82169, -7.97532],
+						"3.4167": [-90, -10, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"2.7083": [0, 0, 0],
+						"3.0833": [0, 0, 0],
+						"3.4167": [0, 0, 0]
+					}
+				},
+				"gun": {
+					"rotation": {
+						"0.0": [0, 0, 10],
+						"0.3333": [-54.98836, -7.03271, 28.88705],
+						"2.4167": [-54.98836, -7.03271, 28.88705],
+						"2.7083": [0, 0, 10],
+						"2.9167": [0, 25, 15],
+						"3.0833": [0, 25, 15],
+						"3.4167": [0, 0, 10]
+					},
+					"position": {
+						"0.0": [-0.5, -0.25, 0],
+						"0.3333": [-0.5, 0.5, 0.5],
+						"2.4167": [-0.5, 0.5, 0.5],
+						"2.7083": [-0.5, -0.25, 0],
+						"3.4167": [-0.5, -0.25, 0]
+					}
+				}
+			},
+			"sound_effects": {
+				"0.9167": {
+					"effect": "rpg7_0"
+				},
+				"1.375": {
+					"effect": "rpg7_1"
+				},
+				"2.0833": {
+					"effect": "rpg7_2"
+				},
+				"2.875": {
+					"effect": "rpg7_3"
+				}
+			},
+			"particle_effects": {
+				"0.0": {
+					"effect": "hir_dim",
+					"locator": "soplo"
+				}
+			}
+		},
+		"animation.rpg7_third": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 5,
+			"bones": {
+				"body": {
+					"rotation": [0, -17.5, 0]
+				},
+				"leftArm": {
+					"rotation": [-129.88473, 70.19611, -48.64135]
+				},
+				"rightArm": {
+					"rotation": [-90, 7.5, 0]
+				},
+				"leftLeg": {
+					"rotation": [12.45392, 1.08089, -4.88206],
+					"position": [0, 0, 1]
+				},
+				"rightLeg": {
+					"rotation": [-4.98107, 0.43523, 4.98107],
+					"position": [0, 0, -1]
+				},
+				"root": {
+					"position": [0, -0.6, 0]
+				},
+				"rightArmgun": {
+					"rotation": [0, 0, 10],
+					"position": [1, 0, 0]
+				},
+				"gun": {
+					"rotation": [0, 0, 0],
+					"position": [0, 0, 0]
+				},
+				"vistrel2": {
+					"scale": 0
+				},
+				"waist": {
+					"rotation": ["(Math.max(-45, Math.min(45,query.target_x_rotation)))", 0, 0]
+				}
+			}
+		},
+		"animation.rpg7_reload_third": {
+			"loop": true,
+			"animation_length": 3.7083,
+			"bones": {
+				"body": {
+					"rotation": [0, -17.5, 0]
+				},
+				"leftArm": {
+					"rotation": {
+						"0.0": [-129.88473, 70.19611, -48.64135],
+						"0.0833": [-129.88473, 70.19611, -48.64135],
+						"0.4167": [31.67357, 51.51215, 0.80526],
+						"0.7083": [33.23187, 32.82818, 50.25186],
+						"1.2083": [-111.51201, 18.12194, 78.92291],
+						"2.125": [-111.51201, 18.12194, 78.92291],
+						"2.3333": [-67.45443, 8.91416, 74.90577],
+						"2.4583": [-67.45443, 8.91416, 74.90577],
+						"2.8333": [-157.38473, 70.19611, -48.64135],
+						"3.25": [-157.38473, 70.19611, -48.64135],
+						"3.5417": [-129.88473, 70.19611, -48.64135]
+					},
+					"position": {
+						"0.0833": [0, 0, 0],
+						"0.7083": [0, 0, 0],
+						"1.2083": [1, -2, -2],
+						"1.625": [-2, -3, 0],
+						"1.875": [-2, -3, 0],
+						"2.0417": [1, 1, -3],
+						"2.125": [1, 1, -3],
+						"2.3333": [1, 1, -1],
+						"2.4583": [1, 1, -1],
+						"2.8333": [0, -2, -4],
+						"3.25": [0, -2, -4],
+						"3.5417": [0, 0, 0]
+					}
+				},
+				"rightArm": {
+					"rotation": {
+						"0.0": [-90, 7.5, 0],
+						"0.3333": [-18.06667, -35.15967, 20.58188],
+						"2.2917": [-18.06667, -35.15967, 20.58188],
+						"2.7083": [-90, 7.5, 0]
+					}
+				},
+				"leftLeg": {
+					"rotation": [12.45392, 1.08089, -4.88206],
+					"position": [0, 0, 1]
+				},
+				"rightLeg": {
+					"rotation": [-4.98107, 0.43523, 4.98107],
+					"position": [0, 0, -1]
+				},
+				"root": {
+					"position": [0, -0.6, 0]
+				},
+				"rightArmgun": {
+					"rotation": [0, 0, 10],
+					"position": [1, 0, 0]
+				},
+				"gun": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.3333": [-117.5, 0, 0],
+						"2.2917": [-117.5, 0, 0],
+						"2.7083": [0, 12.5, 0],
+						"3.25": [0, 12.5, 0],
+						"3.5417": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.3333": [0, 4, -2],
+						"2.2917": [0, 4, -2],
+						"2.7083": [1, 0, 0],
+						"3.25": [1, 0, 0],
+						"3.5417": [0, 0, 0]
+					}
+				},
+				"vistrel": {
+					"position": {
+						"1.2083": [0, 0, -15],
+						"1.5417": [0, 0, -6],
+						"2.125": [0, 0, -6],
+						"2.3333": [0, 0, 0]
+					},
+					"scale": {
+						"0.0": [0, 0, 0],
+						"1.2083": [0, 0, 0],
+						"1.25": {
+							"pre": [0, 0, 0],
+							"post": [1, 1, 1]
+						}
+					}
+				}
+			},
+			"sound_effects": {
+				"0.9167": {
+					"effect": "rpg7_0"
+				},
+				"1.375": {
+					"effect": "rpg7_1"
+				},
+				"2.0833": {
+					"effect": "rpg7_2"
+				},
+				"2.875": {
+					"effect": "rpg7_3"
+				}
+			}
+		},
+		"animation.rpg7_reload_item_third": {
+			"loop": true,
+			"animation_length": 3.7083,
+			"bones": {
+				"body": {
+					"rotation": [0, -17.5, 0]
+				},
+				"leftLeg": {
+					"rotation": [12.45392, 1.08089, -4.88206],
+					"position": [0, 0, 1]
+				},
+				"rightLeg": {
+					"rotation": [-4.98107, 0.43523, 4.98107],
+					"position": [0, 0, -1]
+				},
+				"root": {
+					"position": [0, -0.6, 0]
+				},
+				"rightArmgun": {
+					"rotation": [0, 0, 10],
+					"position": [1, 0, 0]
+				},
+				"vistrel2": {
+					"rotation": [55, 0, 0],
+					"position": [0, -8, 3],
+					"scale": {
+						"0.4583": [0, 0, 0],
+						"0.5": {
+							"pre": [0, 0, 0],
+							"post": [1, 1, 1]
+						},
+						"1.2083": {
+							"pre": [1, 1, 1],
+							"post": [1, 1, 1]
+						},
+						"1.25": {
+							"pre": [1, 1, 1],
+							"post": [0, 0, 0]
+						}
+					}
+				},
+				"vistrel": {
+					"position": {
+						"1.2083": [0, 0, -15],
+						"1.5417": [0, 0, -6],
+						"2.125": [0, 0, -6],
+						"2.3333": [0, 0, 0]
+					},
+					"scale": {
+						"0.0": [0, 0, 0],
+						"1.2083": [0, 0, 0],
+						"1.25": {
+							"pre": [0, 0, 0],
+							"post": [1, 1, 1]
+						},
+						"1.3333": {
+							"pre": [1, 1, 1],
+							"post": [1, 1, 1]
+						},
+						"3.6667": [1, 1, 1]
+					}
+				}
+			}
+		},
+		"animation.rpg7_aim_third": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"rotation": [38.81893, -13.80192, -10.86531],
+					"position": [0, -3, -7]
+				},
+				"leftArm": {
+					"rotation": [-144.88473, 70.19611, -48.64135]
+				},
+				"rightArm": {
+					"rotation": [-122.42395, 16.39691, 12.35922]
+				},
+				"leftLeg": {
+					"rotation": [12.45392, 1.08089, -4.88206],
+					"position": [0, 0, 1]
+				},
+				"rightLeg": {
+					"rotation": [-4.98107, 0.43523, 4.98107],
+					"position": [0, 0, -1]
+				},
+				"root": {
+					"position": [0, -0.6, 0]
+				},
+				"rightArmgun": {
+					"rotation": [0, 0, 10],
+					"position": [1, 0, 0]
+				},
+				"waist": {
+					"rotation": ["(Math.max(-45, Math.min(45,query.target_x_rotation)))", 0, 0]
+				},
+				"binocular": {
+					"rotation": [10, 0, -15]
+				},
+				"vistrel2": {
+					"scale": 0
+				}
+			}
+		},
+		"animation.rpg7_sprint_third": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"rotation": [0, -17.5, 0]
+				},
+				"leftArm": {
+					"rotation": [-117.38473, 70.19611, -48.64135]
+				},
+				"rightArm": {
+					"rotation": [-37.5, 7.5, 0]
+				},
+				"leftLeg": {
+					"rotation": [12.45392, 1.08089, -4.88206],
+					"position": [0, 0, 1]
+				},
+				"rightLeg": {
+					"rotation": [-4.98107, 0.43523, 4.98107],
+					"position": [0, 0, -1]
+				},
+				"root": {
+					"position": [0, -0.6, 0]
+				},
+				"rightArmgun": {
+					"rotation": [0, 0, -2.5],
+					"position": [-1, 0, 0]
+				}
+			}
+		},
+		"animation.rpg7_empty": {
+			"animation_length": 0.1,
+			"bones": {
+				"vistrel": {
+					"scale": "q.equipped_item_any_tag('slot.weapon.mainhand','reload')?-0"
+				},
+				"vistrel2": {
+					"scale": 0
+				}
+			}
+		}
+	}
+}

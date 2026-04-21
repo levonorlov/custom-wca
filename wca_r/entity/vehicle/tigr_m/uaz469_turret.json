@@ -1,0 +1,40 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "addon:tigr_m_turret",
+      "materials": {
+        "default": "spider"
+      },
+      "textures": {
+        "default": "textures/entity/vehicle/tigr_m_turret",
+        "kord": "textures/entity/vehicle/kord"
+      },
+      "animations": {
+        "uaz469": "controller.animation.tigr_m_kord_turret",
+        "reload": "animation.tigr_m_kord_reload"
+      },
+      "scripts": {
+        "animate": [
+        "uaz469"
+        ]
+      },
+      "geometry": {
+        "default": "geometry.tigr_m_turret",
+        "kord": "geometry.tigr_m_turret_kord"
+      },
+      "render_controllers": [
+        "controller.render.car",
+        "controller.render.kord"
+      ],
+			"sound_effects": {
+				"kordvihod": "addon.kordvihod",
+				"kordvhod": "addon.kordvhod",
+				"kordzatvor": "addon.kordzatvor",
+				"kordlenta": "addon.kordlenta",
+				"kordopen": "addon.kordopen",
+				"kordclose": "addon.kordclose"
+      }
+    }
+  }
+}

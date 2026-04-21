@@ -1,0 +1,26 @@
+{
+	"resource_pack_name": "vanilla",
+	"texture_name": "atlas.terrain",
+	"padding": 8,
+	"num_mip_levels": 4,
+	"texture_data": {
+		"meshok": {
+			"textures": "textures/blocks/meshok"
+		},
+		"po2": {
+			"textures": "textures/blocks/po2.png"
+		},
+		"po2_2": {
+			"textures": "textures/blocks/po2_2.png"
+		},
+		"po2_3": {
+			"textures": "textures/blocks/po2_3.png"
+		},
+		"po2_4": {
+			"textures": "textures/blocks/po2_4.png"
+		},
+		"po2_5": {
+			"textures": "textures/blocks/po2_5.png"
+		}
+	}
+}

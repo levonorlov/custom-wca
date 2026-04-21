@@ -1,0 +1,175 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.pbs1",
+				"texture_width": 8,
+				"texture_height": 8,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 5,
+				"visible_bounds_offset": [0, 0.5, 0]
+			},
+			"bones": [
+				{
+					"name": "rightArmgun",
+					"pivot": [-5, 22, 0]
+				},
+				{
+					"name": "gun",
+					"parent": "rightArmgun",
+					"pivot": [-4.5, 13.25, -2.4],
+					"rotation": [90, 0, 0]
+				},
+				{
+					"name": "korobka",
+					"parent": "gun",
+					"pivot": [-4.5, 13.25, -2.4],
+					"cubes": [
+						{
+							"origin": [-5, 13.7, -19.825],
+							"size": [1, 1, 1.25],
+							"pivot": [-4.5, 14.2, -20.7625],
+							"rotation": [0, 0, -45],
+							"uv": {
+								"north": {"uv": [3, 4], "uv_size": [1, 1]},
+								"east": {"uv": [2, 2], "uv_size": [1.25, 1]},
+								"south": {"uv": [4, 4], "uv_size": [1, 1]},
+								"west": {"uv": [2, 3], "uv_size": [1.25, 1]},
+								"up": {"uv": [2, 4], "uv_size": [1, 1.25]},
+								"down": {"uv": [4, 3.25], "uv_size": [1, -1.25]}
+							}
+						},
+						{
+							"origin": [-4.875, 13.825, -24.825],
+							"size": [0.75, 0.75, 5],
+							"pivot": [-4.5, 14.2, -20.7625],
+							"rotation": [0, 0, -45],
+							"uv": {
+								"north": {"uv": [5, 0], "uv_size": [0.75, 0.75]},
+								"east": {"uv": [0, 0], "uv_size": [5, 0.75]},
+								"south": {"uv": [5, 1], "uv_size": [0.75, 0.75]},
+								"west": {"uv": [0, 1], "uv_size": [5, 0.75]},
+								"up": {"uv": [0, 2], "uv_size": [0.75, 5]},
+								"down": {"uv": [1, 7], "uv_size": [0.75, -5]}
+							}
+						}
+					]
+				},
+				{
+					"name": "perevodchik_rexhimov_ognya",
+					"parent": "korobka",
+					"pivot": [-4.5, 14, -2.525],
+					"rotation": [15, 0, 0]
+				},
+				{
+					"name": "pricelnaya_kolodka",
+					"parent": "korobka",
+					"pivot": [-4.5, 13.25, -2.4]
+				},
+				{
+					"name": "perednyaya_vstavka",
+					"parent": "pricelnaya_kolodka",
+					"pivot": [-4.5, 13.25, -2.4]
+				},
+				{
+					"name": "kurok",
+					"parent": "korobka",
+					"pivot": [-4.5, 13.6, -4.2]
+				},
+				{
+					"name": "gazovayatrubka",
+					"parent": "gun",
+					"pivot": [-4.5, 13.25, -2.4]
+				},
+				{
+					"name": "rukoyat",
+					"parent": "gun",
+					"pivot": [-4.5, 13.25, -2.4]
+				},
+				{
+					"name": "stvol",
+					"parent": "gun",
+					"pivot": [-4.5, 14.2, -13.975],
+					"rotation": [0, 0, -45]
+				},
+				{
+					"name": "krishka",
+					"parent": "gun",
+					"pivot": [-4.5, 13.25, -2.4]
+				},
+				{
+					"name": "zatvor",
+					"parent": "gun",
+					"pivot": [-4.5, 13.25, -2.4]
+				},
+				{
+					"name": "vozvratnaya_pruzhina",
+					"parent": "gun",
+					"pivot": [-4.5, 13.25, -2.4]
+				},
+				{
+					"name": "pruzhina2",
+					"parent": "vozvratnaya_pruzhina",
+					"pivot": [-4.5, 13.25, -2.4]
+				},
+				{
+					"name": "gilza",
+					"parent": "gun",
+					"pivot": [-4.5, 14.125, -9.71875]
+				},
+				{
+					"name": "magazin",
+					"parent": "gun",
+					"pivot": [-4.5, 13.325, -2.425]
+				},
+				{
+					"name": "magazin2",
+					"parent": "magazin",
+					"pivot": [-4.5, 13.175, -7.225],
+					"rotation": [-10, 0, 0]
+				},
+				{
+					"name": "bone2",
+					"parent": "magazin2",
+					"pivot": [-4.5, 12.975, -6.25],
+					"rotation": [7.5, 0, 0]
+				},
+				{
+					"name": "bone",
+					"parent": "magazin2",
+					"pivot": [-4.5, 10.06251, -6.05156],
+					"rotation": [-7.5, 0, 0]
+				},
+				{
+					"name": "patron",
+					"parent": "magazin2",
+					"pivot": [-4.675, 13.875, -6.29375],
+					"rotation": [7.5, 0, 0]
+				},
+				{
+					"name": "patron2",
+					"parent": "patron",
+					"pivot": [-4.5, 13.325, -2.425]
+				},
+				{
+					"name": "priklad",
+					"parent": "gun",
+					"pivot": [-4.5, 13.75, -1.15],
+					"rotation": [180, 0, 0]
+				},
+				{
+					"name": "cevyo",
+					"parent": "gun",
+					"pivot": [-4.5, 13.25, -4.4]
+				},
+				{
+					"name": "pbs1",
+					"parent": "gun",
+					"pivot": [-4.5, 14.2, -20.7625],
+					"rotation": [0, 0, -45]
+				}
+			]
+		}
+	]
+}

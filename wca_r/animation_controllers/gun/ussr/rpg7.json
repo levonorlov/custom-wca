@@ -1,0 +1,190 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.rpg7_fire": {
+			"initial_state": "setup",
+			"states": {
+				"setup": {
+					"transitions": [
+						{"fire": "query.property('gun:fire') == 1"}
+					]
+				},
+				"fire": {
+					"animations": [
+						{"shoot": "v.rpg7"}
+					],
+					"transitions": [
+						{
+						  "fire": "query.property('gun:fire') == 1"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.rpg7_sneak": {
+			"initial_state": "setup",
+			"states": {
+				"setup": {
+					"transitions": [
+						{"hold": "variable.rpg7"}
+					]
+				},
+				"hold": {
+					"animations": [
+						{"rpg7_sneak": "v.rpg7"}
+					],
+					"transitions": [
+						{"reload": "q.property('addon:gun') == 2"}
+					],
+					"blend_transition": 0.1
+				},
+				"reload": {
+					"animations": [
+						{"rpg7_reload_sneak": "v.rpg7"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "q.property('addon:gun') != 2"}
+					]
+				},
+				"reload2": {
+					"animations": [
+						{"rpg7_reload2_sneak": "v.rpg7"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"}
+					]
+				}
+			}
+		},
+		"controller.animation.rpg7_third": {
+			"initial_state": "setup",
+			"states": {
+				"setup": {
+					"transitions": [
+						{"hold": "variable.rpg7"}
+					]
+				},
+				"hold": {
+					"animations": [
+						{"rpg7_third": "v.rpg7"}
+					],
+					"transitions": [
+						{"reload": "q.property('addon:gun') == 2"},
+						{"aim": "q.is_sneaking"},
+						{"sprint": "q.is_sprinting && !q.is_using_item"}
+					],
+					"blend_transition": 0.1
+				},
+				"reload": {
+					"animations": [
+						{"rpg7_reload_third": "v.rpg7"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"}
+					]
+				},
+				"aim": {
+					"animations": [
+						{"rpg7_aim_third": "v.rpg7"}
+					],
+					"transitions": [
+						{"hold": "!q.is_sneaking"},
+						{"reload": "q.property('addon:gun') == 2"}
+					],
+					"blend_transition": 0.1
+				},
+				"sprint": {
+					"animations": [
+						{"rpg7_sprint_third": "v.rpg7"}
+					],
+					"transitions": [
+						{"hold": "!q.is_sprinting"},
+						{"hold": "q.is_using_item"},
+						{"reload": "q.property('addon:gun') == 2"}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		},
+		"controller.animation.rpg7_2": {
+			"initial_state": "setup",
+			"states": {
+				"setup": {
+					"transitions": [
+						{"hold": "variable.rpg7"}
+					]
+				},
+				"hold": {
+					"animations": [
+						{"rpg7": "v.rpg7"}
+					],
+					"transitions": [
+						{"empty": "q.property('addon:gun') == 2"}
+					]
+				},
+				"empty": {
+					"animations": [
+						{"rpg7_empty": "v.rpg7"},
+						{"rpg7_empty2": "v.rpg7"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "q.property('addon:gun') != 2"}
+					]
+				}
+			}
+		},
+		"controller.animation.rpg7": {
+			"initial_state": "setup",
+			"states": {
+				"setup": {
+					"transitions": [
+						{"hold": "variable.rpg7"}
+					]
+				},
+				"hold": {
+					"animations": [
+						{"rpg7": "v.rpg7"}
+					],
+					"transitions": [
+						{"reload": "q.property('addon:gun') == 2"},
+						{"aim": "q.is_sneaking"},
+						{"sprint": "q.is_sprinting && !q.is_using_item"}
+					],
+					"blend_transition": 0.1
+				},
+				"reload": {
+					"animations": [
+						{"rpg7_reload": "v.rpg7"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"}
+					]
+				},
+				"aim": {
+					"animations": [
+						{"rpg7_aim": "v.rpg7"}
+					],
+					"transitions": [
+						{"hold": "!q.is_sneaking"},
+						{"reload": "q.property('addon:gun') == 2"}
+					],
+					"blend_transition": 0.1
+				},
+				"sprint": {
+					"animations": [
+						{"rpg7_sprint": "v.rpg7"}
+					],
+					"transitions": [
+						{"hold": "!q.is_sprinting"},
+						{"hold": "q.is_using_item"},
+						{"reload": "q.property('addon:gun') == 2"},
+						{"reload2": "q.equipped_item_any_tag('slot.weapon.mainhand','reload2')"}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		}
+	}
+}

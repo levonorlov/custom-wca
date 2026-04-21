@@ -1,0 +1,44 @@
+
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "addon:tigr_m_kord_fire",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/vehicle/tigr_m_turret",
+        "kord": "textures/entity/vehicle/kord"
+      },
+      "geometry": {
+        "default":  "geometry.tigr_m_turret",
+        "kord": "geometry.tigr_m_turret_kord"
+      },
+      "scripts": {
+        "pre_animation": [
+           "v.main_hand = c.item_slot == 'main_hand';",
+           "v.tigr_m_kord = c.item_slot == 'main_hand';",
+           "v.fire = q.main_hand_item_use_duration > 0.0f;"
+        ],
+        "animate": [
+          {"look_at_target_tigr_m_turret": "!c.is_first_person"},
+          {"tigr_m_turret": "!c.is_first_person"},
+          {"tigr_m_turret_first": "c.is_first_person"},
+          {"tigr_m_kord_fire_controller": "variable.tigr_m_kord"}
+
+        ]
+      },
+      "animations": {
+        "tigr_m_turret": "animation.tigr_m_turret",
+        "tigr_m_turret_first": "animation.tigr_m_turret_first",
+        "look_at_target_tigr_m_turret": "animation.humanoid.look_at_target_tigr_m_turret",
+        "tigr_m_kord_fire_controller": "controller.animation.tigr_m_kord_fire",
+        "shoot": "animation.tigr_m_kord_shoot"
+      },
+      "render_controllers": [ 
+        "controller.render.car",
+        "controller.render.kord" ]
+    }
+  }
+}

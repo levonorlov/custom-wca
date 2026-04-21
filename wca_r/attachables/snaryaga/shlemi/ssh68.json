@@ -1,0 +1,29 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "addon:ssh68",
+			"materials": {
+				"default": "armor",
+				"enchanted": "armor_enchanted"
+			},
+			"textures": {
+				"m88_butan": "textures/entity/ssh68",
+				"balaklava": "textures/entity/balaklava",
+				"balaklava_sand": "textures/entity/balaklava_sand",
+				"balaklava2": "textures/entity/balaklava2"
+			},
+			"geometry": {
+				"m88": "geometry.ssh68",
+				"balaklava": "geometry.balaklava"
+			},
+			"scripts": {
+				"parent_setup": "variable.chest_layer_visible = 0.0;"
+			},
+			"render_controllers": [
+				"controller.render.m88_butan",
+				{"controller.render.balaklava": "q.is_item_name_any('slot.inventory',0,'addon:balaklava') || q.is_item_name_any('slot.inventory',0,'addon:balaklava2') || q.is_item_name_any('slot.inventory',0,'addon:balaklava_sand')"}
+			]
+		}
+	}
+}

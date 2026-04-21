@@ -1,0 +1,73 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.hud",
+				"texture_width": 256,
+				"texture_height": 256,
+				"visible_bounds_width": 629,
+				"visible_bounds_height": 23,
+				"visible_bounds_offset": [0, 0.5, 0]
+			},
+			"bones": [
+				{
+					"name": "head",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "hud",
+					"parent": "head",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "hud_bar",
+					"parent": "hud",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "3",
+					"parent": "hud_bar",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-61.5, -43.5, 0.275],
+							"size": [145, 99, 0],
+							"uv": {
+								"north": {"uv": [102, 0], "uv_size": [102, 56]}
+							}
+						}
+					]
+				},
+				{
+					"name": "2",
+					"parent": "hud_bar",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-61.5, -43.5, 0.225],
+							"size": [145, 99, 0],
+							"uv": {
+								"north": {"uv": [0, 56], "uv_size": [102, 56]}
+							}
+						}
+					]
+				},
+				{
+					"name": "1",
+					"parent": "hud_bar",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-61.5, -43.5, 0.15],
+							"size": [145, 99, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [102, 56]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

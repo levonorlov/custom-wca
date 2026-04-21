@@ -1,0 +1,43 @@
+
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "addon:ak74m_zenit_1p87_gp25",
+      "materials": {
+        "default": "entity_alphatest",
+        "kalik": "spider",
+        "steklo": "slime_outer"
+      },
+      "textures": {
+        "default": "textures/guns/ussr/ak74m_zenit",
+ "gl": "textures/guns/gp25",
+        "kalik": "textures/guns/1p87",
+        "steklo": "textures/guns/1p87_steklo"
+      },
+      "geometry": {
+        "default":  "geometry.ak74m_zenit",
+        "gl":  "geometry.gp25",
+        "kalik":  "geometry.1p87",
+        "steklo":  "geometry.1p87_steklo"
+      },
+      "scripts": {
+        "pre_animation": [
+           "v.main_hand = c.item_slot == 'main_hand';",
+           "v.ak74m_zenit = c.item_slot == 'main_hand';",
+           "v.fire = q.main_hand_item_use_duration > 0.0f;"
+        ],
+        "animate": [
+          {"ak74m_zenit_controller": "c.is_first_person"},
+          {"ak74m_zenit_fire_controller": "variable.ak74m_zenit && variable.is_first_person"}
+
+        ]
+      },
+      "animations": {
+        "ak74m_zenit_controller": "controller.animation.ak74m_zenit",
+        "ak74m_zenit_reload": "animation.ak74m_zenit_reload_item"
+      },
+      "render_controllers": [ "controller.render.crossbow","controller.render.gl","controller.render.kalik","controller.render.kalik_steklo" ]
+    }
+  }
+}

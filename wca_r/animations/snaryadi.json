@@ -1,0 +1,93 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.snaryadi": {
+			"loop": true,
+			"animation_length": 0.45833,
+			"bones": {
+				"head": {
+					"rotation": ["-q.target_x_rotation", "-q.body_y_rotation", 0]
+				},
+				"vistrel": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.4583": [0, 0, 360]
+					}
+				}
+			}
+		},
+		"animation.zapal": {
+			"animation_length": 2.5,
+			"particle_effects": {
+				"0.0": {
+					"effect": "zapal_dim",
+					"locator": "zapal"
+				},
+				"0.1667": {
+					"effect": "zapal_dim",
+					"locator": "zapal"
+				},
+				"0.375": {
+					"effect": "zapal_dim",
+					"locator": "zapal"
+				},
+				"0.5833": {
+					"effect": "zapal_dim",
+					"locator": "zapal"
+				},
+				"0.7917": {
+					"effect": "zapal_dim",
+					"locator": "zapal"
+				},
+				"0.9583": {
+					"effect": "zapal_dim",
+					"locator": "zapal"
+				},
+				"1.125": {
+					"effect": "zapal_dim",
+					"locator": "zapal"
+				},
+				"1.25": {
+					"effect": "zapal_dim",
+					"locator": "zapal"
+				},
+				"1.4583": {
+					"effect": "zapal_dim",
+					"locator": "zapal"
+				},
+				"1.625": {
+					"effect": "zapal_dim",
+					"locator": "zapal"
+				},
+				"1.875": {
+					"effect": "zapal_dim",
+					"locator": "zapal"
+				},
+				"2.0417": {
+					"effect": "zapal_dim",
+					"locator": "zapal"
+				},
+				"2.2083": {
+					"effect": "zapal_dim",
+					"locator": "zapal"
+				},
+				"2.4167": {
+					"effect": "zapal_dim",
+					"locator": "zapal"
+				}
+			}
+		},
+		"animation.granata_spin": {
+			"loop": true,
+			"animation_length": 1,
+			"bones": {
+				"granata": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"1.0": [360, 360, 0]
+					}
+				}
+			}
+		}
+	}
+}

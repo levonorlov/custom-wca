@@ -1,0 +1,35 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.uaz469": {
+      "states": {
+        "default": {
+					"transitions": [
+						{"on": "q.has_player_rider"}
+					]
+        },
+        "on": {
+					"animations": [ "engine_on" ],
+					"transitions": [
+						{"engine": "q.any_animation_finished"},
+						{"default": "!q.has_player_rider"}
+					]
+        },
+        "engine": {
+					"animations": [ "engine" ],
+					"transitions": [
+						{"engine2": "q.any_animation_finished"},
+						{"default": "!q.has_player_rider"}
+					]
+        },
+        "engine2": {
+					"animations": [ "engine" ],
+					"transitions": [
+						{"engine": "q.any_animation_finished"},
+						{"default": "!q.has_player_rider"}
+					]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "addon:m1025",
+      "materials": {
+        "default": "spider"
+      },
+      "textures": {
+        "default": "textures/entity/vehicle/m1025",
+        "sand": "textures/entity/vehicle/m1025_sand",
+        "death": "textures/entity/vehicle/m1025_death",
+        "death_sand": "textures/entity/vehicle/m1025_death_sand"
+      },
+      "geometry": {
+        "default": "geometry.m1025",
+        "death": "geometry.m1025_death"
+      },
+      "animations": {
+         "move": "animation.m1025_move",
+         "rul": "animation.m1025_rul",
+         "engine": "animation.m1025_engine",
+         "engine_on": "animation.m1025_engine_on",
+        "m1025": "controller.animation.m1025",
+        "look_at_target": "animation.common.look_at_target"
+      },
+      "scripts": {
+       "animate": [
+       "m1025",
+       {"move":"q.modified_move_speed"},
+       "look_at_target",
+       "rul"
+      ]
+      },
+      "render_controllers": [
+        { "controller.render.m1025": "q.mark_variant != 2" },
+        { "controller.render.m1025_death": "q.mark_variant == 2" }
+      ],
+			"sound_effects": {
+				"engine": "addon.car_engine",
+				"engine_on": "addon.car_engine_on"
+      },
+      "spawn_egg": {
+         "texture": "spawn_m1025",
+        "texture_index": 0
+      }
+    }
+  }
+}

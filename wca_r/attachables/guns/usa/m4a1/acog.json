@@ -1,0 +1,43 @@
+
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "addon:m4a1_acog",
+      "materials": {
+        "default": "entity_alphatest",
+        "kalik": "slime_outer"
+      },
+      "textures": {
+        "default": "textures/guns/nato/m4a1",
+        "kalik": "textures/guns/acog"
+      },
+      "geometry": {
+        "default":  "geometry.m4a1",
+        "kalik":  "geometry.acog"
+      },
+      "scripts": {
+        "pre_animation": [
+           "v.main_hand = c.item_slot == 'main_hand';",
+           "v.m4a1 = c.item_slot == 'main_hand';",
+           "v.fire = q.main_hand_item_use_duration > 0.0f;"
+        ],
+        "animate": [
+          {"m4a1_controller": "c.is_first_person"},
+          {"m4a1_fire_controller": "variable.m4a1 && variable.is_first_person"},
+          "m4a1_scope",
+          "m4a1_acog"
+
+        ]
+      },
+      "animations": {
+        "m4a1_controller": "controller.animation.m4a1",
+        "m4a1_scope": "animation.m4a1_scope",
+        "m4a1_aim_acog": "animation.m4a1_aim_acog",
+        "m4a1_reload": "animation.m4a1_reload_item",
+        "m4a1_reload2": "animation.m4a1_reload2"
+      },
+      "render_controllers": [ "controller.render.m4a1",{"controller.render.kalik": "c.is_first_person"},{"controller.render.kalik_third": "!c.is_first_person"} ]
+    }
+  }
+}

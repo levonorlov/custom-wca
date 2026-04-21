@@ -1,0 +1,30 @@
+{
+	"format_version": "1.8.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "addon:ussr_pehota_gp",
+			"materials": {
+				"default": "armor",
+				"enchanted": "armor_enchanted"
+			},
+			"textures": {
+				"ssh68": "textures/entity/ussr/ssh68",
+				"v6b3": "textures/entity/ussr/6b3",
+				"sumka_vog": "textures/entity/ussr/sumka_vog"
+			},
+			"geometry": {
+				"ssh68": "geometry.ssh68",
+				"v6b3": "geometry.v6b3",
+				"sumka_vog": "geometry.sumka_vog"
+			},
+			"scripts": {
+				"parent_setup": "variable.chest_layer_visible = 0.0;"
+			},
+			"render_controllers": [
+				"controller.render.ssh68",
+				"controller.render.v6b3",
+				"controller.render.sumka_vog"
+			]
+		}
+	}
+}

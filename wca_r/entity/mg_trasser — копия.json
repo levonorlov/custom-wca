@@ -1,0 +1,30 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "addon:7.62x54_bullet_mg_crawl_trasser",
+			"materials": {
+				"flash": "flash",
+				"default": "spider"
+			},
+			"textures": {
+				"default": "textures/entity/trasser"
+			},
+			"geometry": {
+				"default": "geometry.trasser"
+			},
+			"animations": {
+				"look_at_target": "animation.snaryadi"
+			},
+			"scripts": {
+        "animate": [
+            "look_at_target"
+            ]
+			},
+			"render_controllers": [
+				"controller.render.iron_golem"
+			],
+			"enable_attachables": false
+		}
+	}
+}

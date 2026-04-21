@@ -1,0 +1,53 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "addon:m1151",
+      "materials": {
+        "default": "spider"
+      },
+      "textures": {
+        "default": "textures/entity/vehicle/m1151",
+        "obves": "textures/entity/vehicle/m1151_obves",
+        "death": "textures/entity/vehicle/m1151_death",
+        "camo": "textures/entity/vehicle/m1151_camo",
+        "obves_camo": "textures/entity/vehicle/m1151_obves_camo",
+        "death_camo": "textures/entity/vehicle/m1151_death_camo"
+      },
+      "geometry": {
+        "default": "geometry.m1151",
+        "obves": "geometry.m1151_obves",
+        "death": "geometry.m1151_death"
+      },
+      "animations": {
+         "move": "animation.m1151_move",
+         "rul": "animation.m1151_rul",
+         "engine": "animation.m1151_engine",
+         "engine_on": "animation.m1151_engine_on",
+        "m1151": "controller.animation.m1151",
+        "look_at_target": "animation.common.look_at_target"
+      },
+      "scripts": {
+       "animate": [
+       "m1151",
+       {"move":"q.modified_move_speed"},
+       "look_at_target",
+       "rul"
+      ]
+      },
+      "render_controllers": [
+        { "controller.render.m1151": "q.mark_variant != 2" },
+        { "controller.render.obves": "q.mark_variant != 2" },
+        { "controller.render.car_death": "q.mark_variant == 2" }
+      ],
+			"sound_effects": {
+				"engine": "addon.car_engine",
+				"engine_on": "addon.car_engine_on"
+      },
+      "spawn_egg": {
+         "texture": "spawn_m1151",
+        "texture_index": 0
+      }
+    }
+  }
+}

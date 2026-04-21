@@ -1,0 +1,30 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "addon:m406",
+			"materials": {
+				"flash": "flash",
+				"default": "spider"
+			},
+			"textures": {
+				"default": "textures/entity/m433"
+			},
+			"geometry": {
+				"default": "geometry.m433"
+			},
+			"animations": {
+				"look_at_target": "animation.snaryadi"
+			},
+			"scripts": {
+        "animate": [
+            "look_at_target"
+            ]
+			},
+			"render_controllers": [
+				"controller.render.iron_golem"
+			],
+			"enable_attachables": false
+		}
+	}
+}

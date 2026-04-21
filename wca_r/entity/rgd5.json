@@ -1,0 +1,37 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "addon:rgd5_entity",
+			"materials": {
+				"flash": "flash",
+				"default": "spider"
+			},
+			"textures": {
+				"default": "textures/entity/rgd5"
+			},
+			"geometry": {
+				"default": "geometry.rgd5_entity"
+			},
+			"animations": {
+				"look_at_target": "animation.snaryadi",
+				"spin": "animation.granata_spin",
+				"zapal": "animation.zapal"
+			},
+			"scripts": {
+        "animate": [
+			{"spin":"query.is_riding"},
+            "zapal",
+            "look_at_target"
+            ]
+			},
+			"render_controllers": [
+				{ "controller.render.default": "q.is_alive" }
+			],
+			"particle_effects": {
+				"zapal_dim": "addon:zapal_dim"
+			},
+			"enable_attachables": false
+		}
+	}
+}

@@ -1,0 +1,30 @@
+{
+	"format_version": "1.10.0",
+	"render_controllers": {
+		"controller.render.b8_setka": {
+			"geometry": "Geometry.binokl_setka",
+			"materials": [{ "*": "Material.slime" }],
+			"textures": ["Texture.b8_setka"],
+			"is_hurt_color": {},
+			"on_fire_color": {},
+			"light_color_multiplier": 1.3,
+			"ignore_lighting": true
+		},
+		"controller.render.hud": {
+			"geometry": "Geometry.hud",
+			"materials": [{ "*": "Material.slime" }],
+			"textures": ["Texture.hud"],
+			"part_visibility": [
+			  { "*": true },
+			  { "1": "query.health <= 30 && query.health >= 21" },
+			  { "2": "query.health <= 20 && query.health >= 11" },
+			  { "3": "query.health <= 10" }
+			  
+			],
+			"is_hurt_color": {},
+			"on_fire_color": {},
+			"light_color_multiplier": 1.3,
+			"ignore_lighting": true
+		}
+	}
+}

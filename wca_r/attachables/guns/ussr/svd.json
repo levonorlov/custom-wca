@@ -1,0 +1,41 @@
+
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "addon:svd",
+      "materials": {
+        "default": "slime_outer",
+        "gun": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/guns/ussr/svd"
+      },
+      "geometry": {
+        "default":  "geometry.svd"
+      },
+      "scripts": {
+        "pre_animation": [
+           "v.main_hand = c.item_slot == 'main_hand';",
+           "v.svd = c.item_slot == 'main_hand';",
+           "v.fire = q.main_hand_item_use_duration > 0.0f;"
+        ],
+        "animate": [
+          {"svd_controller": "c.is_first_person && !q.is_riding"},
+          {"svd_fire_controller": "variable.svd"}
+
+        ]
+      },
+      "animations": {
+        "svd_aim": "animation.svd_aim",
+        "svd_controller": "controller.animation.svd",
+        "svd_fire_controller": "controller.animation.svd_fire",
+        "svd_shoot": "animation.svd_shoot",
+        "svd_reload": "animation.svd_reload_item"
+      },
+      "render_controllers": [ 
+				{ "controller.render.gun": "!c.is_first_person || c.is_first_person && !q.is_sneaking" },
+				{ "controller.render.crossbow": "c.is_first_person && !q.is_riding && q.is_sneaking" } ]
+    }
+  }
+}

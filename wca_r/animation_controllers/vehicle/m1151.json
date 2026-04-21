@@ -1,0 +1,95 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.m1151": {
+      "states": {
+        "default": {
+					"transitions": [
+						{"on": "q.has_player_rider"}
+					]
+        },
+        "on": {
+					"animations": [ "engine_on" ],
+					"transitions": [
+						{"engine": "q.any_animation_finished"},
+						{"default": "!q.has_player_rider"}
+					]
+        },
+        "engine": {
+					"animations": [ "engine" ],
+					"transitions": [
+						{"engine2": "q.any_animation_finished"},
+						{"default": "!q.has_player_rider"}
+					]
+        },
+        "engine2": {
+					"animations": [ "engine" ],
+					"transitions": [
+						{"engine": "q.any_animation_finished"},
+						{"default": "!q.has_player_rider"}
+					]
+        }
+      }
+    },
+	"controller.animation.m1151_m2hb_fire": {
+		"initial_state": "setup",
+		"states": {
+			"setup": {
+				"transitions": [
+					{"fire": "query.property('gun:fire') == 1"}
+				]
+			},
+			"fire": {
+				"animations": [
+					{"shoot": "v.m1151_m2hb"}
+				],
+				"transitions": [
+					{
+					  "fire2": "query.property('gun:fire') == 1"
+					}
+				]
+			},
+			"fire2": {
+				"animations": [
+					{"shoot": "v.m1151_m2hb"}
+				],
+				"transitions": [
+					{
+					  "fire": "query.property('gun:fire') == 1"
+					}
+				]
+			}
+		}
+	},
+	"controller.animation.m1151_m2hb_turret": {
+		"initial_state": "setup",
+		"states": {
+			"setup": {
+				"transitions": [
+					{"reload": "query.property('m1151:m2hb') == 1"}
+				]
+			},
+			"reload": {
+				"animations": [
+					"reload"
+				],
+				"transitions": [
+					{
+					  "setup": "query.property('m1151:m2hb') == 0"
+					}
+				]
+			},
+			"fire2": {
+				"animations": [
+					{"shoot": "v.m1151_m2hb"}
+				],
+				"transitions": [
+					{
+					  "fire": "query.property('gun:fire') == 1"
+					}
+				]
+			}
+		}
+	}
+  }
+}

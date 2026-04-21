@@ -1,0 +1,35 @@
+
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "addon:m16a2",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/guns/nato/m16a2"
+      },
+      "geometry": {
+        "default":  "geometry.m16a2"
+      },
+      "scripts": {
+        "pre_animation": [
+           "v.main_hand = c.item_slot == 'main_hand';",
+           "v.m16a2 = c.item_slot == 'main_hand';",
+           "v.fire = q.main_hand_item_use_duration > 0.0f;"
+        ],
+        "animate": [
+          {"m16a2_controller": "c.is_first_person"},
+          {"m16a2_fire_controller": "variable.m16a2 && variable.is_first_person"}
+
+        ]
+      },
+      "animations": {
+        "m16a2_controller": "controller.animation.m16a2",
+        "m16a2_reload": "animation.m16a2_reload_item"
+      },
+      "render_controllers": [ "controller.render.m16a1" ]
+    }
+  }
+}

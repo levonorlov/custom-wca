@@ -1,0 +1,44 @@
+
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "addon:asvalm",
+      "materials": {
+        "default": "entity_alphatest",
+        "kalik": "slime_outer",
+        "steklo": "spider"
+      },
+      "textures": {
+        "default": "textures/guns/ussr/asvalm",
+        "kalik": "textures/guns/m68",
+        "steklo": "textures/guns/m68_steklo"
+      },
+      "geometry": {
+        "default":  "geometry.asvalm",
+        "kalik":  "geometry.asvalm_kalik",
+        "steklo":  "geometry.asvalm_steklo"
+      },
+      "scripts": {
+        "pre_animation": [
+           "v.main_hand = c.item_slot == 'main_hand';",
+           "v.asvalm = c.item_slot == 'main_hand';",
+           "v.fire = q.main_hand_item_use_duration > 0.0f;"
+        ],
+        "animate": [
+          {"asvalm_controller": "c.is_first_person"},
+          {"asvalm_fire_controller": "variable.asvalm && variable.is_first_person"}
+
+        ]
+      },
+      "animations": {
+        "asvalm_controller": "controller.animation.asvalm",
+        "asvalm_fire_controller": "controller.animation.asvalm_fire",
+        "asvalm_shoot": "animation.asvalm_shoot",
+        "asvalm_aim": "animation.asvalm_aim",
+        "asvalm_reload": "animation.asvalm_reload_item"
+      },
+      "render_controllers": [ "controller.render.crossbow","controller.render.kalik","controller.render.kalik_steklo" ]
+    }
+  }
+}

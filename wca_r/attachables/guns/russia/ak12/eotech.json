@@ -1,0 +1,38 @@
+
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "addon:ak12_eotech",
+      "materials": {
+        "default": "entity_alphatest",
+        "kalik": "spider"
+      },
+      "textures": {
+        "default": "textures/guns/ussr/ak12",
+        "kalik": "textures/guns/eotech"
+      },
+      "geometry": {
+        "default":  "geometry.ak12",
+        "kalik":  "geometry.eotech"
+      },
+      "scripts": {
+        "pre_animation": [
+           "v.main_hand = c.item_slot == 'main_hand';",
+           "v.ak12 = c.item_slot == 'main_hand';",
+           "v.fire = q.main_hand_item_use_duration > 0.0f;"
+        ],
+        "animate": [
+          {"ak12_controller": "c.is_first_person"},
+          {"ak12_fire_controller": "variable.ak12 && variable.is_first_person"}
+
+        ]
+      },
+      "animations": {
+        "ak12_controller": "controller.animation.ak12",
+        "ak12_reload": "animation.ak12_reload_item"
+      },
+      "render_controllers": [ "controller.render.crossbow","controller.render.kalik" ]
+    }
+  }
+}

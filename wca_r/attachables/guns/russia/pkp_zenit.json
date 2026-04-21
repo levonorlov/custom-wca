@@ -1,0 +1,64 @@
+
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "addon:pkp_zenit",
+      "materials": {
+        "default": "entity_alphatest",
+        "obves": "spider"
+      },
+      "textures": {
+        "default": "textures/guns/ussr/pkp",
+        "obves": "textures/guns/ussr/pkp_obves"
+      },
+      "geometry": {
+        "default":  "geometry.pkp",
+        "obves":  "geometry.pkp_obves"
+      },
+      "scripts": {
+        "pre_animation": [
+           "v.main_hand = c.item_slot == 'main_hand';",
+           "v.guns = c.item_slot == 'main_hand';",
+           "v.pkp_zenit = c.item_slot == 'main_hand';",
+           "v.fire = q.main_hand_item_use_duration > 0.0f;"
+        ],
+        "animate": [
+          {"idle_controller": "c.is_first_person"},
+          {"pkp_zenit_item": "c.is_first_person"},
+          {"pkp_zenit_controller": "c.is_first_person"},
+          {"pkp_zenit_controller_third": "!c.is_first_person && !query.is_riding"},
+          {"pkp_zenit_controller_sneak": "!c.is_first_person && query.is_riding"},
+          {"pkp_zenit_fire_controller": "variable.pkm"}
+
+        ]
+      },
+      "animations": {
+        "idle_controller": "controller.animation.gun_idle",
+        "idle": "animation.gun_idle",
+        "idle2": "animation.gun_idle2",
+        "pkp_zenit_controller": "controller.animation.pkp_zenit",
+        "pkp_zenit_controller_sneak": "controller.animation.pkp_zenit_sneak",
+        "pkp_zenit_sneak": "animation.pkp_zenit_sneak",
+        "pkp_zenit_reload_sneak": "animation.pkp_zenit_reload_sneak",
+        "pkp_zenit_reload2_sneak": "animation.pkp_zenit_reload2_sneak",
+        "pkp_zenit_controller_third": "controller.animation.pkp_zenit_third",
+        "pkp_zenit_fire_controller": "controller.animation.pkp_zenit_fire",
+        "pkp_zenit_item_third": "animation.pkp_zenit_item_third",
+        "shoot": "animation.pkp_zenit_shoot",
+        "pkp_zenit_aim": "animation.aim_item_pkp_zenit",
+        "pkp_zenit_aim_third": "animation.pkp_zenit_aim_third",
+        "pkp_zenit_sprint_third": "animation.pkp_zenit_sprint_third",
+        "pkp_zenit_item": "animation.pkp_zenit_item",
+        "pkp_zenit_reload": "animation.pkp_zenit_reload",
+        "pkp_zenit_reload2": "animation.pkp_zenit_reload2",
+        "pkp_zenit_reload_third": "animation.pkp_zenit_reload_third",
+        "pkp_zenit_reload2_third": "animation.pkp_zenit_reload2_third",
+        "gun_third": "animation.gun_third_pkp",
+        "pkp_zenit_third": "animation.pkp_zenit_item_third"
+      },
+      "render_controllers": [ 
+         "controller.render.pkp_zenit","controller.render.obves" ]
+    }
+  }
+}

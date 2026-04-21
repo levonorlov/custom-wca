@@ -1,0 +1,233 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.m72_fire": {
+			"initial_state": "setup",
+			"states": {
+				"setup": {
+					"transitions": [
+						{"fire": "query.property('gun:fire') == 1"}
+					]
+				},
+				"fire": {
+					"animations": [
+						{"shoot": "v.m72"}
+					],
+					"transitions": [
+						{
+						  "fire": "query.property('gun:fire') == 1"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.m72_sneak": {
+			"initial_state": "setup",
+			"states": {
+				"setup": {
+					"transitions": [
+						{"hold": "variable.m72"}
+					]
+				},
+				"hold": {
+					"animations": [
+						{"m72_sneak": "v.m72"}
+					],
+					"transitions": [
+						{"reload": "q.property('addon:gun') == 2"},
+						{"reload2": "q.property('addon:gun') == 3"}
+					],
+					"blend_transition": 0.1
+				},
+				"reload": {
+					"animations": [
+						{"m72_reload_sneak": "v.m72"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "q.property('addon:gun') != 2"}
+					]
+				},
+				"reload2": {
+					"animations": [
+						{"m72_reload2_sneak": "v.m72"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "q.property('addon:gun') != 3"}
+					]
+				}
+			}
+		},
+		"controller.animation.m72_third": {
+			"initial_state": "setup",
+			"states": {
+				"setup": {
+					"transitions": [
+						{"hold": "variable.m72"}
+					]
+				},
+				"hold": {
+					"animations": [
+						{"m72_third": "v.m72"}
+					],
+					"transitions": [
+						{"reload": "q.property('addon:gun') == 2"},
+						{"aim": "q.is_sneaking"},
+						{"sprint": "q.is_sprinting"}
+					],
+					"blend_transition": 0.1
+				},
+				"empty": {
+					"animations": [
+						{"m72_empty_third": "v.m72"}
+					],
+					"transitions": [
+						{"reload": "q.property('addon:gun') == 2"},
+						{"hold": "!q.equipped_item_any_tag('slot.weapon.mainhand','empty')"}
+					]
+				},
+				"reload": {
+					"animations": [
+						{"m72_reload_third": "v.m72"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "q.property('addon:gun') != 2"}
+					]
+				},
+				"reload2": {
+					"animations": [
+						{"m72_reload2_third": "v.m72"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "q.property('addon:gun') != 3"}
+					]
+				},
+				"aim": {
+					"animations": [
+						{"m72_aim_third": "v.m72"}
+					],
+					"transitions": [
+						{"hold": "!q.is_sneaking"},
+						{"reload": "q.property('addon:gun') == 2"},
+						{"reload2": "q.property('addon:gun') == 3"}
+					],
+					"blend_transition": 0.1
+				},
+				"sprint": {
+					"animations": [
+						{"m72_sprint_third": "v.m72"}
+					],
+					"transitions": [
+						{"hold": "!q.is_sprinting"},
+						{"hold": "q.is_using_item"},
+						{"reload": "q.property('addon:gun') == 2"},
+						{"reload2": "q.property('addon:gun') == 3"}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		},
+		"controller.animation.m72_2": {
+			"initial_state": "setup",
+			"states": {
+				"setup": {
+					"transitions": [
+						{"hold": "variable.m72"}
+					]
+				},
+				"hold": {
+					"animations": [
+						{"m72": "v.m72"}
+					],
+					"transitions": [
+						{"empty": "q.property('addon:gun') == 2"},
+						{"empty": "q.property('addon:gun') == 3"}
+					]
+				},
+				"empty": {
+					"animations": [
+						{"m72_empty": "v.m72"},
+						{"m72_empty2": "v.m72"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "q.property('addon:gun') != 2"},
+						{"hold": "q.property('addon:gun') != 3"}
+					]
+				}
+			}
+		},
+		"controller.animation.m72": {
+			"initial_state": "setup",
+			"states": {
+				"setup": {
+					"transitions": [
+						{"hold": "variable.m72"}
+					]
+				},
+				"hold": {
+					"animations": [
+						{"m72": "v.m72"}
+					],
+					"transitions": [
+						{"reload": "q.property('addon:gun') == 2"},
+						{"aim": "q.is_sneaking"},
+						{"sprint": "q.is_sprinting"}
+					],
+					"blend_transition": 0.1
+				},
+				"empty": {
+					"animations": [
+						{"m72_empty": "v.m72"}
+					],
+					"transitions": [
+						{"reload": "q.property('addon:gun') == 2"},
+						{"hold": "!q.equipped_item_any_tag('slot.weapon.mainhand','empty')"}
+					]
+				},
+				"reload": {
+					"animations": [
+						{"m72_reload": "v.m72"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "q.property('addon:gun') != 2"}
+					]
+				},
+				"reload2": {
+					"animations": [
+						{"m72_reload2": "v.m72"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "q.property('addon:gun') != 3"}
+					]
+				},
+				"aim": {
+					"animations": [
+						{"m72_aim": "v.m72"}
+					],
+					"transitions": [
+						{"hold": "!q.is_sneaking"},
+						{"reload": "q.property('addon:gun') == 2"}
+					],
+					"blend_transition": 0.1
+				},
+				"sprint": {
+					"animations": [
+						{"m72_sprint": "v.m72"}
+					],
+					"transitions": [
+						{"hold": "!q.is_sprinting"},
+						{"hold": "q.is_using_item"},
+						{"reload": "q.property('addon:gun') == 2"}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		}
+	}
+}

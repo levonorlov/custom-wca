@@ -1,0 +1,45 @@
+
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "addon:m16a4_m68",
+      "materials": {
+        "default": "entity_alphatest",
+        "kalik": "slime_outer",
+        "steklo": "spider"
+      },
+      "textures": {
+        "default": "textures/guns/nato/m16a4",
+        "kalik": "textures/guns/m68",
+        "steklo": "textures/guns/m68_steklo"
+      },
+      "geometry": {
+        "default":  "geometry.m16a4",
+        "kalik":  "geometry.m68",
+        "steklo":  "geometry.m68_steklo"
+      },
+      "scripts": {
+        "pre_animation": [
+           "v.main_hand = c.item_slot == 'main_hand';",
+           "v.m16a4 = c.item_slot == 'main_hand';",
+           "v.fire = q.main_hand_item_use_duration > 0.0f;"
+        ],
+        "animate": [
+          {"m16a4_controller": "c.is_first_person"},
+          {"m16a4_fire_controller": "variable.m16a4 && variable.is_first_person"},
+          "m16a4_scope"
+
+        ]
+      },
+      "animations": {
+        "m16a4_controller": "controller.animation.m16a4",
+        "m16a4_scope": "animation.m16a4_scope",
+        "m16a4_aim_m68": "animation.m16a4_aim_m68",
+        "m16a4_reload": "animation.m16a4_reload_item",
+        "m16a4_reload2": "animation.m16a4_reload2"
+      },
+      "render_controllers": [ "controller.render.m16a4","controller.render.kalik","controller.render.kalik_steklo" ]
+    }
+  }
+}

@@ -1,0 +1,54 @@
+
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "addon:m4a1_m68_m203",
+      "materials": {
+        "default": "entity_alphatest",
+        "kalik": "slime_outer",
+        "steklo": "spider"
+      },
+      "textures": {
+        "default": "textures/guns/nato/m4a1",
+ "gl": "textures/guns/m203",
+        "kalik": "textures/guns/m68",
+        "steklo": "textures/guns/m68_steklo"
+      },
+      "geometry": {
+        "default":  "geometry.m4a1",
+        "gl":  "geometry.m203",
+        "kalik":  "geometry.m68",
+        "steklo":  "geometry.m68_steklo"
+      },
+      "scripts": {
+        "pre_animation": [
+           "v.main_hand = c.item_slot == 'main_hand';",
+           "v.m4a1 = c.item_slot == 'main_hand';",
+           "v.fire = q.main_hand_item_use_duration > 0.0f;"
+        ],
+        "animate": [
+          {"m4a1_controller": "c.is_first_person"},
+          {"m4a1_fire_controller": "variable.m4a1 && variable.is_first_person"},
+          "m4a1_scope",
+          "m4a1_eotech"
+
+        ]
+      },
+      "animations": {
+        "m4a1_controller": "controller.animation.m4a1",
+        "m4a1_m203_sprint": "animation.m4a1_m203_sprint",
+        "m4a1_m203_gl": "animation.m4a1_m203_gl",
+        "m203_m4a1_reload": "animation.m203_m4a1_reload",
+        "m203_m4a1_aim": "animation.m203_m4a1_aim",
+        "m4a1_m203": "animation.m4a1_m203",
+        "m4a1_m203_ungl": "animation.m4a1_m203_ungl",
+        "m4a1_scope": "animation.m4a1_scope",
+        "m4a1_aim_m68": "animation.m4a1_aim_m68",
+        "m4a1_reload": "animation.m4a1_reload_item",
+        "m4a1_reload2": "animation.m4a1_reload2"
+      },
+      "render_controllers": [ "controller.render.m4a1","controller.render.gl","controller.render.kalik","controller.render.kalik_steklo" ]
+    }
+  }
+}

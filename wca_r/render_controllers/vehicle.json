@@ -1,0 +1,69 @@
+{
+  "format_version":"1.8.0",
+  "render_controllers": {
+   "controller.render.m1025": {
+      "geometry": "Geometry.default",
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [
+	"q.property('addon:kraska') == 1 ? Texture.sand : (  (texture.default))"
+	  ],
+      "is_hurt_color": {},
+      "on_fire_color": {}
+     },
+     "controller.render.m1151": {
+        "geometry": "Geometry.default",
+        "materials": [ { "*": "Material.default" } ],
+        "textures": [
+     "q.property('addon:kraska') == 1 ? Texture.camo : (  (texture.default))"
+       ],
+        "is_hurt_color": {},
+        "on_fire_color": {}
+       },
+       "controller.render.m1151_obves": {
+          "geometry": "Geometry.obves",
+          "materials": [ { "*": "Material.default" } ],
+          "textures": [
+       "q.property('addon:kraska') == 1 ? Texture.obves_camo : (  (texture.obves))"
+         ],
+          "is_hurt_color": {},
+          "on_fire_color": {}
+         },
+     "controller.render.m1025_death": {
+        "geometry": "Geometry.death",
+        "materials": [ { "*": "Material.default" } ],
+        "textures": [ 
+         "q.property('addon:kraska') == 1 ? Texture.death_camo : (  (texture.death))"
+       ],
+        "is_hurt_color": {},
+        "on_fire_color": {}
+       },
+    "controller.render.car": {
+       "geometry": "Geometry.default",
+       "materials": [ { "*": "Material.default" } ],
+       "textures": [ "Texture.default" ],
+       "is_hurt_color": {},
+       "on_fire_color": {}
+      },
+      "controller.render.car_death": {
+         "geometry": "Geometry.death",
+         "materials": [ { "*": "Material.default" } ],
+         "textures": [ "Texture.death" ],
+         "is_hurt_color": {},
+         "on_fire_color": {}
+        },
+        "controller.render.kord": {
+           "geometry": "Geometry.kord",
+           "materials": [ { "*": "Material.default" } ],
+           "textures": [ "Texture.kord" ],
+           "is_hurt_color": {},
+           "on_fire_color": {}
+          },
+          "controller.render.m2hb": {
+             "geometry": "Geometry.m2hb",
+             "materials": [ { "*": "Material.default" } ],
+             "textures": [ "Texture.m2hb" ],
+             "is_hurt_color": {},
+             "on_fire_color": {}
+            }
+  }
+}

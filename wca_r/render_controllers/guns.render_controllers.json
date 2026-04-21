@@ -1,0 +1,464 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.ai2": {
+       "geometry": "Geometry.ai2",
+       "materials": [ { "*": "Material.default" } ],
+       "textures": [ "Texture.ai2" ]
+      },
+      "controller.render.ifak": {
+         "geometry": "Geometry.ifak",
+         "materials": [ { "*": "Material.default" } ],
+         "textures": [ "Texture.ifak" ]
+        },
+   "controller.render.player.gazi": {
+      "geometry": "Geometry.gazi",
+      "materials": [ { "*": "Material.default" } ]
+     },
+    "controller.render.flash": {
+       "geometry": "Geometry.flash",
+       "materials": [ { "*": "Material.flash" } ],
+       "textures": [ "Texture.flash" ],
+       "uv_anim": {
+         "offset": [
+           0.0,
+           "math.mod(math.floor(query.life_time * 10),6) / 6"
+         ],
+         "scale": [
+           1.0,
+           "1 / 6"
+         ]
+       },
+       "part_visibility": [
+         { "*": true },
+         { "flash_100mm": "q.is_riding && !query.mark_variant == 1 && !query.mark_variant == 2" },
+         { "flash_2a72": "q.is_riding && !query.mark_variant == 1 && !query.mark_variant == 2" },
+         { "flash_mg": "variable.fnmag || variable.pkm || variable.pkp || variable.pkp_zenit" },
+         { "flash_tigr_m_kord": "variable.tigr_m_kord" },
+         { "flash_m1151_m2hb": "variable.m1151_m2hb" },
+         { "flash": "variable.guns && !variable.rgd5 && !variable.m67 && !variable.fnmag && !variable.rpg7 && !variable.rpoa && !variable.m72 && !variable.pkm && !variable.pkp && !variable.pkp_zenit && !q.equipped_item_any_tag('slot.weapon.mainhand','reload') && !q.equipped_item_any_tag('slot.weapon.mainhand','pbs') && !q.equipped_item_any_tag('slot.weapon.mainhand','pbs1') && !variable.hexagon && !variable.asval && !variable.asvalm" }
+       ]
+      },
+      "controller.render.m4a1": {
+      "is_hurt_color": {},
+      "on_fire_color": {},
+      "geometry": "Geometry.default",
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [ "Texture.default" ],
+      "part_visibility": [
+        { "*": true },
+        { "rukoyatka": "!q.equipped_item_any_tag('slot.weapon.mainhand','m203')" }
+      ]
+     },
+     "controller.render.m16a4": {
+     "is_hurt_color": {},
+     "on_fire_color": {},
+     "geometry": "Geometry.default",
+     "materials": [ { "*": "Material.default" } ],
+     "textures": [ "Texture.default" ],
+     "part_visibility": [
+       { "*": true },
+       { "rukoyatka": "!q.equipped_item_any_tag('slot.weapon.mainhand','m203')" },
+       { "perenos": "!q.equipped_item_any_tag('slot.weapon.mainhand','acog') && !q.equipped_item_any_tag('slot.weapon.mainhand','m68') && !q.equipped_item_any_tag('slot.weapon.mainhand','eotech')" }
+     ]
+    },
+     "controller.render.m16a1": {
+     "is_hurt_color": {},
+     "on_fire_color": {},
+     "geometry": "Geometry.default",
+     "materials": [ { "*": "Material.default" } ],
+     "textures": [ "Texture.default" ],
+     "part_visibility": [
+       { "*": true },
+       { "tsevyo": "!q.equipped_item_any_tag('slot.weapon.mainhand','m203')" },
+       { "tsevyo2": "!q.equipped_item_any_tag('slot.weapon.mainhand','m203')" },
+       { "tsevyo3": "!q.equipped_item_any_tag('slot.weapon.mainhand','m203')" }
+     ]
+    },
+      "controller.render.rpg7": {
+      "is_hurt_color": {},
+      "on_fire_color": {},
+      "geometry": "Geometry.default",
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [ "Texture.default" ],
+      "part_visibility": [
+        { "*": true },
+        { "vistrel": "q.property('addon:gun') != 1" },
+        { "pg7vl": "q.property('addon:gun') != 1" },
+        { "pg7vr": "q.property('addon:gun') != 1" },
+        { "tbg7v": "q.property('addon:gun') != 1" },
+        { "sopla": "q.property('addon:gun') != 1" },
+        { "sopla2": "q.property('addon:gun') != 1" },
+        { "sopla3": "q.property('addon:gun') != 1" },
+        { "sopla4": "q.property('addon:gun') != 1" },
+        { "vistrel2": "q.property('addon:gun') == 2" },
+        { "pg7vl2": "q.property('addon:gun') == 2" },
+        { "pg7vr2": "q.property('addon:gun') == 2" },
+        { "tbg7v2": "q.property('addon:gun') == 2" },
+        { "sopla5": "q.property('addon:gun') == 2" },
+        { "sopla6": "q.property('addon:gun') == 2" },
+        { "sopla7": "q.property('addon:gun') == 2" },
+        { "sopla8": "q.property('addon:gun') == 2" }
+      ]
+     },
+     "controller.render.fnmag": {
+     "is_hurt_color": {},
+     "on_fire_color": {},
+     "geometry": "Geometry.default",
+     "materials": [ { "*": "Material.default" } ],
+     "textures": [ "Texture.default" ],
+     "part_visibility": [
+       { "*": true },
+       { "patron11fnmag": "q.property('fnmag:ammo') <= 51" },
+       { "patron10fnmag": "q.property('fnmag:ammo') <= 50" },
+       { "patron9fnmag": "q.property('fnmag:ammo') <= 49" },
+       { "patron8fnmag": "q.property('fnmag:ammo') <= 48" },
+       { "patron7fnmag": "q.property('fnmag:ammo') <= 47" },
+       { "patron6fnmag": "q.property('fnmag:ammo') <= 46" },
+       { "patron5fnmag": "q.property('fnmag:ammo') <= 45" },
+       { "patron4fnmag": "q.property('fnmag:ammo') <= 44" },
+       { "patron3fnmag": "q.property('fnmag:ammo') <= 43" },
+       { "patron2fnmag": "q.property('fnmag:ammo') <= 42" },
+       { "patronfnmag": "q.property('fnmag:ammo') <= 41" },
+       { "patron12fnmag": "q.property('fnmag:ammo') <= 40" },
+       { "patron13fnmag": "q.property('fnmag:ammo') <= 39" },
+       { "patron14fnmag": "q.property('fnmag:ammo') <= 38" }
+     ]
+    },
+    "controller.render.m240b": {
+    "is_hurt_color": {},
+    "on_fire_color": {},
+    "geometry": "Geometry.default",
+    "materials": [ { "*": "Material.default" } ],
+    "textures": [ "Texture.default" ],
+    "part_visibility": [
+      { "*": true },
+      { "patron11m240b": "q.property('m240b:ammo') <= 51" },
+      { "patron10m240b": "q.property('m240b:ammo') <= 50" },
+      { "patron9m240b": "q.property('m240b:ammo') <= 49" },
+      { "patron9m240b": "q.property('m240b:ammo') <= 48" },
+      { "patron8m240b": "q.property('m240b:ammo') <= 47" },
+      { "patron7m240b": "q.property('m240b:ammo') <= 46" },
+      { "patron6m240b": "q.property('m240b:ammo') <= 45" },
+      { "patron5m240b": "q.property('m240b:ammo') <= 44" },
+      { "patron4m240b": "q.property('m240b:ammo') <= 43" },
+      { "patron3m240b": "q.property('m240b:ammo') <= 42" },
+      { "patron2m240b": "q.property('m240b:ammo') <= 41" },
+      { "patronm240b": "q.property('m240b:ammo') <= 40" },
+      { "patron12m240b": "q.property('m240b:ammo') <= 39" }
+    ]
+   },
+    "controller.render.m249": {
+    "is_hurt_color": {},
+    "on_fire_color": {},
+    "geometry": "Geometry.default",
+    "materials": [ { "*": "Material.default" } ],
+    "textures": [ "Texture.default" ],
+    "part_visibility": [
+      { "*": true },
+      { "patron11m249": false },
+      { "patron10m249": "q.property('m249:ammo') <= 101" },
+      { "patron9m249": "q.property('m249:ammo') <= 100" },
+      { "patron8m249": "q.property('m249:ammo') <= 99" },
+      { "patron7m249": "q.property('m249:ammo') <= 98" },
+      { "patron6m249": "q.property('m249:ammo') <= 97" },
+      { "patron5m249": "q.property('m249:ammo') <= 96" },
+      { "patron4m249": "q.property('m249:ammo') <= 95" },
+      { "patron3m249": "q.property('m249:ammo') <= 94" },
+      { "patron2m249": "q.property('m249:ammo') <= 93" },
+      { "patronm249": "q.property('m249:ammo') <= 92" }
+    ]
+   },
+   "controller.render.m249pip": {
+   "is_hurt_color": {},
+   "on_fire_color": {},
+   "geometry": "Geometry.default",
+   "materials": [ { "*": "Material.default" } ],
+   "textures": [ "Texture.default" ],
+   "part_visibility": [
+     { "*": true },
+     { "patron11m249": false },
+     { "patron10m249": "q.property('m249pip:ammo') <= 101" },
+     { "patron9m249": "q.property('m249pip:ammo') <= 100" },
+     { "patron8m249": "q.property('m249pip:ammo') <= 99" },
+     { "patron7m249": "q.property('m249pip:ammo') <= 98" },
+     { "patron6m249": "q.property('m249pip:ammo') <= 97" },
+     { "patron5m249": "q.property('m249pip:ammo') <= 96" },
+     { "patron4m249": "q.property('m249pip:ammo') <= 95" },
+     { "patron3m249": "q.property('m249pip:ammo') <= 94" },
+     { "patron2m249": "q.property('m249pip:ammo') <= 93" },
+     { "patronm249": "q.property('m249pip:ammo') <= 92" }
+   ]
+  },
+    "controller.render.pkm": {
+    "is_hurt_color": {},
+    "on_fire_color": {},
+    "geometry": "Geometry.default",
+    "materials": [ { "*": "Material.default" } ],
+    "textures": [ "Texture.default" ],
+    "part_visibility": [
+      { "*": true },
+      { "patron11pkm": "q.property('pkm:ammo') <= 101" },
+      { "patron10pkm": "q.property('pkm:ammo') <= 100" },
+      { "patron9pkm": "q.property('pkm:ammo') <= 99" },
+      { "patron8pkm": "q.property('pkm:ammo') <= 98" },
+      { "patron7pkm": "q.property('pkm:ammo') <= 97" },
+      { "patron6pkm": "q.property('pkm:ammo') <= 96" },
+      { "patron5pkm": "q.property('pkm:ammo') <= 95" },
+      { "patron4pkm": "q.property('pkm:ammo') <= 94" },
+      { "patron3pkm": "q.property('pkm:ammo') <= 93" },
+      { "patron2pkm": "q.property('pkm:ammo') <= 92" },
+      { "patronpkm": "q.property('pkm:ammo') <= 91" },
+      { "patronpkm2": "q.property('pkm:ammo') <= 90" },
+      { "patronpkm3": "q.property('pkm:ammo') <= 89" },
+      { "patronpkm4": "q.property('pkm:ammo') <= 88" }
+    ]
+   },
+   "controller.render.pkm_empty": {
+   "is_hurt_color": {},
+   "on_fire_color": {},
+   "geometry": "Geometry.default",
+   "materials": [ { "*": "Material.default" } ],
+   "textures": [ "Texture.default" ],
+   "part_visibility": [
+     { "*": true },
+     { "patron11pkm": false },
+     { "patron10pkm": false },
+     { "patron9pkm": false },
+     { "patron8pkm": false },
+     { "patron7pkm": false },
+     { "patron6pkm": false },
+     { "patron5pkm": false },
+     { "patron4pkm": false },
+     { "patron3pkm": false },
+     { "patron2pkm": false },
+     { "patronpkm": false },
+     { "patronpkm2": false },
+     { "patronpkm3": false },
+     { "patronpkm4": false }
+   ]
+  },
+  "controller.render.pkp": {
+  "is_hurt_color": {},
+  "on_fire_color": {},
+  "geometry": "Geometry.default",
+  "materials": [ { "*": "Material.default" } ],
+  "textures": [ "Texture.default" ],
+  "part_visibility": [
+      { "*": true },
+      { "patron11pkp": "q.property('pkp:ammo') <= 101" },
+      { "patron10pkp": "q.property('pkp:ammo') <= 100" },
+      { "patron9pkp": "q.property('pkp:ammo') <= 99" },
+      { "patron8pkp": "q.property('pkp:ammo') <= 98" },
+      { "patron7pkp": "q.property('pkp:ammo') <= 97" },
+      { "patron6pkp": "q.property('pkp:ammo') <= 96" },
+      { "patron5pkp": "q.property('pkp:ammo') <= 95" },
+      { "patron4pkp": "q.property('pkp:ammo') <= 94" },
+      { "patron3pkp": "q.property('pkp:ammo') <= 93" },
+      { "patron2pkp": "q.property('pkp:ammo') <= 92" },
+      { "patronpkp": "q.property('pkp:ammo') <= 91" },
+      { "patronpkp2": "q.property('pkp:ammo') <= 90" },
+      { "patronpkp3": "q.property('pkp:ammo') <= 89" },
+      { "patronpkp4": "q.property('pkp:ammo') <= 88" }
+    ]
+ },
+ "controller.render.pkp_empty": {
+ "is_hurt_color": {},
+ "on_fire_color": {},
+ "geometry": "Geometry.default",
+ "materials": [ { "*": "Material.default" } ],
+ "textures": [ "Texture.default" ],
+ "part_visibility": [
+   { "*": true },
+   { "patron11pkp": false },
+   { "patron10pkp": false },
+   { "patron9pkp": false },
+   { "patron8pkp": false },
+   { "patron7pkp": false },
+   { "patron6pkp": false },
+   { "patron5pkp": false },
+   { "patron4pkp": false },
+   { "patron3pkp": false },
+   { "patron2pkp": false },
+   { "patronpkp": false },
+   { "patronpkp2": false },
+   { "patronpkp3": false },
+   { "patronpkp4": false }
+ ]
+},
+"controller.render.pkp_zenit": {
+"is_hurt_color": {},
+"on_fire_color": {},
+"geometry": "Geometry.default",
+"materials": [ { "*": "Material.default" } ],
+"textures": [ "Texture.default" ],
+"part_visibility": [
+  { "*": true },
+  { "patron11pkp": "q.property('pkp_zenit:ammo') <= 101" },
+  { "patron10pkp": "q.property('pkp_zenit:ammo') <= 100" },
+  { "patron9pkp": "q.property('pkp_zenit:ammo') <= 99" },
+  { "patron8pkp": "q.property('pkp_zenit:ammo') <= 98" },
+  { "patron7pkp": "q.property('pkp_zenit:ammo') <= 97" },
+  { "patron6pkp": "q.property('pkp_zenit:ammo') <= 96" },
+  { "patron5pkp": "q.property('pkp_zenit:ammo') <= 95" },
+  { "patron4pkp": "q.property('pkp_zenit:ammo') <= 94" },
+  { "patron3pkp": "q.property('pkp_zenit:ammo') <= 93" },
+  { "patron2pkp": "q.property('pkp_zenit:ammo') <= 92" },
+  { "patronpkp": "q.property('pkp_zenit:ammo') <= 91" },
+  { "patronpkp2": "q.property('pkp_zenit:ammo') <= 90" },
+  { "patronpkp3": "q.property('pkp_zenit:ammo') <= 89" },
+  { "patronpkp4": "q.property('pkp_zenit:ammo') <= 88" }
+]
+},
+"controller.render.pkp_zenit_empty": {
+"is_hurt_color": {},
+"on_fire_color": {},
+"geometry": "Geometry.default",
+"materials": [ { "*": "Material.default" } ],
+"textures": [ "Texture.default" ],
+"part_visibility": [
+ { "*": true },
+ { "patron11pkp": false },
+ { "patron10pkp": false },
+ { "patron9pkp": false },
+ { "patron8pkp": false },
+ { "patron7pkp": false },
+ { "patron6pkp": false },
+ { "patron5pkp": false },
+ { "patron4pkp": false },
+ { "patron3pkp": false },
+ { "patron2pkp": false },
+ { "patronpkp": false },
+ { "patronpkp2": false },
+ { "patronpkp3": false },
+ { "patronpkp4": false }
+]
+},
+    "controller.render.fnmag_empty": {
+    "is_hurt_color": {},
+    "on_fire_color": {},
+    "geometry": "Geometry.default",
+    "materials": [ { "*": "Material.default" } ],
+    "textures": [ "Texture.default" ],
+    "part_visibility": [
+      { "*": true },
+      { "patron11fnmag": false },
+      { "patron10fnmag": false },
+      { "patron9fnmag": false },
+      { "patron8fnmag": false },
+      { "patron7fnmag": false },
+      { "patron6fnmag": false },
+      { "patron5fnmag": false },
+      { "patron4fnmag": false },
+      { "patron3fnmag": false },
+      { "patron2fnmag": false },
+      { "patronfnmag": false },
+      { "patron12fnmag": false },
+      { "patron13fnmag": false },
+      { "patron14fnmag": false }
+    ]
+   },
+   "controller.render.scope": {
+   "is_hurt_color": {},
+   "on_fire_color": {},
+   "geometry": "Geometry.scope",
+   "materials": [ { "*": "Material.scope" } ],
+   "textures": [ "Texture.scope" ]
+  },
+   "controller.render.obves": {
+   "is_hurt_color": {},
+   "on_fire_color": {},
+   "geometry": "Geometry.obves",
+   "materials": [ { "*": "Material.obves" } ],
+   "textures": [ "Texture.obves" ]
+  },
+   "controller.render.crosshair": {
+   "is_hurt_color": {},
+   "on_fire_color": {},
+   "geometry": "Geometry.crosshair",
+   "materials": [ { "*": "Material.slime" } ],
+   "textures": [ "Texture.crosshair" ]
+  },
+   "controller.render.m21_crawl": {
+   "is_hurt_color": {},
+   "on_fire_color": {},
+   "geometry": "Geometry.m21_crawl",
+   "materials": [ { "*": "Material.slime" } ],
+   "textures": [ "Texture.m21" ]
+  },
+  "controller.render.svd_crawl": {
+  "is_hurt_color": {},
+  "on_fire_color": {},
+  "geometry": "Geometry.svd_crawl",
+  "materials": [ { "*": "Material.slime" } ],
+  "textures": [ "Texture.svd" ]
+ },
+ "controller.render.vss_crawl": {
+ "is_hurt_color": {},
+ "on_fire_color": {},
+ "geometry": "Geometry.vss_crawl",
+ "materials": [ { "*": "Material.slime" } ],
+ "textures": [ "Texture.vss" ]
+},
+    "controller.render.head": {
+    "is_hurt_color": {},
+    "on_fire_color": {},
+    "geometry": "Geometry.head",
+    "materials": [ { "*": "Material.default" } ],
+    "textures": [ "Texture.head" ]
+   },
+   "controller.render.gl": {
+   "is_hurt_color": {},
+   "on_fire_color": {},
+   "geometry": "Geometry.gl",
+   "materials": [ { "*": "Material.default" } ],
+   "textures": [ "Texture.gl" ],
+   "part_visibility": [
+     { "*": true },
+     { "vog2": "query.property('ak74:gp25') <= 1 || query.property('ak74m:gp25') <= 1 || query.property('akms:gp25') <= 1 || query.property('ak74m_zenit:gp25') <= 1 || query.property('ak12:gp25') <= 1" }
+   ]
+  },
+   "controller.render.kalik": {
+   "is_hurt_color": {},
+   "on_fire_color": {},
+   "geometry": "Geometry.kalik",
+   "materials": [ { "*": "Material.kalik" } ],
+   "textures": [ "Texture.kalik" ]
+  },
+  "controller.render.kalik_third": {
+  "is_hurt_color": {},
+  "on_fire_color": {},
+  "geometry": "Geometry.kalik",
+  "materials": [ { "*": "Material.default" } ],
+  "textures": [ "Texture.kalik" ]
+ },
+  "controller.render.kalik_steklo": {
+  "is_hurt_color": {},
+  "on_fire_color": {},
+  "geometry": "Geometry.steklo",
+  "materials": [ { "*": "Material.steklo" } ],
+  "textures": [ "Texture.steklo" ]
+ },
+  "controller.render.pbs": {
+  "is_hurt_color": {},
+  "on_fire_color": {},
+  "geometry": "Geometry.pbs",
+  "materials": [ { "*": "Material.default" } ],
+  "textures": [ "Texture.pbs" ]
+ },
+       "controller.render.gun": {
+       "is_hurt_color": {},
+       "on_fire_color": {},
+       "geometry": "Geometry.default",
+       "materials": [ { "*": "Material.gun" } ],
+       "textures": [ "Texture.default" ]
+      },
+      "controller.render.m72": {
+      "is_hurt_color": {},
+      "on_fire_color": {},
+      "geometry": "Geometry.m72",
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [ "Texture.m72" ]
+     }
+  }
+}

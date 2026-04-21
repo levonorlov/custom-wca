@@ -1,0 +1,36 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "addon:6b47",
+			"materials": {
+				"default": "armor",
+				"enchanted": "armor_enchanted"
+			},
+			"textures": {
+				"m88_butan": "textures/entity/6b47",
+				"povyazka_white": "textures/entity/povyazka_helmet",
+				"povyazka_blue": "textures/entity/povyazka_blue_helmet",
+				"povyazka_red": "textures/entity/povyazka_red_helmet",
+				"povyazka_green": "textures/entity/povyazka_green_helmet",
+				"povyazka_yellow": "textures/entity/povyazka_yellow_helmet",
+				"balaklava": "textures/entity/balaklava",
+				"balaklava_sand": "textures/entity/balaklava_sand",
+				"balaklava2": "textures/entity/balaklava2"
+			},
+			"geometry": {
+				"m88": "geometry.6b47",
+				"povyazka": "geometry.opscore_povyazka",
+				"balaklava": "geometry.balaklava"
+			},
+			"scripts": {
+				"parent_setup": "variable.chest_layer_visible = 0.0;"
+			},
+			"render_controllers": [
+				"controller.render.m88_butan",
+				{"controller.render.balaklava": "q.is_item_name_any('slot.inventory',0,'addon:balaklava') || q.is_item_name_any('slot.inventory',0,'addon:balaklava2') || q.is_item_name_any('slot.inventory',0,'addon:balaklava_sand')"},
+				{ "controller.render.povyazka": "q.is_item_name_any('slot.inventory',1,'addon:povyazka_white') || q.is_item_name_any('slot.inventory',1,'addon:povyazka_blue')||q.is_item_name_any('slot.inventory',1,'addon:povyazka_red')||q.is_item_name_any('slot.inventory',1,'addon:povyazka_green')||q.is_item_name_any('slot.inventory',1,'addon:povyazka_yellow')" }
+			]
+		}
+	}
+}

@@ -1,0 +1,37 @@
+
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "addon:akms_gp25",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/guns/ussr/akms",
+        "gl": "textures/guns/gp25"
+      },
+      "geometry": {
+        "default":  "geometry.akms",
+        "gl":  "geometry.gp25"
+      },
+      "scripts": {
+        "pre_animation": [
+           "v.main_hand = c.item_slot == 'main_hand';",
+           "v.akms = c.item_slot == 'main_hand';",
+           "v.fire = q.main_hand_item_use_duration > 0.0f;"
+        ],
+        "animate": [
+          {"akms_controller": "c.is_first_person"},
+          {"akms_fire_controller": "variable.akms && variable.is_first_person"}
+
+        ]
+      },
+      "animations": {
+        "akms_controller": "controller.animation.akms",
+        "akms_reload": "animation.akms_reload_item"
+      },
+      "render_controllers": [ "controller.render.crossbow","controller.render.gl" ]
+    }
+  }
+}

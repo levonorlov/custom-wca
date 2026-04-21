@@ -1,0 +1,219 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.rpoa_fire": {
+			"initial_state": "setup",
+			"states": {
+				"setup": {
+					"transitions": [
+						{"fire": "query.property('gun:fire') == 1"}
+					]
+				},
+				"fire": {
+					"animations": [
+						{"shoot": "v.rpoa"}
+					],
+					"transitions": [
+						{
+						  "fire": "query.property('gun:fire') == 1"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.rpoa_sneak": {
+			"initial_state": "setup",
+			"states": {
+				"setup": {
+					"transitions": [
+						{"hold": "variable.rpoa"}
+					]
+				},
+				"hold": {
+					"animations": [
+						{"rpoa_sneak": "v.rpoa"}
+					],
+					"transitions": [
+						{"reload": "q.equipped_item_any_tag('slot.weapon.mainhand','reload')"},
+						{"reload2": "q.equipped_item_any_tag('slot.weapon.mainhand','reload2')"}
+					],
+					"blend_transition": 0.1
+				},
+				"reload": {
+					"animations": [
+						{"rpoa_reload_sneak": "v.rpoa"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "!q.equipped_item_any_tag('slot.weapon.mainhand','reload')"}
+					]
+				},
+				"reload2": {
+					"animations": [
+						{"rpoa_reload2_sneak": "v.rpoa"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "!q.equipped_item_any_tag('slot.weapon.mainhand','reload2')"}
+					]
+				}
+			}
+		},
+		"controller.animation.rpoa_third": {
+			"initial_state": "setup",
+			"states": {
+				"setup": {
+					"transitions": [
+						{"hold": "variable.rpoa"}
+					]
+				},
+				"hold": {
+					"animations": [
+						{"rpoa_third": "v.rpoa"}
+					],
+					"transitions": [
+						{"reload": "q.equipped_item_any_tag('slot.weapon.mainhand','reload')"},
+						{"aim": "q.is_sneaking"},
+						{"sprint": "q.is_sprinting && !q.is_using_item"},
+						{"reload2": "q.equipped_item_any_tag('slot.weapon.mainhand','reload2')"}
+					],
+					"blend_transition": 0.1
+				},
+				"reload": {
+					"animations": [
+						{"rpoa_reload_third": "v.rpoa"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "!q.equipped_item_any_tag('slot.weapon.mainhand','reload')"}
+					]
+				},
+				"reload2": {
+					"animations": [
+						{"rpoa_reload2_third": "v.rpoa"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "!q.equipped_item_any_tag('slot.weapon.mainhand','reload2')"}
+					]
+				},
+				"aim": {
+					"animations": [
+						{"rpoa_aim_third": "v.rpoa"}
+					],
+					"transitions": [
+						{"hold": "!q.is_sneaking"},
+						{"reload": "q.equipped_item_any_tag('slot.weapon.mainhand','reload')"},
+						{"reload2": "q.equipped_item_any_tag('slot.weapon.mainhand','reload2')"}
+					],
+					"blend_transition": 0.1
+				},
+				"sprint": {
+					"animations": [
+						{"rpoa_sprint_third": "v.rpoa"}
+					],
+					"transitions": [
+						{"hold": "!q.is_sprinting"},
+						{"hold": "q.is_using_item"},
+						{"reload": "q.equipped_item_any_tag('slot.weapon.mainhand','reload')"},
+						{"reload2": "q.equipped_item_any_tag('slot.weapon.mainhand','reload2')"}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		},
+		"controller.animation.rpoa_2": {
+			"initial_state": "setup",
+			"states": {
+				"setup": {
+					"transitions": [
+						{"hold": "variable.rpoa"}
+					]
+				},
+				"hold": {
+					"animations": [
+						{"rpoa": "v.rpoa"}
+					],
+					"transitions": [
+						{"empty": "q.equipped_item_any_tag('slot.weapon.mainhand','reload')"},
+						{"empty": "q.equipped_item_any_tag('slot.weapon.mainhand','reload2')"}
+					]
+				},
+				"empty": {
+					"animations": [
+						{"rpoa_empty": "v.rpoa"},
+						{"rpoa_empty2": "v.rpoa"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "!q.equipped_item_any_tag('slot.weapon.mainhand','reload')"},
+						{"hold": "!q.equipped_item_any_tag('slot.weapon.mainhand','reload2')"}
+					]
+				}
+			}
+		},
+		"controller.animation.rpoa": {
+			"initial_state": "setup",
+			"states": {
+				"setup": {
+					"transitions": [
+						{"hold": "variable.rpoa"}
+					]
+				},
+				"hold": {
+					"animations": [
+						{"rpoa": "v.rpoa"}
+					],
+					"transitions": [
+						{"reload": "q.equipped_item_any_tag('slot.weapon.mainhand','reload')"},
+						{"aim": "q.is_sneaking"},
+						{"sprint": "q.is_sprinting && !q.is_using_item"},
+						{"reload2": "q.equipped_item_any_tag('slot.weapon.mainhand','reload2')"}
+					],
+					"blend_transition": 0.1
+				},
+				"reload": {
+					"animations": [
+						{"rpoa_reload": "v.rpoa"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "!q.equipped_item_any_tag('slot.weapon.mainhand','reload')"}
+					]
+				},
+				"reload2": {
+					"animations": [
+						{"rpoa_reload2": "v.rpoa"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "!q.equipped_item_any_tag('slot.weapon.mainhand','reload2')"}
+					]
+				},
+				"aim": {
+					"animations": [
+						{"rpoa_aim": "v.rpoa"}
+					],
+					"transitions": [
+						{"hold": "!q.is_sneaking"},
+						{"reload": "q.equipped_item_any_tag('slot.weapon.mainhand','reload')"},
+						{"reload2": "q.equipped_item_any_tag('slot.weapon.mainhand','reload2')"}
+					],
+					"blend_transition": 0.1
+				},
+				"sprint": {
+					"animations": [
+						{"rpoa_sprint": "v.rpoa"}
+					],
+					"transitions": [
+						{"hold": "!q.is_sprinting"},
+						{"hold": "q.is_using_item"},
+						{"reload": "q.equipped_item_any_tag('slot.weapon.mainhand','reload')"},
+						{"reload2": "q.equipped_item_any_tag('slot.weapon.mainhand','reload2')"}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		}
+	}
+}

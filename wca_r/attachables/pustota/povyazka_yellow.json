@@ -1,0 +1,21 @@
+
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "addon:povyazka_yellow",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/b8"
+      },
+      "geometry": {
+        "default":  "geometry.pustota"
+      },
+      "render_controllers": [ 
+        "controller.render.crossbow"
+    ]
+    }
+  }
+}

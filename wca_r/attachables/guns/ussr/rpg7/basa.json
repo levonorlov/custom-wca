@@ -1,0 +1,43 @@
+
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "addon:rpg7",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/guns/ussr/rpg7"
+      },
+      "geometry": {
+        "default":  "geometry.rpg7"
+      },
+      "scripts": {
+        "pre_animation": [
+           "v.main_hand = c.item_slot == 'main_hand';",
+           "v.rpg7 = c.item_slot == 'main_hand';",
+           "v.fire = q.main_hand_item_use_duration > 0.0f;"
+        ],
+        "animate": [
+          {"rpg7_controller": "c.is_first_person"},
+          "rpg7_empty2",
+          {"rpg7_fire_controller": "variable.rpg7 && variable.is_first_person"},
+          {"rpg7_controller_third": "!c.is_first_person"}
+
+        ]
+      },
+      "animations": {
+        "rpg7_controller": "controller.animation.rpg7",
+        "rpg7_fire_controller": "controller.animation.rpg7_fire",
+        "rpg7_shoot": "animation.rpg7_shoot",
+        "rpg7_empty2": "animation.rpg7_empty2",
+        "rpg7_reload": "animation.rpg7_reload_item",
+        "rpg7_aim": "animation.rpg7_aim_item",
+        "rpg7_controller_third": "controller.animation.rpg7_third",
+        "rpg7_reload_third": "animation.rpg7_reload_item_third"
+      },
+      "render_controllers": [ "controller.render.rpg7" ]
+    }
+  }
+}

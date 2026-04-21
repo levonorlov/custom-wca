@@ -1,0 +1,130 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.humanoid.look_at_target.default": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": ["query.target_x_rotation", "query.target_y_rotation", 0]
+				}
+			}
+		},
+		"animation.humanoid.look_at_target.crawl": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": ["query.target_x_rotation", "query.target_y_rotation", 0]
+				}
+			}
+		},
+		"animation.humanoid.look_at_target_guns": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": ["query.target_x_rotation", "query.target_y_rotation", 0]
+				},
+				"root": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": [0, "(Math.max(-35, Math.min(35,query.target_y_rotation)))", 0]
+				},
+				"waist": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": [0, "query.target_y_rotation", 0]
+				},
+				"heli": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": ["(Math.max(-22.5, Math.min(22.5,query.target_x_rotation)))", "query.target_y_rotation", 0]
+				}
+			}
+		},
+		"animation.humanoid.look_at_target_dshkm": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": [0, "query.target_y_rotation", 0]
+				},
+				"dshk": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": ["query.target_x_rotation", "query.target_y_rotation", 0]
+				},
+				"head": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": ["query.target_x_rotation", "query.target_y_rotation", 0]
+				}
+			}
+		},
+		"animation.humanoid.look_at_target_tigr_m_turret": {
+			"loop": true,
+			"bones": {
+				"turret": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": [0, "query.target_y_rotation", 0]
+				},
+				"stanok3": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": ["(Math.max(-74, Math.min(40,query.target_x_rotation)))", "query.target_y_rotation", 0]
+				}
+			}
+		},
+		"animation.humanoid.look_at_target_m1151_turret": {
+			"loop": true,
+			"bones": {
+				"turret_m1151": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": [0, "query.target_y_rotation", 0]
+				},
+				"stanok3_m1151": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": ["(Math.max(-74, Math.min(40,query.target_x_rotation)))", "query.target_y_rotation", 0]
+				}
+			}
+		},
+		"animation.humanoid.look_at_target_tunk": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": ["query.head_x_rotation", "query.target_y_rotation", 0]
+				},
+				"pushka_bmp3": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": ["(Math.max(-74, Math.min(7.5,query.target_x_rotation)))", "query.target_y_rotation", 0]
+				}
+			}
+		}
+	}
+}

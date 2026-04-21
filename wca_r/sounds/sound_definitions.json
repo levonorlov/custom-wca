@@ -1,0 +1,968 @@
+{
+  "addon.repair": {
+    "category": "neutral",
+    "sounds": [
+      {"name": "sounds/repair",
+      "volume" : 2
+    }
+	   ]
+  },
+  "addon.car_engine": {
+    "category": "neutral",
+    "sounds": [
+      {"name": "sounds/vehicle/car/engine",
+      "volume" : 10
+    }
+	   ]
+  },
+  "addon.car_engine_on": {
+    "category": "neutral",
+    "sounds": [
+      {"name": "sounds/vehicle/car/engine_on",
+      "volume" : 10
+    }
+	   ]
+  },
+  "addon.car": {
+    "category": "neutral",
+    "sounds": [
+      {"name": "sounds/vehicle/car/car_step",
+      "volume" : 15
+    }
+      
+	   ]
+  },
+  "addon.car_step": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/vehicle/car/car_step"
+	   ]
+  },
+  "addon.2a72": {
+    "category": "neutral",
+     "sounds": [
+       {"name": "sounds/bmp3/2a72_1",
+       "volume" : 5
+     },
+       {"name": "sounds/bmp3/2a72_2",
+       "volume" : 5
+     },
+       {"name": "sounds/bmp3/2a72_3",
+       "volume" : 5
+     }
+      ]
+  },
+  "addon.2a70": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/bmp3/2a70_1",
+      "sounds/bmp3/2a70_2",
+      "sounds/bmp3/2a70_3"
+	   ]
+  },
+  "addon.bmp3_dviglo": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/bmp3/dviglo"
+	   ]
+  },
+  "addon.koltco": {
+    "category": "neutral",
+    "sounds": [
+      {"name": "sounds/koltco",
+      "volume" : 2
+    }
+	   ]
+  },
+  "addon.zapal": {
+    "category": "neutral",
+    "sounds": [
+      {"name": "sounds/zapal",
+      "volume" : 2
+    }
+	   ]
+  },
+  "addon.kontuziya": {
+    "category": "neutral",
+    "sounds": [
+       {"name":"sounds/kontuziya",
+      "volume" : 5
+    }
+	   ]
+  },
+  "addon.ukol": {
+    "category": "neutral",
+    "sounds": [
+      {"name": "sounds/ukol",
+      "volume" : 5
+    }
+     ]
+    },
+    "addon.molniya": {
+      "category": "neutral",
+      "sounds": [
+        {"name": "sounds/molniya",
+        "volume" : 1
+      }
+       ]
+      },
+  "addon.krishka": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/krishka"
+	   ]
+  },
+  "addon.krishka2": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/krishka2"
+	   ]
+  },
+  "addon.shprits": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/shptits"
+	   ]
+  },
+  "addon.zhgut2": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/zhgut2"
+	   ]
+  },
+  "addon.serdce": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/serdce"
+	   ]
+  },
+  "addon.serdce2": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/serdce2"
+	   ]
+  },
+  "addon.serdce3": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/serdce3"
+	   ]
+  },
+  "addon.hit": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/bullet/hit",
+      "sounds/bullet/hit2",
+      "sounds/bullet/rikoshet",
+      "sounds/bullet/rikoshet2",
+      "sounds/bullet/hit",
+      "sounds/bullet/hit2"
+	   ]
+  },
+  "addon.gp25_babah": {
+    "category": "neutral",
+    "sounds": [
+      {"name": "sounds/random/explode2",
+      "volume" : 0.50
+    },
+      {"name": "sounds/random/explode3",
+      "volume" : 0.50
+    },
+      {"name": "sounds/random/explode4",
+      "volume" : 0.50
+    }
+	   ]
+  },
+  "addon.vog25": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/reload/vog25"
+	   ]
+  },
+  "addon.vog25_2": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/reload/vog25_2"
+	   ]
+  },
+
+  "addon.gp25": {
+    "category": "neutral",
+    "sounds": [
+      
+      {"name":"sounds/guns/gp25",
+       "volume" : 3
+    }
+	   ]
+  },
+  "addon.m72": {
+    "category": "neutral",
+    "sounds": [
+      {"name": "sounds/guns/nato/m72/fire",
+      "volume" : 3
+   }
+	   ]
+  },
+  "addon.m72krishka": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/guns/nato/m72/krishka"
+	   ]
+  },
+  "addon.m72open": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/guns/nato/m72/open"
+	   ]
+  },
+  "addon.m72kurok": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/guns/nato/m72/kurok"
+	   ]
+  },
+  "addon.rpg7": {
+    "category": "neutral",
+    "sounds": [
+      {"name":"sounds/guns/ussr/rpg7/fire",
+      "volume" : 3
+   }
+	   ]
+  },
+  "addon.rpg7_0": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/guns/ussr/rpg7/rpg7_0"
+	   ]
+  },
+  "addon.rpg7_1": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/guns/ussr/rpg7/rpg7_1"
+	   ]
+  },
+  "addon.rpg7_2": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/guns/ussr/rpg7/rpg7_2"
+	   ]
+  },
+  "addon.rpg7_3": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/guns/ussr/rpg7/rpg7_3"
+	   ]
+  },
+  "addon.m203open": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/reload/m203_open"
+	   ]
+  },
+  "addon.m203granata": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/reload/m203_granata"
+	   ]
+  },
+  "addon.m203close": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/reload/m203_close"
+	   ]
+  },
+  "addon.m203mushka": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/guns/m203_mushka"
+	   ]
+  },
+  "addon.m203": {
+    "category": "neutral",
+    "sounds": [
+      {"name": "sounds/guns/m203",
+      "volume" : 3
+   }
+	   ]
+  },
+  "addon.m2hb": {
+    "category": "neutral",
+    "sounds": [
+      {"name":"sounds/guns/nato/m2hb/fire",
+      "volume" : 6
+   },
+      {"name":"sounds/guns/nato/m2hb/fire2",
+      "volume" : 6
+   },
+      {"name":"sounds/guns/nato/m2hb/fire3",
+      "volume" : 6
+   },
+      {"name": "sounds/guns/nato/m2hb/fire4",
+      "volume" : 6
+   }
+	   ]
+  },
+  "addon.kord": {
+    "category": "neutral",
+    "sounds": [
+      {"name":"sounds/guns/ussr/kord/fire",
+      "volume" : 6
+   },
+      {"name":"sounds/guns/ussr/kord/fire2",
+      "volume" : 6
+   },
+      {"name":"sounds/guns/ussr/kord/fire3",
+      "volume" : 6
+   },
+      {"name": "sounds/guns/ussr/kord/fire4",
+      "volume" : 6
+   }
+	   ]
+  },
+  "addon.kordvihod": {
+    "category": "neutral",
+    "sounds": [
+      {"name": "sounds/guns/ussr/kord/vihod",
+      "volume" : 5
+    }
+      ]
+  },
+  "addon.kordvhod": {
+    "category": "neutral",
+    "sounds": [
+      {"name":
+      "sounds/guns/ussr/kord/vhod",
+      "volume" : 5
+    }
+      ]
+  },
+  "addon.kordzatvor": {
+    "category": "neutral",
+    "sounds": [
+      {"name":
+      "sounds/guns/ussr/kord/zatvor",
+      "volume" : 5
+    }
+      ]
+  },
+  "addon.kordlenta": {
+    "category": "neutral",
+    "sounds": [
+      {"name":
+      "sounds/guns/ussr/kord/lenta",
+      "volume" : 5
+    }
+      ]
+  },
+  "addon.kordopen": {
+    "category": "neutral",
+    "sounds": [
+      {"name":
+      "sounds/guns/ussr/kord/open",
+      "volume" : 5
+    }
+      ]
+  },
+  "addon.kordclose": {
+    "category": "neutral",
+    "sounds": [
+      {"name":
+      "sounds/guns/ussr/kord/close",
+      "volume" : 5
+    }
+      ]
+  },
+  "addon.m2hbvihod": {
+    "category": "neutral",
+    "sounds": [
+      {"name": "sounds/guns/nato/m2hb/vihod",
+      "volume" : 5
+    }
+      ]
+  },
+  "addon.m2hbvhod": {
+    "category": "neutral",
+    "sounds": [
+      {"name":
+      "sounds/guns/nato/m2hb/vhod",
+      "volume" : 5
+    }
+      ]
+  },
+  "addon.m2hbzatvor": {
+    "category": "neutral",
+    "sounds": [
+      {"name":
+      "sounds/guns/nato/m2hb/zatvor",
+      "volume" : 5
+    }
+      ]
+  },
+  "addon.m2hblenta": {
+    "category": "neutral",
+    "sounds": [
+      {"name":
+      "sounds/guns/nato/m2hb/lenta",
+      "volume" : 5
+    }
+      ]
+  },
+  "addon.m2hbopen": {
+    "category": "neutral",
+    "sounds": [
+      {"name":
+      "sounds/guns/nato/m2hb/open",
+      "volume" : 5
+    }
+      ]
+  },
+  "addon.m2hbclose": {
+    "category": "neutral",
+    "sounds": [
+      {"name":
+      "sounds/guns/nato/m2hb/close",
+      "volume" : 5
+    }
+      ]
+  },
+  "addon.m110": {
+    "category": "neutral",
+    "sounds": [
+      {"name":"sounds/guns/nato/m110/fire",
+      "volume" : 6
+   },
+      {"name":"sounds/guns/nato/m110/fire2",
+      "volume" : 6
+   },
+      {"name":"sounds/guns/nato/m110/fire3",
+      "volume" : 6
+   },
+      {"name": "sounds/guns/nato/m110/fire4",
+      "volume" : 6
+   }
+	   ]
+  },
+  "addon.m21": {
+    "category": "neutral",
+    "sounds": [
+      {"name":"sounds/guns/nato/m21/fire",
+      "volume" : 6
+   },
+      {"name":"sounds/guns/nato/m21/fire2",
+      "volume" : 6
+   },
+      {"name":"sounds/guns/nato/m21/fire3",
+      "volume" : 6
+   },
+      {"name": "sounds/guns/nato/m21/fire4",
+      "volume" : 6
+   }
+	   ]
+  },
+  "addon.m21vihod": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/guns/nato/m21/vihod"
+      ]
+  },
+  "addon.m21vhod": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/guns/nato/m21/vhod"
+      ]
+  },
+  "addon.m21zatvor": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/guns/nato/m21/zatvor"
+      ]
+  },
+
+  "addon.m240b": {
+    "category": "neutral",
+    "sounds": [
+      {"name":"sounds/guns/nato/m240b/fire",
+      "volume" : 3
+   },
+      {"name":"sounds/guns/nato/m240b/fire2",
+      "volume" : 3
+   },
+      {"name":"sounds/guns/nato/m240b/fire3",
+      "volume" : 3
+   },
+      {"name": "sounds/guns/nato/m240b/fire4",
+      "volume" : 3
+   }
+	   ]
+  },
+
+  "addon.m249": {
+    "category": "neutral",
+    "sounds": [
+      {"name":"sounds/guns/nato/m249/fire",
+      "volume" : 3
+   },
+      {"name":"sounds/guns/nato/m249/fire2",
+      "volume" : 3
+   },
+      {"name":"sounds/guns/nato/m249/fire3",
+      "volume" : 3
+   },
+      {"name": "sounds/guns/nato/m249/fire4",
+      "volume" : 3
+   }
+	   ]
+  },
+  "addon.m249vihod": {
+    "category": "neutral",
+    "sounds": [
+      {"name": "sounds/guns/nato/m249/vihod",
+      "volume" : 5
+    }
+      ]
+  },
+  "addon.m249vhod": {
+    "category": "neutral",
+    "sounds": [
+      {"name":
+      "sounds/guns/nato/m249/vhod",
+      "volume" : 5
+    }
+      ]
+  },
+  "addon.m249zatvor": {
+    "category": "neutral",
+    "sounds": [
+      {"name":
+      "sounds/guns/nato/m249/zatvor",
+      "volume" : 5
+    }
+      ]
+  },
+  "addon.m249lenta": {
+    "category": "neutral",
+    "sounds": [
+      {"name":
+      "sounds/guns/nato/m249/lenta",
+      "volume" : 5
+    }
+      ]
+  },
+  "addon.m249open": {
+    "category": "neutral",
+    "sounds": [
+      {"name":
+      "sounds/guns/nato/m249/open",
+      "volume" : 5
+    }
+      ]
+  },
+  "addon.m249close": {
+    "category": "neutral",
+    "sounds": [
+      {"name":
+      "sounds/guns/nato/m249/close",
+      "volume" : 5
+    }
+      ]
+  },
+  "addon.fnmag": {
+    "category": "neutral",
+    "sounds": [
+      {"name":"sounds/guns/nato/fnmag/fire",
+      "volume" : 3
+   },
+      {"name":"sounds/guns/nato/fnmag/fire2",
+      "volume" : 3
+   },
+      {"name":"sounds/guns/nato/fnmag/fire3",
+      "volume" : 3
+   },
+      {"name": "sounds/guns/nato/fnmag/fire4",
+      "volume" : 3
+   }
+	   ]
+  },
+  "addon.fnmagvihod": {
+    "category": "neutral",
+    "sounds": [
+      {"name": "sounds/guns/nato/fnmag/vihod",
+      "volume" : 5
+    }
+      ]
+  },
+  "addon.fnmagvhod": {
+    "category": "neutral",
+    "sounds": [
+      {"name":
+      "sounds/guns/nato/fnmag/vhod",
+      "volume" : 5
+    }
+      ]
+  },
+  "addon.fnmagzatvor": {
+    "category": "neutral",
+    "sounds": [
+      {"name":
+      "sounds/guns/nato/fnmag/zatvor",
+      "volume" : 5
+    }
+      ]
+  },
+  "addon.fnmaglenta": {
+    "category": "neutral",
+    "sounds": [
+      {"name":
+      "sounds/guns/nato/fnmag/lenta",
+      "volume" : 5
+    }
+      ]
+  },
+  "addon.fnmagopen": {
+    "category": "neutral",
+    "sounds": [
+      {"name":
+      "sounds/guns/nato/fnmag/open",
+      "volume" : 5
+    }
+      ]
+  },
+  "addon.fnmagclose": {
+    "category": "neutral",
+    "sounds": [
+      {"name":
+      "sounds/guns/nato/fnmag/close",
+      "volume" : 5
+    }
+      ]
+  },
+
+
+  "addon.pkm": {
+    "category": "neutral",
+    "sounds": [
+      {"name":"sounds/guns/ussr/pkm/fire",
+      "volume" : 3
+   },
+      {"name":"sounds/guns/ussr/pkm/fire2",
+      "volume" : 3
+   },
+      {"name":"sounds/guns/ussr/pkm/fire3",
+      "volume" : 3
+   },
+      {"name": "sounds/guns/ussr/pkm/fire4",
+      "volume" : 3
+   }
+	   ]
+  },
+  "addon.pkmvihod": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/guns/ussr/pkm/vihod"
+      ]
+  },
+  "addon.pkmvhod": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/guns/ussr/pkm/vhod"
+      ]
+  },
+  "addon.pkmzatvor": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/guns/ussr/pkm/zatvor"
+      ]
+  },
+  "addon.pkmlenta": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/guns/ussr/pkm/lenta"
+      ]
+  },
+  "addon.pkmopen": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/guns/ussr/pkm/open"
+      ]
+  },
+  "addon.pkmclose": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/guns/ussr/pkm/close"
+      ]
+  },
+  "addon.mosin": {
+    "category": "neutral",
+    "sounds": [
+      {"name":"sounds/guns/ussr/mosin/fire",
+      "volume" : 6
+   },
+      {"name":"sounds/guns/ussr/mosin/fire2",
+      "volume" : 6
+   },
+      {"name":"sounds/guns/ussr/mosin/fire3",
+      "volume" : 6
+   },
+      {"name": "sounds/guns/ussr/mosin/fire4",
+      "volume" : 6
+   }
+	   ]
+  },
+  "addon.mosinzatvor": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/guns/ussr/mosin/zatvor"
+      ]
+  },
+  "addon.mosinopen": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/guns/ussr/mosin/open"
+      ]
+  },
+  "addon.mosinclose": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/guns/ussr/mosin/close"
+      ]
+  },
+  "addon.mosinpatron": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/guns/ussr/mosin/patron"
+      ]
+  },
+  "addon.svd": {
+    "category": "neutral",
+    "sounds": [
+      {"name":"sounds/guns/ussr/svd/fire",
+      "volume" : 6
+   },
+      {"name":"sounds/guns/ussr/svd/fire2",
+      "volume" : 6
+   },
+      {"name":"sounds/guns/ussr/svd/fire3",
+      "volume" : 6
+   },
+      {"name": "sounds/guns/ussr/svd/fire4",
+      "volume" : 6
+   }
+	   ]
+  },
+  "addon.svdvihod": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/guns/ussr/svd/vihod"
+      ]
+  },
+  "addon.svdvhod": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/guns/ussr/svd/vhod"
+      ]
+  },
+  "addon.svdzatvor": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/guns/ussr/svd/zatvor"
+      ]
+  },
+  "addon.asval": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/guns/ussr/asval/fire",
+      "sounds/guns/ussr/asval/fire2",
+      "sounds/guns/ussr/asval/fire3",
+      "sounds/guns/ussr/asval/fire4"
+	   ]
+  },
+  "addon.asvalvihod": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/guns/ussr/asval/vihod"
+      ]
+  },
+  "addon.asvalvhod": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/guns/ussr/asval/vhod"
+      ]
+  },
+  "addon.asvalzatvor": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/guns/ussr/asval/zatvor"
+      ]
+  },
+  "addon.aks74u": {
+    "category": "neutral",
+    "sounds": [
+      {"name":"sounds/guns/ussr/ak74/aks74u/fire",
+      "volume" : 6
+   },
+      {"name":"sounds/guns/ussr/ak74/aks74u/fire2",
+      "volume" : 6
+   },
+      {"name":"sounds/guns/ussr/ak74/aks74u/fire3",
+      "volume" : 6
+   },
+      {"name": "sounds/guns/ussr/ak74/aks74u/fire4",
+      "volume" : 6
+   }
+	   ]
+  },
+  "addon.ak74": {
+    "category": "neutral",
+    "sounds": [
+      {"name":"sounds/guns/ussr/ak74/fire",
+      "volume" : 6
+   },
+      {"name":"sounds/guns/ussr/ak74/fire2",
+      "volume" : 6
+   },
+      {"name":"sounds/guns/ussr/ak74/fire3",
+      "volume" : 6
+   },
+      {"name": "sounds/guns/ussr/ak74/fire4",
+      "volume" : 6
+   }
+	   ]
+  },
+  "addon.ak74_pbs": {
+    "category": "neutral",
+    "sounds": [
+      {"name":"sounds/guns/ussr/ak74/fire_pbs",
+      "volume" : 3
+   },
+      {"name":"sounds/guns/ussr/ak74/fire_pbs2",
+      "volume" : 3
+   },
+      {"name":"sounds/guns/ussr/ak74/fire_pbs3",
+      "volume" : 3
+   },
+      {"name": "sounds/guns/ussr/ak74/fire_pbs4",
+      "volume" : 3
+   }
+	   ]
+  },
+  "addon.akm": {
+    "category": "neutral",
+    "sounds": [
+      {"name":"sounds/guns/ussr/akm/fire",
+      "volume" : 6
+   },
+      {"name":"sounds/guns/ussr/akm/fire2",
+      "volume" : 6
+   },
+      {"name":"sounds/guns/ussr/akm/fire3",
+      "volume" : 6
+   },
+      {"name": "sounds/guns/ussr/akm/fire4",
+      "volume" : 6
+   }
+	   ]
+  },
+  "addon.akm_pbs": {
+    "category": "neutral",
+    "sounds": [
+      {"name":"sounds/guns/ussr/akm/fire_pbs",
+      "volume" : 3
+   },
+      {"name":"sounds/guns/ussr/akm/fire_pbs2",
+      "volume" : 3
+   },
+      {"name":"sounds/guns/ussr/akm/fire_pbs3",
+      "volume" : 3
+   },
+      {"name": "sounds/guns/ussr/akm/fire_pbs4",
+      "volume" : 3
+   }
+	   ]
+  },
+  "addon.akvihod": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/guns/ussr/ak74/vihod"
+      ]
+  },
+  "addon.akvhod": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/guns/ussr/ak74/vhod"
+      ]
+  },
+  "addon.akzatvor": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/guns/ussr/ak74/zatvor"
+      ]
+  },
+
+  
+  "addon.m16": {
+    "category": "neutral",
+    "sounds": [
+      {"name":"sounds/guns/nato/m16/fire",
+      "volume" : 6
+   },
+      {"name":"sounds/guns/nato/m16/fire2",
+      "volume" : 6
+   },
+      {"name":"sounds/guns/nato/m16/fire3",
+      "volume" : 6
+   },
+      {"name": "sounds/guns/nato/m16/fire4",
+      "volume" : 6
+   }
+	   ]
+  },
+  "addon.m16_pbs": {
+    "category": "neutral",
+    "sounds": [
+      {"name":"sounds/guns/nato/m16/fire_pbs",
+      "volume" : 3
+   },
+      {"name":"sounds/guns/nato/m16/fire_pbs2",
+      "volume" : 3
+   },
+      {"name":"sounds/guns/nato/m16/fire_pbs3",
+      "volume" : 3
+   },
+      {"name": "sounds/guns/nato/m16/fire_pbs4",
+      "volume" : 3
+   }
+	   ]
+  },
+  "addon.m16vihod": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/guns/nato/m16/vihod"
+      ]
+  },
+  "addon.m16vhod": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/guns/nato/m16/vhod"
+      ]
+  },
+  "addon.m16zatvor": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/guns/nato/m16/zatvor"
+      ]
+  },
+
+
+  "addon.mag": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/guns/reload/mag"
+      ]
+  },
+  "addon.patron": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/reload/patron"
+	   ]
+  }
+}

@@ -1,0 +1,288 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.ak12_sneak": {
+			"initial_state": "setup",
+			"states": {
+				"setup": {
+					"transitions": [
+						{"hold": "variable.ak12"}
+					]
+				},
+				"hold": {
+					"animations": [
+						{"ak12_sneak": "v.ak12"}
+					],
+					"transitions": [
+						{"reload": "q.property('addon:gun') == 2"},
+						{"reload2": "q.property('addon:gun') == 3"},
+                        {"moving": "query.is_riding && query.ground_speed > 0.0"}
+					],
+					"blend_transition": 0.1
+				},
+                "moving": {
+                    "animations": [
+                        {"crawl2": "v.ak12"}
+                    ],
+                    "blend_transition": 0.1,
+                    "blend_via_shortest_path": true,
+                    "transitions": [
+                        {
+                            "hold": "query.is_riding && query.ground_speed == 0.0"
+                        },
+                        {
+                            "default": "!query.is_riding"
+                        }
+                    ]
+                },
+				"reload": {
+					"animations": [
+						{"ak12_reload_sneak": "v.ak12"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "q.property('addon:gun') != 2"}
+					]
+				},
+				"reload2": {
+					"animations": [
+						{"ak12_reload2_sneak": "v.ak12"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "q.property('addon:gun') != 3"}
+					]
+				}
+			}
+		},
+		"controller.animation.ak12_third": {
+			"initial_state": "setup",
+			"states": {
+				"setup": {
+					"transitions": [
+						{"hold": "variable.ak12"}
+					]
+				},
+				"hold": {
+					"animations": [
+						{"ak12_third": "v.ak12"}
+					],
+					"transitions": [
+						{"hold2": "q.all_animations_finished && q.is_using_item"},
+						{"gun_third": "q.all_animations_finished && !q.is_using_item"},
+						{"reload_gp25": "q.property('ak12:gp25') == 2"},
+						{"reload": "q.property('addon:gun') == 2"},
+						{"aim": "q.is_sneaking"},
+						{"sprint": "q.is_sprinting && !q.is_using_item"},
+						{"reload2": "q.property('addon:gun') == 3"}
+					],
+					"blend_transition": 0.1
+				},
+				"hold2": {
+					"animations": [
+						{"ak12_third": "v.ak12"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished && q.is_using_item"},
+						{"gun_third": "q.all_animations_finished && !q.is_using_item"},
+						{"reload_gp25": "q.property('ak12:gp25') == 2"},
+						{"reload": "q.property('addon:gun') == 2"},
+						{"aim": "q.is_sneaking"},
+						{"sprint": "q.is_sprinting && !q.is_using_item"},
+						{"reload2": "q.property('addon:gun') == 3"}
+					],
+					"blend_transition": 0.1
+				},
+				"gun_third": {
+					"animations": [
+						"gun_third"
+					],
+					"transitions": [
+						{"hold": "q.is_using_item"},
+						{"reload_gp25": "q.property('ak74:gp25') == 2"},
+						{"reload": "q.property('addon:gun') == 2"},
+						{"aim": "q.is_sneaking"},
+						{"sprint": "q.is_sprinting && !q.is_using_item"},
+						{"reload2": "q.property('addon:gun') == 3"}
+					],
+					"blend_transition": 0.15
+				},
+				"reload_gp25": {
+					"animations": [
+						{"gp25_ak12_reload_third": "v.ak12"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "q.property('ak12:gp25') == 3"}
+					]
+				},
+				"reload": {
+					"animations": [
+						{"ak12_reload_third": "v.ak12"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "q.property('addon:gun') != 2"}
+					]
+				},
+				"reload2": {
+					"animations": [
+						{"ak12_reload2_third": "v.ak12"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "q.property('addon:gun') != 3"}
+					]
+				},
+				"aim": {
+					"animations": [
+						{"ak12_aim_third": "v.ak12"}
+					],
+					"transitions": [
+						{"reload_gp25": "q.property('ak12:gp25') == 2"},
+						{"hold": "!q.is_sneaking"},
+						{"reload": "q.property('addon:gun') == 2"},
+						{"reload2": "q.property('addon:gun') == 3"}
+					],
+					"blend_transition": 0.1
+				},
+				"sprint": {
+					"animations": [
+						{"ak12_sprint_third": "v.ak12"}
+					],
+					"transitions": [
+						{"reload_gp25": "q.property('ak12:gp25') == 2"},
+						{"hold": "!q.is_sprinting"},
+						{"hold": "q.is_using_item"},
+						{"reload": "q.property('addon:gun') == 2"},
+						{"reload2": "q.property('addon:gun') == 3"}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		},
+		"controller.animation.ak12": {
+			"initial_state": "setup",
+			"states": {
+				"setup": {
+					"transitions": [
+						{"hold": "variable.ak12"}
+					]
+				},
+				"hold": {
+					"animations": [
+						{"ak12": "v.ak12 && !query.equipped_item_any_tag('slot.weapon.mainhand','gp25')"},
+						{"ak12_gp25": "v.ak12 && query.equipped_item_any_tag('slot.weapon.mainhand','gp25')"}
+					],
+					"transitions": [
+						{"reload": "q.property('addon:gun') == 2"},
+						{"aim": "q.is_sneaking"},
+						{"sprint": "q.is_sprinting && !q.is_using_item"},
+						{"reload2": "q.property('addon:gun') == 3"},
+						{"gp25": "q.property('ak12:gp25') == 1 || q.property('ak12:gp25') == 3"}
+					],
+					"blend_transition": 0.1
+				},
+				"gl": {
+					"animations": [
+						{"ak12_gp25_gl": "v.ak12"}
+					],
+					"transitions": [
+						{"gp25": "q.all_animations_finished"}
+					],
+					"blend_transition": 0.1
+				},
+				"ungl": {
+					"animations": [
+						{"ak12_gp25_ungl": "v.ak12"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"}
+					],
+					"blend_transition": 0.1
+				},
+				"gp25": {
+					"animations": [
+						{"ak12_gp25": "v.ak12"}
+					],
+					"transitions": [
+						{"reload_gp25": "q.property('ak12:gp25') == 2"},
+						{"aim_gp25": "q.is_sneaking"},
+						{"sprint": "q.is_sprinting && !q.is_using_item"},
+						{"hold": "q.property('ak12:gp25') == 0 || q.property('ak12:gp25') == 4"}
+					],
+					"blend_transition": 0.1
+				},
+				"reload_gp25": {
+					"animations": [
+						{"gp25_ak12_reload": "v.ak12"}
+					],
+					"transitions": [
+						{"gp25": "q.all_animations_finished"},
+						{"gp25": "q.property('ak12:gp25') == 3"}
+					]
+				},
+				"aim_gp25": {
+					"animations": [
+						{"gp25_ak12_aim": "v.ak12"}
+					],
+					"transitions": [
+						{"aim": "q.property('ak12:gp25') == 0 || q.property('ak12:gp25') == 4"},
+						{"gp25": "!q.is_sneaking"},
+						{"reload_gp25": "q.property('ak12:gp25') == 2"}
+					],
+					"blend_transition": 0.1
+				},
+				"reload": {
+					"animations": [
+						{"ak12_reload": "v.ak12 && !query.equipped_item_any_tag('slot.weapon.mainhand','gp25')"},
+						{"ak12_gp25_reload": "v.ak12 && query.equipped_item_any_tag('slot.weapon.mainhand','gp25')"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "q.property('addon:gun') != 2"}
+					]
+				},
+				"reload2": {
+					"animations": [
+						{"ak12_reload2": "v.ak12 && !query.equipped_item_any_tag('slot.weapon.mainhand','gp25')"},
+						{"ak12_gp25_reload2": "v.ak12 && query.equipped_item_any_tag('slot.weapon.mainhand','gp25')"}
+					],
+					"transitions": [
+						{"hold": "q.all_animations_finished"},
+						{"hold": "q.property('addon:gun') != 3"}
+					]
+				},
+				"aim": {
+					"animations": [
+						{"ak12_aim": "v.ak12 && !v.eotech && !query.equipped_item_any_tag('slot.weapon.mainhand','1p87') && !query.equipped_item_any_tag('slot.weapon.mainhand','gp25')"},
+						{"ak12_aim_gp25": "v.ak12 && query.equipped_item_any_tag('slot.weapon.mainhand','gp25') && !v.eotech && !query.equipped_item_any_tag('slot.weapon.mainhand','1p87')"},
+						{"ak12_aim_1p87": "v.ak12 && query.equipped_item_any_tag('slot.weapon.mainhand','1p87')"},
+						{"ak12_aim_eotech": "v.ak12 && v.eotech"}
+					],
+					"transitions": [
+						{"aim_gp25": "q.property('ak12:gp25') == 1 || q.property('ak12:gp25') == 3"},
+						{"hold": "!q.is_sneaking"},
+						{"reload": "q.property('addon:gun') == 2"},
+						{"reload2": "q.property('addon:gun') == 3"}
+					],
+					"blend_transition": 0.1
+				},
+				"sprint": {
+					"animations": [
+						{"ak12_sprint_gp25": "v.ak12 && query.equipped_item_any_tag('slot.weapon.mainhand','gp25')"},
+						{"ak12_sprint": "v.ak12 && !query.equipped_item_any_tag('slot.weapon.mainhand','gp25')"}
+					],
+					"transitions": [
+					{"gp25": "!q.is_sprinting && q.property('ak12:gp25') == 1 || q.property('ak12:gp25') == 3"},
+						{"hold": "!q.is_sprinting"},
+						{"hold": "q.is_using_item"},
+						{"reload": "q.property('addon:gun') == 2"},
+						{"reload2": "q.property('addon:gun') == 3"}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		}
+	}
+}

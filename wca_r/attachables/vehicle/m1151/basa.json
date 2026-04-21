@@ -1,0 +1,44 @@
+
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "addon:m1151_m2hb_fire",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/vehicle/m1151_turret",
+        "m2hb": "textures/entity/vehicle/m2hb"
+      },
+      "geometry": {
+        "default": "geometry.m1151_turret",
+        "m2hb": "geometry.m1151_turret_m2"
+      },
+      "scripts": {
+        "pre_animation": [
+           "v.main_hand = c.item_slot == 'main_hand';",
+           "v.m1151_m2hb = c.item_slot == 'main_hand';",
+           "v.fire = q.main_hand_item_use_duration > 0.0f;"
+        ],
+        "animate": [
+          {"look_at_target_m1151_turret": "!c.is_first_person"},
+          {"m1151_turret": "!c.is_first_person"},
+          {"m1151_turret_first": "c.is_first_person"},
+          {"m1151_m2hb_fire_controller": "variable.m1151_kord"}
+
+        ]
+      },
+      "animations": {
+        "m1151_turret": "animation.m1151_turret",
+        "m1151_turret_first": "animation.m1151_turret_first",
+        "look_at_target_m1151_turret": "animation.humanoid.look_at_target_m1151_turret",
+        "m1151_m2hb_fire_controller": "controller.animation.m1151_m2hb_fire",
+        "shoot": "animation.m1151_kord_shoot"
+      },
+      "render_controllers": [ 
+        "controller.render.car",
+        "controller.render.m2hb" ]
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.fire_bmp3_2a70": {
+			"initial_state": "setup",
+			"states": {
+				"setup": {
+					"transitions": [
+						{"2a70": "query.property('2a70:fire') == 1"}
+					]
+				},
+				"2a70": {
+					"animations": [
+						"2a70_fire"
+					],
+					"transitions": [
+						{
+						  "setup": "query.property('2a70:fire') == 0"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.fire_bmp3_2a72": {
+			"initial_state": "setup",
+			"states": {
+				"setup": {
+					"transitions": [
+						{"2a72": "query.property('2a72:fire') == 1"}
+					]
+				},
+				"2a72": {
+					"animations": [
+						"2a72_fire"
+					],
+					"transitions": [
+						{"setup": "query.property('2a72:fire') == 0"}
+					]
+				}
+			}
+		}
+	}
+}

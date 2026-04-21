@@ -1,0 +1,33 @@
+{
+	"format_version": "1.8.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "addon:usa_pehota",
+			"materials": {
+				"default": "armor",
+				"enchanted": "armor_enchanted"
+			},
+			"textures": {
+				"bdu": "textures/entity/nato/bdu",
+				"alice": "textures/entity/nato/alice",
+				"pasgth": "textures/entity/nato/pasgth",
+				"pasgtv": "textures/entity/nato/pasgtv"
+			},
+			"geometry": {
+				"bdu": "geometry.m88",
+				"alice": "geometry.alice",
+				"pasgth": "geometry.pasgth",
+				"pasgtv": "geometry.pasgtv"
+			},
+			"scripts": {
+				"parent_setup": "variable.chest_layer_visible = 0.0;"
+			},
+			"render_controllers": [
+				"controller.render.bdu",
+				"controller.render.alice",
+				"controller.render.pasgth",
+				"controller.render.pasgtv"
+			]
+		}
+	}
+}

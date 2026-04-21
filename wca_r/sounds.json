@@ -1,0 +1,192 @@
+{
+
+	"entity_sounds": {
+		"entities": {
+			"addon:tigr_m": {
+			  "volume": 1,
+			  "pitch": [1, 1],
+			  "events": {
+				"death" : {
+					"sound": "mob.irongolem.hit",
+					"volume": 0,
+					"pitch": [1.0]
+					  },
+				"hurt" : {"sound": "mob.irongolem.hit" },
+				"step": {
+				  "sound": "addon.car",
+				  "volume": 0.25,
+				  "pitch": 1.0
+						  }
+					  }
+						  },
+						  "addon:tigr_m_kapsula": {
+							"volume": 1,
+							"pitch": [1, 1],
+							"events": {
+							  "death" : {
+								  "sound": "mob.irongolem.hit",
+								  "volume": 0,
+								  "pitch": [1.0]
+									},
+							  "hurt" : {"sound": "mob.irongolem.hit" },
+							  "step": {
+								"sound": "addon.car",
+								"volume": 0.25,
+								"pitch": 1.0
+										}
+									}
+										},
+						  "addon:tigr_m_dviglo": {
+							"volume": 1,
+							"pitch": [1, 1],
+							"events": {
+							  "death" : {
+								  "sound": "mob.irongolem.hit",
+								  "volume": 0,
+								  "pitch": [1.0]
+									},
+							  "hurt" : {"sound": "mob.irongolem.hit" }
+									}
+										},
+			"addon:m1025": {
+			  "volume": 1,
+			  "pitch": [1, 1],
+			  "events": {
+				"death" : {
+					"sound": "mob.irongolem.hit",
+					"volume": 0,
+					"pitch": [1.0]
+					  },
+				"hurt" : {"sound": "mob.irongolem.hit" },
+				"step": {
+				  "sound": "addon.car",
+				  "volume": 0.25,
+				  "pitch": 1.0
+						  }
+					  }
+						  },
+						  "addon:m1025_kapsula": {
+							"volume": 1,
+							"pitch": [1, 1],
+							"events": {
+							  "death" : {
+								  "sound": "mob.irongolem.hit",
+								  "volume": 0,
+								  "pitch": [1.0]
+									},
+							  "hurt" : {"sound": "mob.irongolem.hit" },
+							  "step": {
+								"sound": "addon.car",
+								"volume": 0.25,
+								"pitch": 1.0
+										}
+									}
+										},
+						  "addon:m1025_dviglo": {
+							"volume": 1,
+							"pitch": [1, 1],
+							"events": {
+							  "death" : {
+								  "sound": "mob.irongolem.hit",
+								  "volume": 0,
+								  "pitch": [1.0]
+									},
+							  "hurt" : {"sound": "mob.irongolem.hit" }
+									}
+										},
+			"addon:uaz469": {
+			  "volume": 1,
+			  "pitch": [1, 1],
+			  "events": {
+				"death" : {
+					"sound": "mob.irongolem.hit",
+					"volume": 0,
+					"pitch": [1.0]
+					  },
+				"hurt" : {"sound": "mob.irongolem.hit" },
+				"step": {
+				  "sound": "addon.car",
+				  "volume": 0.25,
+				  "pitch": 1.0
+						  }
+					  }
+						  },
+						  "addon:uaz469_kapsula": {
+							"volume": 1,
+							"pitch": [1, 1],
+							"events": {
+							  "death" : {
+								  "sound": "mob.irongolem.hit",
+								  "volume": 0,
+								  "pitch": [1.0]
+									},
+							  "hurt" : {"sound": "mob.irongolem.hit" },
+							  "step": {
+								"sound": "addon.car",
+								"volume": 0.25,
+								"pitch": 1.0
+										}
+									}
+										},
+						  "addon:uaz469_dviglo": {
+							"volume": 1,
+							"pitch": [1, 1],
+							"events": {
+							  "death" : {
+								  "sound": "mob.irongolem.hit",
+								  "volume": 0,
+								  "pitch": [1.0]
+									},
+							  "hurt" : {"sound": "mob.irongolem.hit" }
+									}
+										},
+			"addon:m1151": {
+			  "volume": 1,
+			  "pitch": [1, 1],
+			  "events": {
+				"death" : {
+					"sound": "mob.irongolem.hit",
+					"volume": 0,
+					"pitch": [1.0]
+					  },
+				"hurt" : {"sound": "mob.irongolem.hit" },
+				"step": {
+				  "sound": "addon.car",
+				  "volume": 0.25,
+				  "pitch": 1.0
+						  }
+					  }
+						  },
+						  "addon:m1151_kapsula": {
+							"volume": 1,
+							"pitch": [1, 1],
+							"events": {
+							  "death" : {
+								  "sound": "mob.irongolem.hit",
+								  "volume": 0,
+								  "pitch": [1.0]
+									},
+							  "hurt" : {"sound": "mob.irongolem.hit" },
+							  "step": {
+								"sound": "addon.car",
+								"volume": 0.25,
+								"pitch": 1.0
+										}
+									}
+										},
+						  "addon:m1151_dviglo": {
+							"volume": 1,
+							"pitch": [1, 1],
+							"events": {
+							  "death" : {
+								  "sound": "mob.irongolem.hit",
+								  "volume": 0,
+								  "pitch": [1.0]
+									},
+							  "hurt" : {"sound": "mob.irongolem.hit" }
+									}
+										}
+		}
+	},
+	"interactive_sounds": {}
+}

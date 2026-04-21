@@ -1,0 +1,29 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.armor_2": {
+			"loop": true,
+			"bones": {
+				"jacket": {
+					"scale": 0
+				}
+			}
+		},
+		"animation.shlem": {
+			"loop": true,
+			"bones": {
+				"hat": {
+					"scale": 0.955
+				}
+			}
+		},
+		"animation.ranetc_6sh117_1": {
+			"loop": true,
+			"bones": {
+				"lyamka": {
+					"scale": [1, 1, 0.8]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,51 @@
+
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "addon:m249",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/guns/nato/m249"
+      },
+      "geometry": {
+        "default":  "geometry.m249"
+      },
+      "scripts": {
+        "pre_animation": [
+           "v.main_hand = c.item_slot == 'main_hand';",
+           "v.m249 = c.item_slot == 'main_hand';",
+           "v.fire = q.main_hand_item_use_duration > 0.0f;"
+        ],
+        "animate": [
+          {"m249_item": "c.is_first_person"},
+          {"m249_item_third": "!c.is_first_person && !query.is_riding"},
+          {"m249_controller": "c.is_first_person"},
+          {"m249_controller_third": "!c.is_first_person && !query.is_riding"},
+          {"m249_controller_sneak": "!c.is_first_person && query.is_riding"},
+          {"m249_fire_controller": "variable.m249"}
+
+        ]
+      },
+      "animations": {
+        "m249_controller": "controller.animation.m249",
+        "m249_controller_sneak": "controller.animation.m249_sneak",
+        "m249_sneak": "animation.m249_sneak",
+        "m249_reload_sneak": "animation.m249_reload_sneak",
+        "m249_reload2_sneak": "animation.m249_reload2_sneak",
+        "m249_controller_third": "controller.animation.m249_third",
+        "m249_fire_controller": "controller.animation.m249_fire",
+        "m249_item_third": "animation.m249_item_third",
+        "shoot": "animation.m249_shoot",
+        "m249_aim": "animation.m249_aim",
+        "m249_item": "animation.m249_item",
+        "m249_reload": "animation.m249_reload",
+        "m249_reload2": "animation.m249_reload2"
+      },
+      "render_controllers": [ 
+         "controller.render.m249" ]
+    }
+  }
+}

@@ -1,0 +1,46 @@
+
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "addon:mosin",
+      "materials": {
+        "default": "slime_outer",
+        "gun": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/guns/ussr/mosin"
+      },
+      "geometry": {
+        "default":  "geometry.mosin"
+      },
+      "scripts": {
+        "pre_animation": [
+           "v.main_hand = c.item_slot == 'main_hand';",
+           "v.mosin = c.item_slot == 'main_hand';",
+           "v.fire = q.main_hand_item_use_duration > 0.0f;"
+        ],
+        "animate": [
+          {"mosin_controller": "c.is_first_person && !q.is_riding"},
+          {"mosin_controller": "c.is_first_person && q.is_riding  && q.property('addon:gun') == 2 || c.is_first_person && q.is_riding && q.property('addon:gun') == 3 || c.is_first_person && q.is_riding && q.property('addon:gun') == 5"},
+          {"mosin_fire_controller": "variable.mosin"}
+
+        ]
+      },
+      "animations": {
+        "mosin_aim": "animation.mosin_aim",
+        "mosin_controller": "controller.animation.mosin",
+        "mosin_fire_controller": "controller.animation.mosin_fire",
+        "mosin_shoot": "animation.mosin_shoot",
+        "mosin_reload": "animation.mosin_reload_item",
+        "mosin_reload2": "animation.mosin_reload2_item",
+        "mosin_zatvor": "animation.mosin_zatvor_item"
+      },
+      "render_controllers": [ 
+				{ "controller.render.gun": "!c.is_first_person || c.is_first_person && !q.is_sneaking && q.property('addon:gun') != 5 && q.property('addon:gun') != 3 && q.property('addon:gun') != 2" },
+				{ "controller.render.crossbow": "c.is_first_person && !q.is_riding && q.is_sneaking && q.property('addon:gun') != 5 && q.property('addon:gun') != 3 && q.property('addon:gun') != 2" },
+				{ "controller.render.gun": "q.property('addon:gun') == 5 || q.property('addon:gun') == 2 || q.property('addon:gun') == 3" }
+      ]
+    }
+  }
+}

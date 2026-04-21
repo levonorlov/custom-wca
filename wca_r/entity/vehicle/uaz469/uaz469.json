@@ -1,0 +1,47 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "addon:uaz469",
+      "materials": {
+        "default": "spider"
+      },
+      "textures": {
+        "default": "textures/entity/vehicle/uaz469",
+        "death": "textures/entity/vehicle/uaz469_death"
+      },
+      "geometry": {
+        "default": "geometry.uaz469",
+        "death": "geometry.uaz469_death"
+      },
+      "animations": {
+         "move": "animation.uaz469_move",
+         "rul": "animation.uaz469_rul",
+         "engine": "animation.uaz469_engine",
+         "engine_on": "animation.uaz469_engine_on",
+        "uaz469": "controller.animation.uaz469",
+        "look_at_target": "animation.common.look_at_target"
+      },
+      "scripts": {
+       "animate": [
+       "uaz469",
+       {"move":"q.modified_move_speed"},
+       "look_at_target",
+       "rul"
+      ]
+      },
+      "render_controllers": [
+        { "controller.render.car": "q.mark_variant != 2" },
+        { "controller.render.car_death": "q.mark_variant == 2" }
+      ],
+			"sound_effects": {
+				"engine": "addon.car_engine",
+				"engine_on": "addon.car_engine_on"
+      },
+      "spawn_egg": {
+         "texture": "spawn_uaz469",
+        "texture_index": 0
+      }
+    }
+  }
+}

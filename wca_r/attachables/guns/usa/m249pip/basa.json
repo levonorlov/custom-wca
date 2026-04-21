@@ -1,0 +1,51 @@
+
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "addon:m249pip",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/guns/nato/m249pip"
+      },
+      "geometry": {
+        "default":  "geometry.m249pip"
+      },
+      "scripts": {
+        "pre_animation": [
+           "v.main_hand = c.item_slot == 'main_hand';",
+           "v.m249pip = c.item_slot == 'main_hand';",
+           "v.fire = q.main_hand_item_use_duration > 0.0f;"
+        ],
+        "animate": [
+          {"m249pip_item": "c.is_first_person"},
+          {"m249pip_item_third": "!c.is_first_person && !query.is_riding"},
+          {"m249pip_controller": "c.is_first_person"},
+          {"m249pip_controller_third": "!c.is_first_person && !query.is_riding"},
+          {"m249pip_controller_sneak": "!c.is_first_person && query.is_riding"},
+          {"m249pip_fire_controller": "variable.m249pip"}
+
+        ]
+      },
+      "animations": {
+        "m249pip_controller": "controller.animation.m249pip",
+        "m249pip_controller_sneak": "controller.animation.m249pip_sneak",
+        "m249pip_sneak": "animation.m249pip_sneak",
+        "m249pip_reload_sneak": "animation.m249pip_reload_sneak",
+        "m249pip_reload2_sneak": "animation.m249pip_reload2_sneak",
+        "m249pip_controller_third": "controller.animation.m249pip_third",
+        "m249pip_fire_controller": "controller.animation.m249pip_fire",
+        "m249pip_item_third": "animation.m249pip_item_third",
+        "shoot": "animation.m249pip_shoot",
+        "m249pip_aim": "animation.m249pip_aim",
+        "m249pip_item": "animation.m249pip_item",
+        "m249pip_reload": "animation.m249pip_reload",
+        "m249pip_reload2": "animation.m249pip_reload2"
+      },
+      "render_controllers": [ 
+         "controller.render.m249pip" ]
+    }
+  }
+}

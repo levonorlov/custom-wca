@@ -1,0 +1,95 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+			"controller.animation.tigr_m": {
+			  "states": {
+				"default": {
+							"transitions": [
+								{"on": "q.has_player_rider"}
+							]
+				},
+				"on": {
+							"animations": [ "engine_on" ],
+							"transitions": [
+								{"engine": "q.any_animation_finished"},
+								{"default": "!q.has_player_rider"}
+							]
+				},
+				"engine": {
+							"animations": [ "engine" ],
+							"transitions": [
+								{"engine2": "q.any_animation_finished"},
+								{"default": "!q.has_player_rider"}
+							]
+				},
+				"engine2": {
+							"animations": [ "engine" ],
+							"transitions": [
+								{"engine": "q.any_animation_finished"},
+								{"default": "!q.has_player_rider"}
+							]
+				}
+			  }
+			},
+	"controller.animation.tigr_m_kord_fire": {
+		"initial_state": "setup",
+		"states": {
+			"setup": {
+				"transitions": [
+					{"fire": "query.property('gun:fire') == 1"}
+				]
+			},
+			"fire": {
+				"animations": [
+					{"shoot": "v.tigr_m_kord"}
+				],
+				"transitions": [
+					{
+					  "fire2": "query.property('gun:fire') == 1"
+					}
+				]
+			},
+			"fire2": {
+				"animations": [
+					{"shoot": "v.tigr_m_kord"}
+				],
+				"transitions": [
+					{
+					  "fire": "query.property('gun:fire') == 1"
+					}
+				]
+			}
+		}
+	},
+	"controller.animation.tigr_m_kord_turret": {
+		"initial_state": "setup",
+		"states": {
+			"setup": {
+				"transitions": [
+					{"reload": "query.property('tigr_m:kord') == 1"}
+				]
+			},
+			"reload": {
+				"animations": [
+					"reload"
+				],
+				"transitions": [
+					{
+					  "setup": "query.property('tigr_m:kord') == 0"
+					}
+				]
+			},
+			"fire2": {
+				"animations": [
+					{"shoot": "v.tigr_m_kord"}
+				],
+				"transitions": [
+					{
+					  "fire": "query.property('gun:fire') == 1"
+					}
+				]
+			}
+		}
+	}
+  }
+}

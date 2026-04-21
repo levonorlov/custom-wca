@@ -1,0 +1,40 @@
+
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "addon:rpg7_reload",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/guns/ussr/rpg7"
+      },
+      "geometry": {
+        "default":  "geometry.rpg7"
+      },
+      "scripts": {
+        "pre_animation": [
+           "v.main_hand = c.item_slot == 'main_hand';",
+           "v.rpg7 = c.item_slot == 'main_hand';"
+        ],
+        "animate": [
+          {"rpg7_controller": "c.is_first_person"},
+          {"rpg7_controller_third": "!c.is_first_person"}
+        ]
+      },
+      "animations": {
+        "rpg7": "animation.rpg7_empty",
+        "rpg7_sprint": "animation.rpg7_empty",
+        "rpg7_sprint_third": "animation.rpg7_empty",
+        "rpg7_third": "animation.rpg7_empty",
+        "rpg7_aim_third": "animation.rpg7_empty",
+        "rpg7_controller": "controller.animation.rpg7",
+        "rpg7_controller_third": "controller.animation.rpg7_third",
+        "rpg7_reload": "animation.rpg7_reload_item",
+        "rpg7_reload_third": "animation.rpg7_reload_item_third"
+      },
+      "render_controllers": [ "controller.render.crossbow" ]
+    }
+  }
+}

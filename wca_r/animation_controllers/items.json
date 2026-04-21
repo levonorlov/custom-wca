@@ -1,0 +1,109 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.ai2": {
+      "initial_state": "setup",
+      "states": {
+        "setup": {
+          "transitions": [
+            {
+              "ai2_use": "query.is_item_name_any('slot.weapon.mainhand',0,'addon:ai2') && q.is_using_item"
+            }]
+        },
+        "ai2_use": {
+          "animations": [
+            {
+              "ai2_use": "query.is_item_name_any('slot.weapon.mainhand',0,'addon:ai2')"
+            }
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            },
+            {
+              "setup": "!query.is_item_name_any('slot.weapon.mainhand',0,'addon:ai2')"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.ai2_third": {
+      "initial_state": "setup",
+      "states": {
+        "setup": {
+          "transitions": [
+            {
+              "ai2_use": "query.is_item_name_any('slot.weapon.mainhand',0,'addon:ai2') && q.is_using_item"
+            }]
+        },
+        "ai2_use": {
+          "animations": [
+            {
+              "ai2_use_third": "query.is_item_name_any('slot.weapon.mainhand',0,'addon:ai2')"
+            }
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            },
+            {
+              "setup": "!query.is_item_name_any('slot.weapon.mainhand',0,'addon:ai2')"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.ifak": {
+      "initial_state": "setup",
+      "states": {
+        "setup": {
+          "transitions": [
+            {
+              "ifak_use": "query.is_item_name_any('slot.weapon.mainhand',0,'addon:ifak') && q.is_using_item"
+            }]
+        },
+        "ifak_use": {
+          "animations": [
+            {
+              "ifak_use": "query.is_item_name_any('slot.weapon.mainhand',0,'addon:ifak')"
+            }
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            },
+            {
+              "setup": "!query.is_item_name_any('slot.weapon.mainhand',0,'addon:ifak')"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.ifak_third": {
+      "initial_state": "setup",
+      "states": {
+        "setup": {
+          "transitions": [
+            {
+              "ifak_use": "query.is_item_name_any('slot.weapon.mainhand',0,'addon:ifak') && q.is_using_item"
+            }]
+        },
+        "ifak_use": {
+          "animations": [
+            {
+              "ifak_use_third": "query.is_item_name_any('slot.weapon.mainhand',0,'addon:ifak')"
+            }
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            },
+            {
+              "setup": "!query.is_item_name_any('slot.weapon.mainhand',0,'addon:ifak')"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "addon:tigr_m",
+      "materials": {
+        "default": "spider"
+      },
+      "textures": {
+        "default": "textures/entity/vehicle/tigr_m",
+        "death": "textures/entity/vehicle/tigr_m_death"
+      },
+      "geometry": {
+        "default": "geometry.tigr_m",
+        "death": "geometry.tigr_m_death"
+      },
+      "animations": {
+         "move": "animation.tigr_m_move",
+         "rul": "animation.tigr_m_rul",
+         "engine": "animation.tigr_m_engine",
+         "engine_on": "animation.tigr_m_engine_on",
+        "tigr_m": "controller.animation.tigr_m",
+        "look_at_target": "animation.common.look_at_target"
+      },
+      "scripts": {
+       "animate": [
+       "tigr_m",
+       {"move":"q.modified_move_speed"},
+       "look_at_target",
+       "rul"
+      ]
+      },
+      "render_controllers": [
+        { "controller.render.car": "q.mark_variant != 2" },
+        { "controller.render.car_death": "q.mark_variant == 2" }
+      ],
+			"sound_effects": {
+				"engine": "addon.car_engine",
+				"engine_on": "addon.car_engine_on"
+      },
+      "spawn_egg": {
+         "texture": "spawn_tigr_m",
+        "texture_index": 0
+      }
+    }
+  }
+}

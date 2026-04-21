@@ -1,0 +1,63 @@
+
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "addon:pkm",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/guns/ussr/pkm",
+        "head": "textures/guns/ussr/pkm"
+      },
+      "geometry": {
+        "default":  "geometry.pkm",
+        "head":  "geometry.pkm_head"
+      },
+      "scripts": {
+        "pre_animation": [
+           "v.main_hand = c.item_slot == 'main_hand';",
+           "v.guns = c.item_slot == 'main_hand';",
+           "v.pkm = c.item_slot == 'main_hand';",
+           "v.fire = q.main_hand_item_use_duration > 0.0f;"
+        ],
+        "animate": [
+          {"idle_controller": "c.is_first_person"},
+          {"pkm_item": "c.is_first_person"},
+          {"pkm_controller": "c.is_first_person"},
+          {"pkm_controller_third": "!c.is_first_person && !query.is_riding"},
+          {"pkm_controller_sneak": "!c.is_first_person && query.is_riding"},
+          {"pkm_fire_controller": "variable.pkm"}
+
+        ]
+      },
+      "animations": {
+        "idle_controller": "controller.animation.gun_idle",
+        "idle": "animation.gun_idle",
+        "idle2": "animation.gun_idle2",
+        "pkm_controller": "controller.animation.pkm",
+        "pkm_controller_sneak": "controller.animation.pkm_sneak",
+        "pkm_sneak": "animation.pkm_sneak",
+        "pkm_reload_sneak": "animation.pkm_reload_sneak",
+        "pkm_reload2_sneak": "animation.pkm_reload2_sneak",
+        "pkm_controller_third": "controller.animation.pkm_third",
+        "pkm_fire_controller": "controller.animation.pkm_fire",
+        "pkm_item_third": "animation.pkm_item_third",
+        "shoot": "animation.pkm_shoot",
+        "pkm_aim": "animation.aim_item_pkm",
+        "pkm_aim_third": "animation.pkm_aim_third",
+        "pkm_sprint_third": "animation.pkm_sprint_third",
+        "pkm_item": "animation.pkm_item",
+        "pkm_reload": "animation.pkm_reload",
+        "pkm_reload2": "animation.pkm_reload2",
+        "pkm_reload_third": "animation.pkm_reload_third",
+        "pkm_reload2_third": "animation.pkm_reload2_third",
+        "gun_third": "animation.gun_third_pkm",
+        "pkm_third": "animation.pkm_item_third"
+      },
+      "render_controllers": [ 
+         "controller.render.pkm" ]
+    }
+  }
+}

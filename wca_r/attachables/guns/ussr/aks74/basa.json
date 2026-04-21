@@ -1,0 +1,35 @@
+
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "addon:aks74",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/guns/ussr/aks74"
+      },
+      "geometry": {
+        "default":  "geometry.aks74"
+      },
+      "scripts": {
+        "pre_animation": [
+           "v.main_hand = c.item_slot == 'main_hand';",
+           "v.aks74 = c.item_slot == 'main_hand';",
+           "v.fire = q.main_hand_item_use_duration > 0.0f;"
+        ],
+        "animate": [
+          {"aks74_controller": "c.is_first_person"},
+          {"aks74_fire_controller": "variable.aks74 && variable.is_first_person"}
+
+        ]
+      },
+      "animations": {
+        "aks74_controller": "controller.animation.aks74",
+        "aks74_reload": "animation.aks74_reload_item"
+      },
+      "render_controllers": [ "controller.render.crossbow" ]
+    }
+  }
+}
